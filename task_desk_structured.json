@@ -14,7 +14,7 @@
         "objective": "",
         "task_id": "task-002",
         "subtasks": [
-            "- completing Internship task, isolating teams function ",
+            "- completing Internship task, isolating teams function",
             "- working on performance enhancement, of overall dashboard",
             "- working on teams level hours breakdown, and deciding status",
             "- Finish the task with all other complication included, by 10:00"
@@ -27,7 +27,7 @@
         "subtasks": [
             "- trying to hide the teams function instead of removing it completly",
             "- trying to enhance performance of the dashbaord, Cache and memory",
-            "- Finding difference between rohits and mine dashbaord to find leads, ",
+            "- Finding difference between rohits and mine dashbaord to find leads,",
             "- completing Internship task, Maximum by today"
         ]
     },
@@ -36,9 +36,9 @@
         "objective": "",
         "task_id": "task-004",
         "subtasks": [
-            "- completed the freezing option, have to verify with James, ",
+            "- completed the freezing option, have to verify with James,",
             "- will try to implement for the individual and shared resource as will",
-            "- will host the solution in Server by tonight, ",
+            "- will host the solution in Server by tonight,",
             "- Testing solution, completing the documentation and other things"
         ]
     },
@@ -58,7 +58,7 @@
         "task_id": "task-006",
         "subtasks": [
             "- complete Admin page minor works in dashboard in Local",
-            "- Complete the team level hours breakdown with research ",
+            "- Complete the team level hours breakdown with research",
             "- Complete the entire dashboard with freezing option correctly",
             "- Basic validation and deploy the board with current changes"
         ]
@@ -77,7 +77,7 @@
         "objective": "",
         "task_id": "task-008",
         "subtasks": [
-            "- Major project Patent Data ",
+            "- Major project Patent Data",
             "- fetch content for abstract, introduction, literature Review",
             "- fetch content for summery and detailed description"
         ]
@@ -193,7 +193,7 @@
         "subtasks": [
             "- Complete week 1 to 6 (Revision) for DL Lab Exam",
             "- Complete week 6 to 12 (Revision) for DL Lab Exam",
-            "- Complete the Viva Questions in Group, "
+            "- Complete the Viva Questions in Group,"
         ]
     },
     {
@@ -235,7 +235,7 @@
         "objective": "",
         "task_id": "task-013",
         "subtasks": [
-            "- Clear all the mails and jumk from the internship laptop, ",
+            "- Clear all the mails and jumk from the internship laptop,",
             "- Customize internship laptop according to personal Need,",
             "- Change the Laptop wallpaper according to current situation",
             "- Finish all the clean up and keep the laptop ready for further plan"
@@ -246,8 +246,8 @@
         "objective": "",
         "task_id": "task-014",
         "subtasks": [
-            "- Set all 3 laptops, in a proper condition for future planning, ",
-            "- Update the Google Calender according to changes ",
+            "- Set all 3 laptops, in a proper condition for future planning,",
+            "- Update the Google Calender according to changes",
             "- Clean and refurbish table to maintain clarity of thought",
             "- Clean Phone also with same aspects"
         ]
@@ -258,10 +258,10 @@
         "task_id": "task-015",
         "subtasks": [
             "- Talk to people about the internship situation,",
-            "- Get a clarity of thought on what to do next, ",
+            "- Get a clarity of thought on what to do next,",
             "- Plan about the acadamic situation,",
-            "- Prepare about the hassle less study plan for it also, ",
-            "- Get a clarity on other project related as well, ",
+            "- Prepare about the hassle less study plan for it also,",
+            "- Get a clarity on other project related as well,",
             "- Maximum try to complete planning part and get clarity about all",
             "- Update the Trackers and sheets accordingly and finish the task"
         ]
@@ -271,8 +271,8 @@
         "objective": "Objective-1",
         "task_id": "task-016",
         "subtasks": [
-            "- Learn Everything in Rajeevs repository using cursor, ",
-            "- Create a Document as per the objectives discuessed, ",
+            "- Learn Everything in Rajeevs repository using cursor,",
+            "- Create a Document as per the objectives discuessed,",
             "- Learn all the Objectives discussed, including implementation & calling"
         ]
     },
@@ -292,9 +292,9 @@
         "objective": "Objective-2",
         "task_id": "task-018",
         "subtasks": [
-            "- Complete the React tutorial from youtube, ",
+            "- Complete the React tutorial from youtube,",
             "- Try to Implement the frontend of the \"monarch Newsletter\"",
-            "- Complete with relavent Practise and Notetaking, "
+            "- Complete with relavent Practise and Notetaking,"
         ]
     },
     {
@@ -302,10 +302,10 @@
         "objective": "Objective-2",
         "task_id": "task-019",
         "subtasks": [
-            "- Complete the Node.JS crash courses discussed in objectives, ",
-            "- Complete the relavent practise and notetaking, ",
+            "- Complete the Node.JS crash courses discussed in objectives,",
+            "- Complete the relavent practise and notetaking,",
             "- Complete Express in Node.js, with all above steps",
-            "- Try to Implement MCP using the Node.js and learn the Nitty-gritties ",
+            "- Try to Implement MCP using the Node.js and learn the Nitty-gritties",
             "- Complete the \"Monarch NewsLetter\""
         ]
     },
@@ -322,7 +322,7 @@
         "objective": "Objective-3",
         "task_id": "task-021",
         "subtasks": [
-            "- Complete the JWT RnD Project, "
+            "- Complete the JWT RnD Project,"
         ]
     },
     {
@@ -383,7 +383,7 @@
         "task_id": "task-005",
         "subtasks": [
             "- Complete the Reporting-Dashboard Fixes Completly",
-            "- Complete Learning DynamoDB, and Implemetation with Current Code, "
+            "- Complete Learning DynamoDB, and Implemetation with Current Code,"
         ]
     },
     {
@@ -402,10 +402,10 @@
         "objective": "Objective-2 ( 2 )",
         "task_id": "task-007",
         "subtasks": [
-            "- Current Situation Assesment, ",
-            "- New Feature Planning and implementation, ",
+            "- Current Situation Assesment,",
+            "- New Feature Planning and implementation,",
             "- Complete the entire Idea in Implementation ( only Backend )",
-            "- Generate Further CheckPoint "
+            "- Generate Further CheckPoint"
         ]
     },
     {
@@ -413,7 +413,7 @@
         "objective": "Objective-5 ( 1 )",
         "task_id": "task-008",
         "subtasks": [
-            "- Clean Up the Mobile according to objectives, ",
+            "- Clean Up the Mobile according to objectives,",
             "- Keep everything ready for the next objective"
         ]
     },
@@ -422,9 +422,9 @@
         "objective": "Objective-5 ( 1 )",
         "task_id": "task-009",
         "subtasks": [
-            "- Make the JWT project production ready, ",
+            "- Make the JWT project production ready,",
             "- Complete the production build and deploy",
-            "- Configure the API endpoint for the code, "
+            "- Configure the API endpoint for the code,"
         ]
     },
     {
@@ -432,9 +432,9 @@
         "objective": "Objective-5 ( 1 )",
         "task_id": "task-010",
         "subtasks": [
-            "- Complete Jayasree mam work report, ",
-            "- AI based path planning strategies for autonomous mobile robots, ",
-            "- Complete the report according to requirment and submit, "
+            "- Complete Jayasree mam work report,",
+            "- AI based path planning strategies for autonomous mobile robots,",
+            "- Complete the report according to requirment and submit,"
         ]
     },
     {
@@ -442,7 +442,7 @@
         "objective": "Objective-5 ( 1 )",
         "task_id": "task-011",
         "subtasks": [
-            "- Complete all the pending working in reporting dashbaord, ",
+            "- Complete all the pending working in reporting dashbaord,",
             "- Fix the bugs and issues, complete dashbaord and deploy in pm2"
         ]
     },
@@ -452,8 +452,8 @@
         "task_id": "task-012",
         "subtasks": [
             "- Start NMIT, Complete chapter-1",
-            "- Find videos or content online and complete accordingly, ",
-            "- after completion have a look at types of questions in previos papers, "
+            "- Find videos or content online and complete accordingly,",
+            "- after completion have a look at types of questions in previos papers,"
         ]
     },
     {
@@ -490,7 +490,7 @@
         "task_id": "task-016",
         "subtasks": [
             "- Complete the JWT Task for internship",
-            "- Keep everything ready and make a call at 2 tommorow, "
+            "- Keep everything ready and make a call at 2 tommorow,"
         ]
     },
     {
@@ -510,7 +510,7 @@
         "subtasks": [
             "- Complete the Important topics given from unit - 3",
             "- Complete the important topics given from unit-5",
-            "- follow the rest of the topics from the playlist, ",
+            "- follow the rest of the topics from the playlist,",
             "- try to complete the other 2 units in this way"
         ]
     },
@@ -529,7 +529,7 @@
         "task_id": "task-2",
         "subtasks": [
             "- Complete the MacBook Work",
-            "- All the trackers & other document work, ",
+            "- All the trackers & other document work,",
             "- Complete the report work in notion",
             "- Organize all the trackers to be used efficently",
             "- complete all the tasks according to the objective"
@@ -540,8 +540,8 @@
         "objective": "Objective-2",
         "task_id": "task-3",
         "subtasks": [
-            "- Complete the Dell Internship Work, ",
-            "- Organize all the code files and everything effectivly, ",
+            "- Complete the Dell Internship Work,",
+            "- Organize all the code files and everything effectivly,",
             "- All the un used code update it in the Github",
             "- complete all the tasks according to the objective"
         ]
@@ -551,9 +551,9 @@
         "objective": "Objective-1",
         "task_id": "task-4",
         "subtasks": [
-            "- Know where the LLM-DS project status, ",
+            "- Know where the LLM-DS project status,",
             "- Complete For Data anlysis & Check the results mulitple iterations",
-            "- Fix the previos issues with data analysis ",
+            "- Fix the previos issues with data analysis",
             "- Check for multiple datasets in. both cleaning and analysis"
         ]
     },
@@ -562,10 +562,10 @@
         "objective": "Objective-1",
         "task_id": "task-5",
         "subtasks": [
-            "- Know the current status of the JWT Project, ",
+            "- Know the current status of the JWT Project,",
             "- Keep the code updated in VS and Lambda,",
-            "- Complete the API Documentation, ",
-            "- Inform about the log situation in call, ",
+            "- Complete the API Documentation,",
+            "- Inform about the log situation in call,",
             "- Complete the transaction table for audit purpose"
         ]
     },
@@ -575,8 +575,8 @@
         "task_id": "task-6",
         "subtasks": [
             "- Complete the Dashbaord, with validation of teams level",
-            "- Validation of 3 sprints for 4 teams, ",
-            "- write the validation code and implement it in main code, ",
+            "- Validation of 3 sprints for 4 teams,",
+            "- write the validation code and implement it in main code,",
             "- Complete the whole thing with all changes"
         ]
     },
@@ -594,8 +594,8 @@
         "objective": "Objective-1",
         "task_id": "task-8",
         "subtasks": [
-            "- Complete Basic Autherization for all 4 apis, ",
-            "- Complete the POST method Validation API, ",
+            "- Complete Basic Autherization for all 4 apis,",
+            "- Complete the POST method Validation API,",
             "- Show demo in call and based on which start As-Built Documentation"
         ]
     },
@@ -608,7 +608,7 @@
             "- Change the name of the 4th API, to \"verify Token\" and deploy",
             "- Test working of all 4 API, and deploy them to company AWS",
             "- Update the response in the API documentation & Test cases Document",
-            "- Complete the as-built documentation, "
+            "- Complete the as-built documentation,"
         ]
     },
     {
@@ -616,10 +616,10 @@
         "objective": "Objective-4",
         "task_id": "task-10",
         "subtasks": [
-            "- Complete React Tutorial from YouTube, ",
+            "- Complete React Tutorial from YouTube,",
             "- Update all learning notes in obsedian",
-            "- Upload learning code to GitHub for reference, ",
-            "- Learning API Handling in React "
+            "- Upload learning code to GitHub for reference,",
+            "- Learning API Handling in React"
         ]
     },
     {
@@ -629,7 +629,7 @@
         "subtasks": [
             "- Update the weekly report in mail",
             "- Add screenshots to the As-Built Document",
-            "- keep all Documents ready for the 4 PM Call ",
+            "- keep all Documents ready for the 4 PM Call",
             "- Complete the updated and everything in As-Built Document"
         ]
     },
@@ -657,7 +657,7 @@
         "objective": "Objective-5",
         "task_id": "task-14",
         "subtasks": [
-            "- Have a call for IVR workflows, ",
+            "- Have a call for IVR workflows,",
             "- Complete the appointment scheduling workflow"
         ]
     },
@@ -730,8 +730,8 @@
         "task_id": "task-21",
         "subtasks": [
             "- Test the entire cleaning & analysis part rigoursly",
-            "- Add the Anlaysis Pipeline & Agent to orchestrator, ",
-            "- Test the entire pipeline, from cleaning to execution, "
+            "- Add the Anlaysis Pipeline & Agent to orchestrator,",
+            "- Test the entire pipeline, from cleaning to execution,"
         ]
     },
     {
@@ -739,12 +739,12 @@
         "objective": "Objective-1",
         "task_id": "task-22",
         "subtasks": [
-            "- Update the JWT Project ",
+            "- Update the JWT Project",
             "- Meet all the current client Requirements",
             "- Update the minute code changes & Update the Tech Documents",
             "- Update the code for being production ready",
-            "- Fix all the issues suggested by the cursor, ",
-            "- Have a code review with updated code, "
+            "- Fix all the issues suggested by the cursor,",
+            "- Have a code review with updated code,"
         ]
     },
     {
@@ -752,10 +752,10 @@
         "objective": "objective-6",
         "task_id": "task-23",
         "subtasks": [
-            "- Complete the entire backend as discussed, ",
-            "- make all the endpoints according to plan, ",
+            "- Complete the entire backend as discussed,",
+            "- make all the endpoints according to plan,",
             "- Complete the frontned for the application",
-            "- demo the application with Rakesh "
+            "- demo the application with Rakesh"
         ]
     },
     {
@@ -766,7 +766,7 @@
             "- Get the Tracker ready for the Feb Month",
             "- Complete report (chart & data) for previous months",
             "- Organise the google calender with weekly updates",
-            "- Keep the planning system ready, ",
+            "- Keep the planning system ready,",
             "- ReOrganise the MACBook Laptop"
         ]
     },
@@ -775,7 +775,7 @@
         "objective": "Objective-1",
         "task_id": "task-002",
         "subtasks": [
-            "- Reorganise the server code, once ",
+            "- Reorganise the server code, once",
             "- Try to embed multiple calls at the same instant",
             "- once check all the endpoints functioning again in postman",
             "- Complete server and postman testing for the application"
@@ -786,7 +786,7 @@
         "objective": "Objective-1",
         "task_id": "task-003",
         "subtasks": [
-            "- Make changes to the rest of Vonage-Auth-API, ",
+            "- Make changes to the rest of Vonage-Auth-API,",
             "- Make the generate token API production ready",
             "- Make the verify token API Production ready"
         ]
@@ -799,7 +799,7 @@
             "- Run Agent standalone code once,",
             "- Test Standalone analysis agent with 5 datasets for 5 questions",
             "- validate the Result with ChatGPT",
-            "- Integrate it in the main orchestrator Agent ",
+            "- Integrate it in the main orchestrator Agent",
             "- Fix the cleaning agent bug",
             "- Run the Orchestration Agent for 5 datasets with 5 Questions & validate"
         ]
@@ -810,8 +810,8 @@
         "task_id": "task-005",
         "subtasks": [
             "- Complete the random information at multi call automation",
-            "- Add the CSV file input and test case functionality, ",
-            "- Complete the React Frontend for this entire backend, ",
+            "- Add the CSV file input and test case functionality,",
+            "- Complete the React Frontend for this entire backend,",
             "- Complete the baseline project"
         ]
     },
@@ -853,8 +853,8 @@
         "objective": "Objective-2",
         "task_id": "task-009",
         "subtasks": [
-            "- segregate the functions into files, ",
-            "- Understand server python completly, ",
+            "- segregate the functions into files,",
+            "- Understand server python completly,",
             "- add the PostGres for this log operation and fix log endpoint",
             "- Add the overall logs endpoint and all filter to segregate each endpoint"
         ]
@@ -867,7 +867,7 @@
             "- Complete Unit-1 OB",
             "- Complete Unit-2 OB",
             "- Complete Unit-3 OB",
-            "- all Important questions from units 1, 2 & 3 "
+            "- all Important questions from units 1, 2 & 3"
         ]
     },
     {
@@ -889,7 +889,7 @@
             "- Complete the PostGres Operations in the IVR",
             "- Complete the dashbaord with required changes",
             "- Work on making 20 parallal calls in the same time & updated regarding it",
-            "- Do an R&D about the LLM tokens issue for 20 calls "
+            "- Do an R&D about the LLM tokens issue for 20 calls"
         ]
     },
     {
@@ -897,7 +897,7 @@
         "objective": "Objective-2",
         "task_id": "task-013",
         "subtasks": [
-            "- Complete all the changes in the requirement sheet, ",
+            "- Complete all the changes in the requirement sheet,",
             "- Complete the requirement & keep the basic prod ready",
             "- Demo the MVP to the managet"
         ]
@@ -907,7 +907,7 @@
         "objective": "Objective-2",
         "task_id": "task-014",
         "subtasks": [
-            "- Complete the work excel sheet, ",
+            "- Complete the work excel sheet,",
             "- Complete the Gitlab upload of the IVR Project",
             "- Complete the Vonage auth API prod ready API for remining 2",
             "- Complete the reports and such tasks left for final submission",
@@ -951,7 +951,7 @@
         "task_id": "Task-002",
         "subtasks": [
             "Complete Organising of the notion page as per objective",
-            "Do basic R&D on what can be migrated to notion and everyting, ",
+            "Do basic R&D on what can be migrated to notion and everyting,",
             "Finish formating of tracker & Notion for the march month",
             "Organise the Mac & Lenovo for the march tasks",
             "Keep the entire structure ready for using and complete the objective"
@@ -964,7 +964,7 @@
         "subtasks": [
             "Search for a tutorial for MCP using python in youtube add to notion",
             "Search for a tutorial for MCP using nodeJS in youtube add to notion",
-            "Make a plan of preparation based on the tutorial content "
+            "Make a plan of preparation based on the tutorial content"
         ]
     },
     {
@@ -972,8 +972,8 @@
         "objective": "[IN] Objective 3",
         "task_id": "Task-004",
         "subtasks": [
-            "Learn about the dailpad Iframe embedding ",
-            "Learn about the PA gadget and how does it fetch patient detail, ",
+            "Learn about the dailpad Iframe embedding",
+            "Learn about the PA gadget and how does it fetch patient detail,",
             "Learn more about them in the call and get a clarity on the further tasks"
         ]
     },
@@ -983,7 +983,7 @@
         "task_id": "Task-005",
         "subtasks": [
             "Complete Learning about the MCP concepts from notion",
-            "Complete Learning about MCP implementation in python ",
+            "Complete Learning about MCP implementation in python",
             "Add Learning to Learn_code repository make Commits",
             "Complete a small Python based MCP application with LLM integration"
         ]
@@ -1003,7 +1003,7 @@
         "subtasks": [
             "Complete the baseline idea of the monarch management application",
             "Complete the repository set up of the project with information",
-            "Create Multiple functions for pulling and organising data from sheets, ",
+            "Create Multiple functions for pulling and organising data from sheets,",
             "Create an MCP tool, that can pull out this information into CSV data",
             "Create a Basic config for connecting into claude for testing this MCP tool"
         ]
