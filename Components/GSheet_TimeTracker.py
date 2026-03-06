@@ -43,7 +43,6 @@ def clean_sheet_time_tracker_data(dataset):
 # Formatter for Time Tracker Sheet → JSON
 # ---------------------------------------------------
 def format_sheet_time_tracker_to_json(dataset):
-
     structured_data = []
     task_map = {}
     for _, row in dataset.iterrows():
@@ -51,14 +50,22 @@ def format_sheet_time_tracker_to_json(dataset):
         if task_id == "":
             continue
 
+        # Convert minutes and hours to numbers if possible
+        try:
+            minutes = float(row["Total-MIN"]) if row["Total-MIN"] != "" else ""
+        except:
+            minutes = ""
+        try:
+            hours = float(row["Total-Hr"]) if row["Total-Hr"] != "" else ""
+        except:
+            hours = ""
         session = {
             "clock_in": row["Clock-IN"],
             "clock_out": row["Clock-OUT"],
-            "minutes": row["Total-MIN"],
-            "hours": row["Total-Hr"]
+            "minutes": minutes,
+            "hours": hours
         }
         if task_id not in task_map:
-
             task_entry = {
                 "date": row["Date"],
                 "day": row["Day"],
@@ -68,7 +75,6 @@ def format_sheet_time_tracker_to_json(dataset):
                 "status": row["Status"],
                 "sessions": []
             }
-
             task_map[task_id] = task_entry
             structured_data.append(task_entry)
         task_map[task_id]["sessions"].append(session)
