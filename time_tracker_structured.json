@@ -1,0 +1,1996 @@
+[
+    {
+        "date": "10/13/2025",
+        "day": "",
+        "task": "Organization",
+        "task_id": "task-001",
+        "category": "PERSONAL",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "12:06:00 PM",
+                "clock_out": "1:00:49 PM",
+                "minutes": "54.81",
+                "hours": "0.91"
+            },
+            {
+                "clock_in": "1:20:05 PM",
+                "clock_out": "1:40:12 PM",
+                "minutes": "20.12",
+                "hours": "0.34"
+            },
+            {
+                "clock_in": "5:00:34 PM",
+                "clock_out": "6:30:26 PM",
+                "minutes": "89.87",
+                "hours": "1.50"
+            },
+            {
+                "clock_in": "8:16:57 PM",
+                "clock_out": "9:01:17 PM",
+                "minutes": "44.35",
+                "hours": "0.74"
+            },
+            {
+                "clock_in": "11:32:44 PM",
+                "clock_out": "12:48:46 AM",
+                "minutes": "76.05",
+                "hours": "1.27"
+            },
+            {
+                "clock_in": "7:38:17 PM",
+                "clock_out": "7:56:06 PM",
+                "minutes": "17.81",
+                "hours": "0.30"
+            },
+            {
+                "clock_in": "9:55:32 PM",
+                "clock_out": "10:26:38 PM",
+                "minutes": "31.10",
+                "hours": "0.52"
+            },
+            {
+                "clock_in": "9:57:04 AM",
+                "clock_out": "11:54:16 AM",
+                "minutes": "117.20",
+                "hours": "1.95"
+            },
+            {
+                "clock_in": "12:25:12 PM",
+                "clock_out": "1:00:55 PM",
+                "minutes": "35.72",
+                "hours": "0.60"
+            },
+            {
+                "clock_in": "1:30:52 PM",
+                "clock_out": "4:09:06 PM",
+                "minutes": "158.24",
+                "hours": "2.64"
+            },
+            {
+                "clock_in": "10:00:33 PM",
+                "clock_out": "12:49:55 AM",
+                "minutes": "169.36",
+                "hours": "2.82"
+            },
+            {
+                "clock_in": "2:45:03 PM",
+                "clock_out": "5:00:22 PM",
+                "minutes": "135.32",
+                "hours": "2.26"
+            }
+        ]
+    },
+    {
+        "date": "10/13/2025",
+        "day": "",
+        "task": "Internship",
+        "task_id": "task-002",
+        "category": "INTERNSHIP",
+        "status": "PENDING",
+        "sessions": [
+            {
+                "clock_in": "2:24:12 PM",
+                "clock_out": "4:32:52 PM",
+                "minutes": "128.67",
+                "hours": "2.14"
+            },
+            {
+                "clock_in": "5:32:47 PM",
+                "clock_out": "6:54:40 PM",
+                "minutes": "81.88",
+                "hours": "1.36"
+            },
+            {
+                "clock_in": "8:11:09 PM",
+                "clock_out": "11:14:26 PM",
+                "minutes": "183.29",
+                "hours": "3.05"
+            },
+            {
+                "clock_in": "11:19:10 PM",
+                "clock_out": "1:38 AM",
+                "minutes": "139.00",
+                "hours": "2.32"
+            },
+            {
+                "clock_in": "7:01:52 PM",
+                "clock_out": "7:20:24 PM",
+                "minutes": "18.53",
+                "hours": "0.31"
+            },
+            {
+                "clock_in": "12:05:01 PM",
+                "clock_out": "2:30:01 PM",
+                "minutes": "145.00",
+                "hours": "2.42"
+            },
+            {
+                "clock_in": "7:40:05 PM",
+                "clock_out": "8:51:12 PM",
+                "minutes": "71.12",
+                "hours": "1.19"
+            },
+            {
+                "clock_in": "9:30:24 PM",
+                "clock_out": "10:09:56 PM",
+                "minutes": "39.53",
+                "hours": "0.66"
+            },
+            {
+                "clock_in": "1:07:32 PM",
+                "clock_out": "5:07:15 PM",
+                "minutes": "239.72",
+                "hours": "4.00"
+            },
+            {
+                "clock_in": "11:18:56 PM",
+                "clock_out": "12:02:52 AM",
+                "minutes": "43.94",
+                "hours": "0.73"
+            },
+            {
+                "clock_in": "1:00:54 AM",
+                "clock_out": "1:38:11 AM",
+                "minutes": "37.28",
+                "hours": "0.62"
+            }
+        ]
+    },
+    {
+        "date": "10/14/2025",
+        "day": "",
+        "task": "Internship ",
+        "task_id": "task-003",
+        "category": "INTERNSHIP",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "2:08:08 PM",
+                "clock_out": "4:38:05 PM",
+                "minutes": "149.95",
+                "hours": "2.50"
+            },
+            {
+                "clock_in": "5:38:28 PM",
+                "clock_out": "7:40:30 PM",
+                "minutes": "122.04",
+                "hours": "2.03"
+            },
+            {
+                "clock_in": "8:30:35 PM",
+                "clock_out": "10:20:31 PM",
+                "minutes": "109.93",
+                "hours": "1.83"
+            },
+            {
+                "clock_in": "10:38:27 PM",
+                "clock_out": "11:28:28 PM",
+                "minutes": "50.02",
+                "hours": "0.83"
+            },
+            {
+                "clock_in": "8:22:23 PM",
+                "clock_out": "9:52:46 PM",
+                "minutes": "90.37",
+                "hours": "1.51"
+            },
+            {
+                "clock_in": "11:33:16 PM",
+                "clock_out": "12:35:00 AM",
+                "minutes": "61.74",
+                "hours": "1.03"
+            },
+            {
+                "clock_in": "3:00:12 PM",
+                "clock_out": "4:09:44 PM",
+                "minutes": "69.53",
+                "hours": "1.16"
+            },
+            {
+                "clock_in": "4:35:04 PM",
+                "clock_out": "5:04:42 PM",
+                "minutes": "29.63",
+                "hours": "0.49"
+            },
+            {
+                "clock_in": "5:23:40 PM",
+                "clock_out": "6:55:27 PM",
+                "minutes": "91.78",
+                "hours": "1.53"
+            },
+            {
+                "clock_in": "7:37:56 PM",
+                "clock_out": "8:31:15 PM",
+                "minutes": "53.31",
+                "hours": "0.89"
+            },
+            {
+                "clock_in": "8:53:53 PM",
+                "clock_out": "9:24:42 PM",
+                "minutes": "30.82",
+                "hours": "0.51"
+            },
+            {
+                "clock_in": "9:47:44 PM",
+                "clock_out": "10:25:30 PM",
+                "minutes": "37.77",
+                "hours": "0.63"
+            },
+            {
+                "clock_in": "10:58:30 PM",
+                "clock_out": "12:03:47 AM",
+                "minutes": "65.27",
+                "hours": "1.09"
+            },
+            {
+                "clock_in": "2:26:57 PM",
+                "clock_out": "2:37:52 PM",
+                "minutes": "10.92",
+                "hours": "0.18"
+            }
+        ]
+    },
+    {
+        "date": "10/15/2025",
+        "day": "",
+        "task": "Internship",
+        "task_id": "task-004",
+        "category": "INTERNSHIP",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "3:02:08 PM",
+                "clock_out": "4:11:35 PM",
+                "minutes": "69.45",
+                "hours": "1.16"
+            },
+            {
+                "clock_in": "4:18:43 PM",
+                "clock_out": "5:23:31 PM",
+                "minutes": "64.80",
+                "hours": "1.08"
+            },
+            {
+                "clock_in": "9:43:08 PM",
+                "clock_out": "9:49:16 PM",
+                "minutes": "6.12",
+                "hours": "0.10"
+            },
+            {
+                "clock_in": "10:19:32 PM",
+                "clock_out": "11:08:24 PM",
+                "minutes": "48.87",
+                "hours": "0.81"
+            },
+            {
+                "clock_in": "9:21:05 PM",
+                "clock_out": "10:29:55 PM",
+                "minutes": "68.83",
+                "hours": "1.15"
+            },
+            {
+                "clock_in": "11:07:41 PM",
+                "clock_out": "11:51:26 PM",
+                "minutes": "43.75",
+                "hours": "0.73"
+            },
+            {
+                "clock_in": "10:30:23 PM",
+                "clock_out": "10:52:16 PM",
+                "minutes": "21.88",
+                "hours": "0.36"
+            },
+            {
+                "clock_in": "11:45:19 AM",
+                "clock_out": "12:27:07 PM",
+                "minutes": "41.80",
+                "hours": "0.70"
+            },
+            {
+                "clock_in": "2:10:11 PM",
+                "clock_out": "4:08:06 PM",
+                "minutes": "117.92",
+                "hours": "1.97"
+            },
+            {
+                "clock_in": "12:25:49 PM",
+                "clock_out": "1:07:52 PM",
+                "minutes": "42.06",
+                "hours": "0.70"
+            },
+            {
+                "clock_in": "1:33:02 PM",
+                "clock_out": "2:13:24 PM",
+                "minutes": "40.36",
+                "hours": "0.67"
+            },
+            {
+                "clock_in": "1:11:19 PM",
+                "clock_out": "3:33:21 PM",
+                "minutes": "142.03",
+                "hours": "2.37"
+            },
+            {
+                "clock_in": "9:01:54 PM",
+                "clock_out": "9:44:12 PM",
+                "minutes": "42.30",
+                "hours": "0.71"
+            },
+            {
+                "clock_in": "11:03:52 PM",
+                "clock_out": "12:13:03 AM",
+                "minutes": "69.19",
+                "hours": "1.15"
+            },
+            {
+                "clock_in": "2:39:52 PM",
+                "clock_out": "2:46:01 PM",
+                "minutes": "6.14",
+                "hours": "0.10"
+            },
+            {
+                "clock_in": "3:03:25 PM",
+                "clock_out": "4:02:48 PM",
+                "minutes": "59.37",
+                "hours": "0.99"
+            },
+            {
+                "clock_in": "4:36:55 PM",
+                "clock_out": "4:49:56 PM",
+                "minutes": "13.02",
+                "hours": "0.22"
+            },
+            {
+                "clock_in": "5:36:31 PM",
+                "clock_out": "6:42:45 PM",
+                "minutes": "66.24",
+                "hours": "1.10"
+            },
+            {
+                "clock_in": "2:37:38 PM",
+                "clock_out": "3:31:54 PM",
+                "minutes": "54.27",
+                "hours": "0.90"
+            },
+            {
+                "clock_in": "7:00:30 PM",
+                "clock_out": "7:38:47 PM",
+                "minutes": "38.28",
+                "hours": "0.64"
+            }
+        ]
+    },
+    {
+        "date": "10/16/2025",
+        "day": "",
+        "task": "Learning ",
+        "task_id": "task-005",
+        "category": "Learning",
+        "status": "PENDING",
+        "sessions": [
+            {
+                "clock_in": "1:45:29 PM",
+                "clock_out": "4:03:50 PM",
+                "minutes": "138.35",
+                "hours": "2.31"
+            },
+            {
+                "clock_in": "9:36:28 PM",
+                "clock_out": "11:25:23 PM",
+                "minutes": "108.90",
+                "hours": "1.82"
+            },
+            {
+                "clock_in": "12:37:29 AM",
+                "clock_out": "1:25:20 AM",
+                "minutes": "47.84",
+                "hours": "0.80"
+            },
+            {
+                "clock_in": "12:12 PM",
+                "clock_out": "1:04:33 PM",
+                "minutes": "51.71",
+                "hours": "0.86"
+            },
+            {
+                "clock_in": "2:05:25 PM",
+                "clock_out": "3:21:47 PM",
+                "minutes": "76.37",
+                "hours": "1.27"
+            },
+            {
+                "clock_in": "4:37:22 PM",
+                "clock_out": "5:21:39 PM",
+                "minutes": "44.27",
+                "hours": "0.74"
+            },
+            {
+                "clock_in": "5:30:09 PM",
+                "clock_out": "5:59:39 PM",
+                "minutes": "29.50",
+                "hours": "0.49"
+            },
+            {
+                "clock_in": "3:10:22 PM",
+                "clock_out": "5:08:52 PM",
+                "minutes": "118.50",
+                "hours": "1.97"
+            },
+            {
+                "clock_in": "5:35:10 PM",
+                "clock_out": "5:48:40 PM",
+                "minutes": "13.49",
+                "hours": "0.22"
+            },
+            {
+                "clock_in": "6:38:18 PM",
+                "clock_out": "7:18:21 PM",
+                "minutes": "40.05",
+                "hours": "0.67"
+            },
+            {
+                "clock_in": "7:33:50 PM",
+                "clock_out": "8:39:59 PM",
+                "minutes": "66.14",
+                "hours": "1.10"
+            },
+            {
+                "clock_in": "9:45:47 PM",
+                "clock_out": "10:27:45 PM",
+                "minutes": "41.97",
+                "hours": "0.70"
+            },
+            {
+                "clock_in": "11:02:11 PM",
+                "clock_out": "12:43:02 AM",
+                "minutes": "100.85",
+                "hours": "1.68"
+            },
+            {
+                "clock_in": "6:11:04 PM",
+                "clock_out": "8:15:50 PM",
+                "minutes": "124.77",
+                "hours": "2.08"
+            },
+            {
+                "clock_in": "7:45:16 PM",
+                "clock_out": "12:55:34 AM",
+                "minutes": "310.30",
+                "hours": "5.17"
+            },
+            {
+                "clock_in": "4:05:10 PM",
+                "clock_out": "11:06:34 PM",
+                "minutes": "421.40",
+                "hours": "7.02"
+            }
+        ]
+    },
+    {
+        "date": "10/16/2025",
+        "day": "",
+        "task": "Learning ",
+        "task_id": "Task-006",
+        "category": "INTERNSHIP",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "4:11:02 PM",
+                "clock_out": "4:42:11 PM",
+                "minutes": "31.14",
+                "hours": "0.52"
+            },
+            {
+                "clock_in": "4:56:44 PM",
+                "clock_out": "6:37:17 PM",
+                "minutes": "100.54",
+                "hours": "1.68"
+            },
+            {
+                "clock_in": "7:13:14 PM",
+                "clock_out": "7:46:54 PM",
+                "minutes": "33.67",
+                "hours": "0.56"
+            },
+            {
+                "clock_in": "8:06:54 PM",
+                "clock_out": "11:21:32 PM",
+                "minutes": "194.64",
+                "hours": "3.24"
+            },
+            {
+                "clock_in": "10:10:31 PM",
+                "clock_out": "10:32:06 PM",
+                "minutes": "21.59",
+                "hours": "0.36"
+            }
+        ]
+    },
+    {
+        "date": "10/26/2025",
+        "day": "Sunday",
+        "task": "Collage-Assignments",
+        "task_id": "task-007",
+        "category": "ACADAMICS",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "1:50:15 PM",
+                "clock_out": "2:20:28 PM",
+                "minutes": "30.23",
+                "hours": "0.50"
+            },
+            {
+                "clock_in": "3:37:25 PM",
+                "clock_out": "5:26:14 PM",
+                "minutes": "108.82",
+                "hours": "1.81"
+            },
+            {
+                "clock_in": "8:10:15 PM",
+                "clock_out": "9:11:19 PM",
+                "minutes": "61.07",
+                "hours": "1.02"
+            },
+            {
+                "clock_in": "3:00:09 PM",
+                "clock_out": "4:58:02 PM",
+                "minutes": "117.88",
+                "hours": "1.96"
+            },
+            {
+                "clock_in": "12:22:52 AM",
+                "clock_out": "2:03:31 AM",
+                "minutes": "100.64",
+                "hours": "1.68"
+            }
+        ]
+    },
+    {
+        "date": "10/26/2025",
+        "day": "Sunday",
+        "task": "Major-Project",
+        "task_id": "task-008",
+        "category": "ACADAMICS",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "5:51:49 PM",
+                "clock_out": "6:14:21 PM",
+                "minutes": "22.54",
+                "hours": "0.38"
+            },
+            {
+                "clock_in": "8:35:10 PM",
+                "clock_out": "9:50:09 PM",
+                "minutes": "74.99",
+                "hours": "1.25"
+            },
+            {
+                "clock_in": "10:48:52 PM",
+                "clock_out": "12:10:04 AM",
+                "minutes": "81.20",
+                "hours": "1.35"
+            },
+            {
+                "clock_in": "8:30:16 PM",
+                "clock_out": "10:24:13 PM",
+                "minutes": "113.96",
+                "hours": "1.90"
+            },
+            {
+                "clock_in": "6:06:37 PM",
+                "clock_out": "7:24:32 PM",
+                "minutes": "77.90",
+                "hours": "1.30"
+            },
+            {
+                "clock_in": "10:26:24 PM",
+                "clock_out": "2:25:17 AM",
+                "minutes": "238.89",
+                "hours": "3.98"
+            },
+            {
+                "clock_in": "8:00:46 PM",
+                "clock_out": "8:53:57 PM",
+                "minutes": "53.18",
+                "hours": "0.89"
+            },
+            {
+                "clock_in": "9:07:19 PM",
+                "clock_out": "9:56:20 PM",
+                "minutes": "49.02",
+                "hours": "0.82"
+            },
+            {
+                "clock_in": "10:15:24 PM",
+                "clock_out": "11:35:08 PM",
+                "minutes": "79.73",
+                "hours": "1.33"
+            },
+            {
+                "clock_in": "12:43:04 AM",
+                "clock_out": "1:11:44 AM",
+                "minutes": "28.66",
+                "hours": "0.48"
+            }
+        ]
+    },
+    {
+        "date": "10/27/2025",
+        "day": "Monday",
+        "task": "Collage-Assignments",
+        "task_id": "task-009",
+        "category": "ACADAMICS",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "4:00:45 PM",
+                "clock_out": "5:09:58 PM",
+                "minutes": "69.21",
+                "hours": "1.15"
+            },
+            {
+                "clock_in": "5:18:31 PM",
+                "clock_out": "6:09:42 PM",
+                "minutes": "51.18",
+                "hours": "0.85"
+            },
+            {
+                "clock_in": "6:36:02 PM",
+                "clock_out": "7:16:19 PM",
+                "minutes": "40.28",
+                "hours": "0.67"
+            },
+            {
+                "clock_in": "7:25:03 PM",
+                "clock_out": "8:24:05 PM",
+                "minutes": "59.03",
+                "hours": "0.98"
+            },
+            {
+                "clock_in": "9:09:10 PM",
+                "clock_out": "9:27:22 PM",
+                "minutes": "18.20",
+                "hours": "0.30"
+            },
+            {
+                "clock_in": "10:27:38 PM",
+                "clock_out": "12:51:49 AM",
+                "minutes": "144.19",
+                "hours": "2.40"
+            },
+            {
+                "clock_in": "5:13:02 PM",
+                "clock_out": "5:55:20 PM",
+                "minutes": "42.31",
+                "hours": "0.71"
+            },
+            {
+                "clock_in": "6:16:03 PM",
+                "clock_out": "7:22:05 PM",
+                "minutes": "66.03",
+                "hours": "1.10"
+            },
+            {
+                "clock_in": "7:59:48 PM",
+                "clock_out": "8:33:18 PM",
+                "minutes": "33.50",
+                "hours": "0.56"
+            },
+            {
+                "clock_in": "2:02:32 PM",
+                "clock_out": "3:28:18 PM",
+                "minutes": "85.76",
+                "hours": "1.43"
+            },
+            {
+                "clock_in": "3:12:23 PM",
+                "clock_out": "3:53:57 PM",
+                "minutes": "41.57",
+                "hours": "0.69"
+            },
+            {
+                "clock_in": "4:28:16 PM",
+                "clock_out": "6:45:46 PM",
+                "minutes": "137.50",
+                "hours": "2.29"
+            },
+            {
+                "clock_in": "11:51:48 PM",
+                "clock_out": "12:36:37 AM",
+                "minutes": "44.82",
+                "hours": "0.75"
+            },
+            {
+                "clock_in": "2:31:27 PM",
+                "clock_out": "3:24:34 PM",
+                "minutes": "53.11",
+                "hours": "0.89"
+            },
+            {
+                "clock_in": "3:30:56 PM",
+                "clock_out": "4:57:43 PM",
+                "minutes": "86.78",
+                "hours": "1.45"
+            },
+            {
+                "clock_in": "6:02:37 PM",
+                "clock_out": "6:32:18 PM",
+                "minutes": "29.69",
+                "hours": "0.49"
+            },
+            {
+                "clock_in": "7:50:30 PM",
+                "clock_out": "8:21:03 PM",
+                "minutes": "30.54",
+                "hours": "0.51"
+            }
+        ]
+    },
+    {
+        "date": "10/27/2025",
+        "day": "Monday",
+        "task": "Collage-Record",
+        "task_id": "task-011",
+        "category": "ACADAMICS",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "9:27:22 PM",
+                "clock_out": "10:30:20 PM",
+                "minutes": "62.96",
+                "hours": "1.05"
+            },
+            {
+                "clock_in": "10:38:22 PM",
+                "clock_out": "11:25:19 PM",
+                "minutes": "46.94",
+                "hours": "0.78"
+            },
+            {
+                "clock_in": "11:30:22 PM",
+                "clock_out": "1:00:30 AM",
+                "minutes": "90.13",
+                "hours": "1.50"
+            },
+            {
+                "clock_in": "4:26:09 PM",
+                "clock_out": "5:04:26 PM",
+                "minutes": "38.27",
+                "hours": "0.64"
+            },
+            {
+                "clock_in": "5:20:19 PM",
+                "clock_out": "8:19:20 PM",
+                "minutes": "179.02",
+                "hours": "2.98"
+            },
+            {
+                "clock_in": "6:15:43 PM",
+                "clock_out": "7:58:57 PM",
+                "minutes": "103.24",
+                "hours": "1.72"
+            },
+            {
+                "clock_in": "8:00:19 PM",
+                "clock_out": "10:52:09 PM",
+                "minutes": "171.83",
+                "hours": "2.86"
+            },
+            {
+                "clock_in": "3:05:49 PM",
+                "clock_out": "5:32:39 PM",
+                "minutes": "146.83",
+                "hours": "2.45"
+            },
+            {
+                "clock_in": "6:30:04 PM",
+                "clock_out": "7:57:30 PM",
+                "minutes": "87.43",
+                "hours": "1.46"
+            },
+            {
+                "clock_in": "8:30:33 PM",
+                "clock_out": "10:26:06 PM",
+                "minutes": "115.55",
+                "hours": "1.93"
+            },
+            {
+                "clock_in": "9:30:06 PM",
+                "clock_out": "12:48:10 AM",
+                "minutes": "198.07",
+                "hours": "3.30"
+            },
+            {
+                "clock_in": "3:22:40 PM",
+                "clock_out": "4:56:17 PM",
+                "minutes": "93.63",
+                "hours": "1.56"
+            },
+            {
+                "clock_in": "6:59:16 PM",
+                "clock_out": "7:28:58 PM",
+                "minutes": "29.70",
+                "hours": "0.49"
+            },
+            {
+                "clock_in": "1:15:05 AM",
+                "clock_out": "1:39:20 AM",
+                "minutes": "24.25",
+                "hours": "0.40"
+            },
+            {
+                "clock_in": "1:52:42 AM",
+                "clock_out": "2:17:35 AM",
+                "minutes": "24.88",
+                "hours": "0.41"
+            }
+        ]
+    },
+    {
+        "date": "10/27/2025",
+        "day": "Monday",
+        "task": "Collage-presentations",
+        "task_id": "task-010",
+        "category": "ACADAMICS",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "12:01:01 AM",
+                "clock_out": "2:16:51 AM",
+                "minutes": "135.82",
+                "hours": "2.26"
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "",
+                "hours": ""
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "",
+                "hours": ""
+            },
+            {
+                "clock_in": "9:34:44 PM",
+                "clock_out": "11:06:15 PM",
+                "minutes": "91.52",
+                "hours": "1.53"
+            },
+            {
+                "clock_in": "2:10:03 PM",
+                "clock_out": "3:05:23 PM",
+                "minutes": "55.33",
+                "hours": "0.92"
+            },
+            {
+                "clock_in": "12:03:30 PM",
+                "clock_out": "12:59:50 PM",
+                "minutes": "56.33",
+                "hours": "0.94"
+            },
+            {
+                "clock_in": "2:48:32 PM",
+                "clock_out": "3:01:48 PM",
+                "minutes": "13.27",
+                "hours": "0.22"
+            },
+            {
+                "clock_in": "3:19:18 PM",
+                "clock_out": "4:00:14 PM",
+                "minutes": "40.93",
+                "hours": "0.68"
+            },
+            {
+                "clock_in": "11:28:11 PM",
+                "clock_out": "11:50:33 PM",
+                "minutes": "22.37",
+                "hours": "0.37"
+            },
+            {
+                "clock_in": "8:35:00 PM",
+                "clock_out": "8:51:24 PM",
+                "minutes": "16.40",
+                "hours": "0.27"
+            },
+            {
+                "clock_in": "10:27:44 PM",
+                "clock_out": "12:31:55 AM",
+                "minutes": "124.18",
+                "hours": "2.07"
+            },
+            {
+                "clock_in": "12:50:12 AM",
+                "clock_out": "1:32:22 AM",
+                "minutes": "42.18",
+                "hours": "0.70"
+            },
+            {
+                "clock_in": "11:08:35 AM",
+                "clock_out": "12:31:51 PM",
+                "minutes": "83.28",
+                "hours": "1.39"
+            },
+            {
+                "clock_in": "12:40:23 PM",
+                "clock_out": "1:21:56 PM",
+                "minutes": "41.55",
+                "hours": "0.69"
+            },
+            {
+                "clock_in": "11:14:53 PM",
+                "clock_out": "1:18:44 AM",
+                "minutes": "123.85",
+                "hours": "2.06"
+            },
+            {
+                "clock_in": "12:22:43 PM",
+                "clock_out": "1:32:13 PM",
+                "minutes": "69.49",
+                "hours": "1.16"
+            },
+            {
+                "clock_in": "2:52:35 PM",
+                "clock_out": "3:48:03 PM",
+                "minutes": "55.47",
+                "hours": "0.92"
+            },
+            {
+                "clock_in": "11:56:57 PM",
+                "clock_out": "1:15:01 AM",
+                "minutes": "78.07",
+                "hours": "1.30"
+            }
+        ]
+    },
+    {
+        "date": "11/9/2025",
+        "day": "Sunday",
+        "task": "Collage-MajorProject",
+        "task_id": "task-006",
+        "category": "ACADAMICS",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "11:41:30 PM",
+                "clock_out": "12:23:17 AM",
+                "minutes": "41.78",
+                "hours": "0.70"
+            },
+            {
+                "clock_in": "6:45:41 PM",
+                "clock_out": "7:07:42 PM",
+                "minutes": "22.02",
+                "hours": "0.37"
+            },
+            {
+                "clock_in": "8:28:39 PM",
+                "clock_out": "12:59:37 AM",
+                "minutes": "270.96",
+                "hours": "4.52"
+            },
+            {
+                "clock_in": "7:00:36 PM",
+                "clock_out": "8:25:04 PM",
+                "minutes": "84.47",
+                "hours": "1.41"
+            },
+            {
+                "clock_in": "9:30:12 PM",
+                "clock_out": "9:59:47 PM",
+                "minutes": "29.59",
+                "hours": "0.49"
+            },
+            {
+                "clock_in": "10:45:38 PM",
+                "clock_out": "1:43:58 AM",
+                "minutes": "178.33",
+                "hours": "2.97"
+            },
+            {
+                "clock_in": "10:00:23 AM",
+                "clock_out": "1:20:28 PM",
+                "minutes": "200.08",
+                "hours": "3.33"
+            },
+            {
+                "clock_in": "9:24:43 PM",
+                "clock_out": "11:51:11 PM",
+                "minutes": "146.47",
+                "hours": "2.44"
+            },
+            {
+                "clock_in": "7:00:58 PM",
+                "clock_out": "7:39:12 PM",
+                "minutes": "38.24",
+                "hours": "0.64"
+            },
+            {
+                "clock_in": "7:55:12 PM",
+                "clock_out": "9:37:32 PM",
+                "minutes": "102.33",
+                "hours": "1.71"
+            },
+            {
+                "clock_in": "12:46:48 PM",
+                "clock_out": "5:36:08 PM",
+                "minutes": "289.33",
+                "hours": "4.82"
+            }
+        ]
+    },
+    {
+        "date": "11/17/2025",
+        "day": "Monday",
+        "task": "SemExam-(DL)-Prep",
+        "task_id": "task-012",
+        "category": "ACADAMICS",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "4:35:43 PM",
+                "clock_out": "5:05:31 PM",
+                "minutes": "29.80",
+                "hours": "0.50"
+            },
+            {
+                "clock_in": "5:50:27 PM",
+                "clock_out": "7:29:38 PM",
+                "minutes": "99.18",
+                "hours": "1.65"
+            },
+            {
+                "clock_in": "9:19:51 PM",
+                "clock_out": "10:31:22 PM",
+                "minutes": "71.52",
+                "hours": "1.19"
+            },
+            {
+                "clock_in": "11:15:28 PM",
+                "clock_out": "12:54:54 AM",
+                "minutes": "99.43",
+                "hours": "1.66"
+            },
+            {
+                "clock_in": "12:00:14 PM",
+                "clock_out": "3:10:03 PM",
+                "minutes": "189.82",
+                "hours": "3.16"
+            },
+            {
+                "clock_in": "4:18:58 PM",
+                "clock_out": "7:45:34 PM",
+                "minutes": "206.59",
+                "hours": "3.44"
+            },
+            {
+                "clock_in": "8:20:24 PM",
+                "clock_out": "10:45:35 PM",
+                "minutes": "145.18",
+                "hours": "2.42"
+            },
+            {
+                "clock_in": "12:00:23 AM",
+                "clock_out": "2:15:51 AM",
+                "minutes": "135.47",
+                "hours": "2.26"
+            },
+            {
+                "clock_in": "3:08:08 AM",
+                "clock_out": "3:53:15 AM",
+                "minutes": "45.12",
+                "hours": "0.75"
+            },
+            {
+                "clock_in": "4:00:39 AM",
+                "clock_out": "12:30:23 PM",
+                "minutes": "509.73",
+                "hours": "8.50"
+            },
+            {
+                "clock_in": "1:07:42 PM",
+                "clock_out": "1:38:26 PM",
+                "minutes": "30.74",
+                "hours": "0.51"
+            },
+            {
+                "clock_in": "2:32:32 PM",
+                "clock_out": "4:09:59 PM",
+                "minutes": "97.44",
+                "hours": "1.62"
+            },
+            {
+                "clock_in": "5:35:36 PM",
+                "clock_out": "6:14:06 PM",
+                "minutes": "38.50",
+                "hours": "0.64"
+            },
+            {
+                "clock_in": "8:55:35 PM",
+                "clock_out": "9:31:19 PM",
+                "minutes": "35.72",
+                "hours": "0.60"
+            }
+        ]
+    },
+    {
+        "date": "11/19/2025",
+        "day": "Wednesday",
+        "task": "Dell(Intern)-Deepclean",
+        "task_id": "task-013",
+        "category": "INTERNSHIP",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "6:00:19 PM",
+                "clock_out": "7:45:57 PM",
+                "minutes": "105.64",
+                "hours": "1.76"
+            },
+            {
+                "clock_in": "1:16:57 AM",
+                "clock_out": "1:47:05 AM",
+                "minutes": "30.13",
+                "hours": "0.50"
+            },
+            {
+                "clock_in": "1:23:53 PM",
+                "clock_out": "2:07:29 PM",
+                "minutes": "43.60",
+                "hours": "0.73"
+            },
+            {
+                "clock_in": "2:22:40 PM",
+                "clock_out": "3:44:06 PM",
+                "minutes": "81.43",
+                "hours": "1.36"
+            },
+            {
+                "clock_in": "4:02:35 PM",
+                "clock_out": "4:41:22 PM",
+                "minutes": "38.78",
+                "hours": "0.65"
+            },
+            {
+                "clock_in": "5:52:54 PM",
+                "clock_out": "7:17:21 PM",
+                "minutes": "84.44",
+                "hours": "1.41"
+            },
+            {
+                "clock_in": "8:12:33 PM",
+                "clock_out": "8:42:48 PM",
+                "minutes": "30.26",
+                "hours": "0.50"
+            },
+            {
+                "clock_in": "8:56:54 PM",
+                "clock_out": "10:03:52 PM",
+                "minutes": "66.97",
+                "hours": "1.12"
+            }
+        ]
+    },
+    {
+        "date": "11/19/2025",
+        "day": "Wednesday",
+        "task": "Dell(Intern)-Deepclean",
+        "task_id": "task-014",
+        "category": "PERSONAL",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "7:45:57 PM",
+                "clock_out": "8:02:24 PM",
+                "minutes": "16.45",
+                "hours": "0.27"
+            },
+            {
+                "clock_in": "8:00:46 AM",
+                "clock_out": "10:30:27 AM",
+                "minutes": "149.68",
+                "hours": "2.49"
+            },
+            {
+                "clock_in": "11:45:23 AM",
+                "clock_out": "12:45:10 PM",
+                "minutes": "59.78",
+                "hours": "1.00"
+            },
+            {
+                "clock_in": "5:00:08 PM",
+                "clock_out": "6:14:16 PM",
+                "minutes": "74.15",
+                "hours": "1.24"
+            },
+            {
+                "clock_in": "6:08:51 PM",
+                "clock_out": "7:09:07 PM",
+                "minutes": "60.26",
+                "hours": "1.00"
+            },
+            {
+                "clock_in": "11:01:57 AM",
+                "clock_out": "11:46:41 AM",
+                "minutes": "44.74",
+                "hours": "0.75"
+            },
+            {
+                "clock_in": "12:55:10 PM",
+                "clock_out": "2:11:02 PM",
+                "minutes": "75.86",
+                "hours": "1.26"
+            },
+            {
+                "clock_in": "6:57:32 PM",
+                "clock_out": "7:42:06 PM",
+                "minutes": "44.57",
+                "hours": "0.74"
+            },
+            {
+                "clock_in": "11:50:20 AM",
+                "clock_out": "1:23:53 PM",
+                "minutes": "93.56",
+                "hours": "1.56"
+            },
+            {
+                "clock_in": "2:18:24 PM",
+                "clock_out": "4:42:48 PM",
+                "minutes": "144.40",
+                "hours": "2.41"
+            },
+            {
+                "clock_in": "4:54:32 PM",
+                "clock_out": "5:02:11 PM",
+                "minutes": "7.65",
+                "hours": "0.13"
+            },
+            {
+                "clock_in": "5:30:31 PM",
+                "clock_out": "6:02:29 PM",
+                "minutes": "31.97",
+                "hours": "0.53"
+            },
+            {
+                "clock_in": "10:18:27 PM",
+                "clock_out": "11:15:40 PM",
+                "minutes": "57.22",
+                "hours": "0.95"
+            },
+            {
+                "clock_in": "11:33:01 PM",
+                "clock_out": "2:22:01 AM",
+                "minutes": "168.99",
+                "hours": "2.82"
+            },
+            {
+                "clock_in": "11:13:15 AM",
+                "clock_out": "11:30:25 AM",
+                "minutes": "17.17",
+                "hours": "0.29"
+            },
+            {
+                "clock_in": "11:39:04 AM",
+                "clock_out": "11:58:34 AM",
+                "minutes": "19.49",
+                "hours": "0.32"
+            }
+        ]
+    },
+    {
+        "date": "11/19/2025",
+        "day": "Wednesday",
+        "task": "Dell(Intern)-Deepclean",
+        "task_id": "task-015",
+        "category": "PERSONAL",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "8:17:57 PM",
+                "clock_out": "8:43:47 PM",
+                "minutes": "25.84",
+                "hours": "0.43"
+            },
+            {
+                "clock_in": "10:30:31 PM",
+                "clock_out": "11:39:19 PM",
+                "minutes": "68.81",
+                "hours": "1.15"
+            },
+            {
+                "clock_in": "4:09:40 PM",
+                "clock_out": "5:00:56 PM",
+                "minutes": "51.26",
+                "hours": "0.85"
+            },
+            {
+                "clock_in": "10:14:00 PM",
+                "clock_out": "11:44:45 PM",
+                "minutes": "90.74",
+                "hours": "1.51"
+            },
+            {
+                "clock_in": "1:12:45 AM",
+                "clock_out": "2:09:30 AM",
+                "minutes": "56.75",
+                "hours": "0.95"
+            },
+            {
+                "clock_in": "12:40:34 AM",
+                "clock_out": "1:39:09 AM",
+                "minutes": "58.58",
+                "hours": "0.98"
+            },
+            {
+                "clock_in": "12:49:30 PM",
+                "clock_out": "2:07:54 PM",
+                "minutes": "78.40",
+                "hours": "1.31"
+            },
+            {
+                "clock_in": "3:30:42 PM",
+                "clock_out": "3:53:10 PM",
+                "minutes": "22.46",
+                "hours": "0.37"
+            },
+            {
+                "clock_in": "12:57:19 PM",
+                "clock_out": "1:14:08 PM",
+                "minutes": "16.81",
+                "hours": "0.28"
+            },
+            {
+                "clock_in": "6:07:36 PM",
+                "clock_out": "7:38:45 PM",
+                "minutes": "91.15",
+                "hours": "1.52"
+            },
+            {
+                "clock_in": "8:05:15 PM",
+                "clock_out": "9:16:11 PM",
+                "minutes": "70.93",
+                "hours": "1.18"
+            },
+            {
+                "clock_in": "1:40:53 PM",
+                "clock_out": "5:05:44 PM",
+                "minutes": "204.85",
+                "hours": "3.41"
+            },
+            {
+                "clock_in": "5:22:47 PM",
+                "clock_out": "6:17:08 PM",
+                "minutes": "54.36",
+                "hours": "0.91"
+            },
+            {
+                "clock_in": "9:28:01 PM",
+                "clock_out": "12:10:18 AM",
+                "minutes": "162.29",
+                "hours": "2.70"
+            },
+            {
+                "clock_in": "1:04:54 AM",
+                "clock_out": "2:30:02 AM",
+                "minutes": "85.14",
+                "hours": "1.42"
+            },
+            {
+                "clock_in": "2:12:46 PM",
+                "clock_out": "4:00:01 PM",
+                "minutes": "107.24",
+                "hours": "1.79"
+            },
+            {
+                "clock_in": "4:30:36 PM",
+                "clock_out": "5:50:02 PM",
+                "minutes": "79.43",
+                "hours": "1.32"
+            },
+            {
+                "clock_in": "6:07:55 PM",
+                "clock_out": "6:33:56 PM",
+                "minutes": "26.01",
+                "hours": "0.43"
+            },
+            {
+                "clock_in": "8:15:42 PM",
+                "clock_out": "8:37:49 PM",
+                "minutes": "22.11",
+                "hours": "0.37"
+            },
+            {
+                "clock_in": "8:58:00 PM",
+                "clock_out": "10:55:56 PM",
+                "minutes": "117.94",
+                "hours": "1.97"
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "0.00",
+                "hours": "0.00"
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "",
+                "hours": ""
+            }
+        ]
+    },
+    {
+        "date": "11/19/2025",
+        "day": "Wednesday",
+        "task": "Dell(Intern)-Deepclean",
+        "task_id": "task-016",
+        "category": "INTERNSHIP",
+        "status": "PENDING",
+        "sessions": [
+            {
+                "clock_in": "12:19:47 AM",
+                "clock_out": "1:51:50 AM",
+                "minutes": "92.04",
+                "hours": "1.53"
+            },
+            {
+                "clock_in": "8:30:08 PM",
+                "clock_out": "9:15:14 PM",
+                "minutes": "45.10",
+                "hours": "0.75"
+            },
+            {
+                "clock_in": "9:50:39 PM",
+                "clock_out": "11:24:29 PM",
+                "minutes": "93.83",
+                "hours": "1.56"
+            },
+            {
+                "clock_in": "10:45:42 AM",
+                "clock_out": "11:52:53 AM",
+                "minutes": "67.19",
+                "hours": "1.12"
+            },
+            {
+                "clock_in": "12:01:45 PM",
+                "clock_out": "1:18:44 PM",
+                "minutes": "76.98",
+                "hours": "1.28"
+            },
+            {
+                "clock_in": "3:21:32 PM",
+                "clock_out": "3:53:09 PM",
+                "minutes": "31.62",
+                "hours": "0.53"
+            },
+            {
+                "clock_in": "2:15:35 PM",
+                "clock_out": "3:01:27 PM",
+                "minutes": "45.87",
+                "hours": "0.76"
+            }
+        ]
+    },
+    {
+        "date": "11/20/2025",
+        "day": "Thursday",
+        "task": "Documentation",
+        "task_id": "task-017",
+        "category": "INTERNSHIP",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "5:17:14 PM",
+                "clock_out": "7:19:37 PM",
+                "minutes": "122.38",
+                "hours": "2.04"
+            },
+            {
+                "clock_in": "7:10:56 PM",
+                "clock_out": "7:56:27 PM",
+                "minutes": "45.52",
+                "hours": "0.76"
+            },
+            {
+                "clock_in": "9:18:30 PM",
+                "clock_out": "10:03:52 PM",
+                "minutes": "45.38",
+                "hours": "0.76"
+            },
+            {
+                "clock_in": "1:32:09 AM",
+                "clock_out": "3:10:04 AM",
+                "minutes": "97.92",
+                "hours": "1.63"
+            },
+            {
+                "clock_in": "5:30:21 PM",
+                "clock_out": "6:05:22 PM",
+                "minutes": "35.01",
+                "hours": "0.58"
+            },
+            {
+                "clock_in": "7:08:23 PM",
+                "clock_out": "7:50:04 PM",
+                "minutes": "41.68",
+                "hours": "0.69"
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "",
+                "hours": ""
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "",
+                "hours": ""
+            },
+            {
+                "clock_in": "7:09:24 PM",
+                "clock_out": "8:05:11 PM",
+                "minutes": "55.78",
+                "hours": "0.93"
+            }
+        ]
+    },
+    {
+        "date": "11/21/2025",
+        "day": "Friday",
+        "task": "Node.js learning",
+        "task_id": "task-019",
+        "category": "Learning",
+        "status": "PENDING",
+        "sessions": [
+            {
+                "clock_in": "8:41:41 PM",
+                "clock_out": "9:23:09 PM",
+                "minutes": "41.48",
+                "hours": "0.69"
+            },
+            {
+                "clock_in": "11:48:45 PM",
+                "clock_out": "1:00:59 AM",
+                "minutes": "72.23",
+                "hours": "1.20"
+            },
+            {
+                "clock_in": "8:49:21 PM",
+                "clock_out": "9:50:39 PM",
+                "minutes": "61.30",
+                "hours": "1.02"
+            },
+            {
+                "clock_in": "10:19:28 PM",
+                "clock_out": "10:51:54 PM",
+                "minutes": "32.43",
+                "hours": "0.54"
+            },
+            {
+                "clock_in": "11:18:25 PM",
+                "clock_out": "12:54:13 AM",
+                "minutes": "95.80",
+                "hours": "1.60"
+            },
+            {
+                "clock_in": "1:14:55 AM",
+                "clock_out": "1:28:34 AM",
+                "minutes": "13.66",
+                "hours": "0.23"
+            },
+            {
+                "clock_in": "3:00:55 PM",
+                "clock_out": "4:52:16 PM",
+                "minutes": "111.36",
+                "hours": "1.86"
+            }
+        ]
+    },
+    {
+        "date": "11/24/2025",
+        "day": "Monday",
+        "task": "Node.js Learning",
+        "task_id": "task-021",
+        "category": "Learning",
+        "status": "PENDING",
+        "sessions": [
+            {
+                "clock_in": "7:08:16 PM",
+                "clock_out": "8:54:24 PM",
+                "minutes": "106.13",
+                "hours": "1.77"
+            },
+            {
+                "clock_in": "9:00:13 PM",
+                "clock_out": "9:53:02 PM",
+                "minutes": "52.81",
+                "hours": "0.88"
+            },
+            {
+                "clock_in": "10:30:03 PM",
+                "clock_out": "11:09:12 PM",
+                "minutes": "39.16",
+                "hours": "0.65"
+            },
+            {
+                "clock_in": "11:15:29 PM",
+                "clock_out": "12:21:19 AM",
+                "minutes": "65.83",
+                "hours": "1.10"
+            },
+            {
+                "clock_in": "12:23:00 AM",
+                "clock_out": "1:35:56 AM",
+                "minutes": "72.93",
+                "hours": "1.22"
+            }
+        ]
+    },
+    {
+        "date": "11/26/2025",
+        "day": "Wednesday",
+        "task": "Sem-(CNS)-Prepration",
+        "task_id": "task-020",
+        "category": "ACADAMICS",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "12:20:55 PM",
+                "clock_out": "12:47:43 PM",
+                "minutes": "26.80",
+                "hours": "0.45"
+            },
+            {
+                "clock_in": "1:20:03 PM",
+                "clock_out": "1:50:24 PM",
+                "minutes": "30.35",
+                "hours": "0.51"
+            },
+            {
+                "clock_in": "3:33:36 PM",
+                "clock_out": "3:53:12 PM",
+                "minutes": "19.60",
+                "hours": "0.33"
+            },
+            {
+                "clock_in": "4:15:01 PM",
+                "clock_out": "5:01:34 PM",
+                "minutes": "46.54",
+                "hours": "0.78"
+            },
+            {
+                "clock_in": "6:00:43 PM",
+                "clock_out": "6:21:09 PM",
+                "minutes": "20.43",
+                "hours": "0.34"
+            },
+            {
+                "clock_in": "8:59:50 PM",
+                "clock_out": "9:41:11 PM",
+                "minutes": "41.36",
+                "hours": "0.69"
+            },
+            {
+                "clock_in": "9:56:56 PM",
+                "clock_out": "11:12:23 PM",
+                "minutes": "75.45",
+                "hours": "1.26"
+            },
+            {
+                "clock_in": "11:20:30 PM",
+                "clock_out": "1:06:13 AM",
+                "minutes": "105.71",
+                "hours": "1.76"
+            },
+            {
+                "clock_in": "10:15:58 PM",
+                "clock_out": "11:30:36 PM",
+                "minutes": "74.63",
+                "hours": "1.24"
+            }
+        ]
+    },
+    {
+        "date": "11/28/2025",
+        "day": "Friday",
+        "task": "Sem-(KRR)-Prep",
+        "task_id": "task-022",
+        "category": "ACADAMICS",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "5:21:48 PM",
+                "clock_out": "6:44:05 PM",
+                "minutes": "82.28",
+                "hours": "1.37"
+            },
+            {
+                "clock_in": "7:33:54 PM",
+                "clock_out": "8:32:32 PM",
+                "minutes": "58.63",
+                "hours": "0.98"
+            },
+            {
+                "clock_in": "9:35:24 PM",
+                "clock_out": "10:52:23 PM",
+                "minutes": "76.98",
+                "hours": "1.28"
+            },
+            {
+                "clock_in": "12:22:38 AM",
+                "clock_out": "1:48:06 AM",
+                "minutes": "85.47",
+                "hours": "1.42"
+            },
+            {
+                "clock_in": "9:05:12 PM",
+                "clock_out": "11:50:43 PM",
+                "minutes": "165.51",
+                "hours": "2.76"
+            },
+            {
+                "clock_in": "5:05:53 PM",
+                "clock_out": "5:59:34 PM",
+                "minutes": "53.69",
+                "hours": "0.89"
+            },
+            {
+                "clock_in": "6:25:44 PM",
+                "clock_out": "7:13:45 PM",
+                "minutes": "48.02",
+                "hours": "0.80"
+            },
+            {
+                "clock_in": "7:35:47 PM",
+                "clock_out": "8:44:46 PM",
+                "minutes": "68.99",
+                "hours": "1.15"
+            },
+            {
+                "clock_in": "9:30:19 PM",
+                "clock_out": "12:01:44 AM",
+                "minutes": "151.42",
+                "hours": "2.52"
+            }
+        ]
+    },
+    {
+        "date": "11/30/2025",
+        "day": "Sunday",
+        "task": "Sem-(HCI)-Prep",
+        "task_id": "task-023",
+        "category": "ACADAMICS",
+        "status": "PENDING",
+        "sessions": [
+            {
+                "clock_in": "5:01:04 PM",
+                "clock_out": "6:52:45 PM",
+                "minutes": "111.69",
+                "hours": "1.86"
+            },
+            {
+                "clock_in": "7:40:30 PM",
+                "clock_out": "8:09:35 PM",
+                "minutes": "29.08",
+                "hours": "0.48"
+            },
+            {
+                "clock_in": "9:00:52 PM",
+                "clock_out": "9:27:48 PM",
+                "minutes": "26.93",
+                "hours": "0.45"
+            },
+            {
+                "clock_in": "10:00:27 PM",
+                "clock_out": "11:00:44 PM",
+                "minutes": "60.29",
+                "hours": "1.00"
+            },
+            {
+                "clock_in": "12:21:10 AM",
+                "clock_out": "1:49:16 AM",
+                "minutes": "88.09",
+                "hours": "1.47"
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "",
+                "hours": ""
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "",
+                "hours": ""
+            },
+            {
+                "clock_in": "9:40:57 AM",
+                "clock_out": "10:21:12 AM",
+                "minutes": "40.24",
+                "hours": "0.67"
+            },
+            {
+                "clock_in": "10:40:25 AM",
+                "clock_out": "11:35:53 AM",
+                "minutes": "55.46",
+                "hours": "0.92"
+            },
+            {
+                "clock_in": "3:36:27 PM",
+                "clock_out": "6:17:53 PM",
+                "minutes": "161.43",
+                "hours": "2.69"
+            },
+            {
+                "clock_in": "6:51:05 PM",
+                "clock_out": "8:48:15 PM",
+                "minutes": "117.16",
+                "hours": "1.95"
+            },
+            {
+                "clock_in": "9:30:32 PM",
+                "clock_out": "11:26:47 PM",
+                "minutes": "116.26",
+                "hours": "1.94"
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "0.00",
+                "hours": "0.00"
+            },
+            {
+                "clock_in": "",
+                "clock_out": "",
+                "minutes": "",
+                "hours": ""
+            }
+        ]
+    },
+    {
+        "date": "12/29/2025",
+        "day": "Monday",
+        "task": "Intern-work",
+        "task_id": "task-018",
+        "category": "INTERNSHIP",
+        "status": "COMPLETED",
+        "sessions": [
+            {
+                "clock_in": "2:10:23 PM",
+                "clock_out": "4:27:31 PM",
+                "minutes": "137.14",
+                "hours": "2.29"
+            },
+            {
+                "clock_in": "10:30:55 AM",
+                "clock_out": "11:32:15 AM",
+                "minutes": "61.33",
+                "hours": "1.02"
+            },
+            {
+                "clock_in": "11:41:29 AM",
+                "clock_out": "12:14:32 PM",
+                "minutes": "33.04",
+                "hours": "0.55"
+            },
+            {
+                "clock_in": "12:40:09 PM",
+                "clock_out": "2:07:04 PM",
+                "minutes": "86.91",
+                "hours": "1.45"
+            },
+            {
+                "clock_in": "3:27:53 PM",
+                "clock_out": "4:50:34 PM",
+                "minutes": "82.67",
+                "hours": "1.38"
+            },
+            {
+                "clock_in": "7:54:51 PM",
+                "clock_out": "9:24:53 PM",
+                "minutes": "90.03",
+                "hours": "1.50"
+            },
+            {
+                "clock_in": "9:38:31 AM",
+                "clock_out": "11:35:36 AM",
+                "minutes": "117.09",
+                "hours": "1.95"
+            }
+        ]
+    },
+    {
+        "date": "3/4/2026",
+        "day": "Wednesday",
+        "task": "Monarch-Tasks",
+        "task_id": "Task-005",
+        "category": "LEARNING",
+        "status": "PENDING",
+        "sessions": [
+            {
+                "clock_in": "8:51:13 PM",
+                "clock_out": "9:52:30 PM",
+                "minutes": "61.28",
+                "hours": "1.02"
+            },
+            {
+                "clock_in": "11:50:03 AM",
+                "clock_out": "12:41:02 PM",
+                "minutes": "50.99",
+                "hours": "0.85"
+            },
+            {
+                "clock_in": "2:00:33 PM",
+                "clock_out": "2:28:05 PM",
+                "minutes": "27.54",
+                "hours": "0.46"
+            },
+            {
+                "clock_in": "2:40:41 PM",
+                "clock_out": "2:53:17 PM",
+                "minutes": "12.61",
+                "hours": "0.21"
+            },
+            {
+                "clock_in": "4:50:31 PM",
+                "clock_out": "6:05:30 PM",
+                "minutes": "74.98",
+                "hours": "1.25"
+            },
+            {
+                "clock_in": "6:06:04 PM",
+                "clock_out": "6:15:43 PM",
+                "minutes": "9.64",
+                "hours": "0.16"
+            }
+        ]
+    },
+    {
+        "date": "3/6/2026",
+        "day": "Friday",
+        "task": "Monarch-Tasks",
+        "task_id": "Task-007",
+        "category": "PROJECT",
+        "status": "PENDING",
+        "sessions": [
+            {
+                "clock_in": "6:23:31 PM",
+                "clock_out": "6:53:47 PM",
+                "minutes": "",
+                "hours": ""
+            },
+            {
+                "clock_in": "7:28:32 PM",
+                "clock_out": "",
+                "minutes": "",
+                "hours": ""
+            }
+        ]
+    }
+]
