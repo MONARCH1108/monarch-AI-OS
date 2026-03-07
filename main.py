@@ -6,6 +6,14 @@ from Components.GSheet_TimeTracker import (
     clean_sheet_time_tracker_data,
     format_sheet_time_tracker_to_json,
 )
+from Components.GSheet_DayHours import (
+    clean_sheet_day_hours_data,
+    format_sheet_day_hours_to_json
+)
+from Components.GSheet_WeekHours import (
+    clean_sheet_week_hours_data,
+    format_sheet_week_hours_to_json
+)
 
 import json
 from mcp.server.fastmcp import FastMCP
@@ -109,6 +117,85 @@ async def get_time_tracker_data() -> str:
     dataset = clean_sheet_time_tracker_data(dataset)
     structured_data = format_sheet_time_tracker_to_json(dataset)
 
+    return json.dumps(structured_data, indent=2)
+
+# -------------------------------
+# TOOL 3
+# Get Day Hours Review Data
+# -------------------------------
+
+@mcp.tool()
+async def get_day_hours_data() -> str:
+    """
+    Retrieve the structured Day Hours Review data from the productivity tracker.
+
+    This tool fetches daily productivity hours recorded in the Day-Hours-Review sheet.
+
+    Use this tool when you need information about:
+    • Daily work hours
+    • Total minutes worked per day
+    • Daily productivity summaries
+    • Work patterns across days
+
+    Returns:
+        JSON array of daily productivity records with the following structure:
+
+        [
+            {
+                "date": "YYYY-MM-DD",
+                "day": "Monday",
+                "minutes": 607.77,
+                "hours": 10.13,
+                "summary": "10 Hours 8 Min"
+            }
+        ]
+    """
+
+    from Components.GSheet_DayHours import authenticate_and_fetch_sheet_data as fetch_dayhours_data
+
+    dataset = fetch_dayhours_data(credentials_path, sheet_id)
+    dataset = clean_sheet_day_hours_data(dataset)
+    structured_data = format_sheet_day_hours_to_json(dataset)
+
+    return json.dumps(structured_data, indent=2)
+
+# -------------------------------
+# TOOL 4
+# Get Weekly Hours Review Data
+# -------------------------------
+
+@mcp.tool()
+async def get_weekly_hours_data() -> str:
+    """
+    Retrieve the structured Weekly Hours Review data from the productivity tracker.
+
+    This tool fetches weekly productivity summaries from the Weekly-Review sheet.
+
+    Use this tool when you need information about:
+    • Weekly productivity hours
+    • Weekly work summaries
+    • Work distribution across weeks
+    • Monthly productivity totals
+
+    Returns:
+        JSON array of weekly productivity records with the following structure:
+
+        [
+            {
+                "month": "October",
+                "range": "12th - 18th",
+                "hours": 28.79,
+                "minutes": 1727.31,
+                "summary": "28 Hrs 48 Min"
+            }
+        ]
+    """
+
+    from Components.GSheet_WeekHours import authenticate_and_fetch_sheet_data as fetch_weekhours_data
+
+    dataset = fetch_weekhours_data(credentials_path, sheet_id)
+    dataset = clean_sheet_week_hours_data(dataset)
+    structured_data = format_sheet_week_hours_to_json(dataset)
     return json.dumps(structured_data, indent=2)
 
 # -------------------------------
