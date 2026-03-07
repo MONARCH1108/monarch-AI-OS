@@ -1,6 +1,7 @@
 import gspread
 import pandas as pd
 import json
+from datetime import datetime
 from google.oauth2.service_account import Credentials
 
 
@@ -27,10 +28,23 @@ def authenticate_and_fetch_sheet_data(credentials_path, sheet_id):
 # Cleaning logic specific to Sheet1 TaskDesk
 # ---------------------------------------------------
 def clean_sheet1_taskdesk_data(dataset):
+
     dataset.replace("", pd.NA, inplace=True)
+
     dataset["Date"] = dataset["Date"].ffill()
     dataset["Objective"] = dataset["Objective"].ffill()
+
     dataset = dataset.fillna("")
+
+    # remove leading/trailing spaces
+    dataset["Date"] = dataset["Date"].astype(str).str.strip()
+    dataset["Objective"] = dataset["Objective"].astype(str).str.strip()
+
+    # normalize objective case
+    dataset["Objective"] = dataset["Objective"].apply(
+        lambda x: x.title() if x != "" else x
+    )
+
     return dataset
 
 
@@ -42,23 +56,34 @@ def format_sheet1_taskdesk_to_json(dataset):
     structured_data = []
     current_task = None
     for _, row in dataset.iterrows():
+        date_str = row["Date"]
+
+        # Skip rows like "October Month 2025"
+        try:
+            formatted_date = datetime.strptime(date_str, "%m/%d/%Y").strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+
         if row["Task-ID"] != "":
+            base_task_id = row["Task-ID"]
+            unique_task_id = f"{formatted_date}-{base_task_id}"
             current_task = {
-                "date": row["Date"],
+                "date": formatted_date,
                 "objective": row["Objective"],
-                "task_id": row["Task-ID"],
+                "task_id": unique_task_id,
                 "subtasks": []
             }
-
             if row["Task-Description"] != "":
-                current_task["subtasks"].append(row["Task-Description"])
+                subtask = row["Task-Description"].lstrip("- ").strip()
+                current_task["subtasks"].append(subtask)
+
             structured_data.append(current_task)
         else:
             if current_task and row["Task-Description"] != "":
-                current_task["subtasks"].append(row["Task-Description"])
+                subtask = row["Task-Description"].lstrip("- ").strip()
+                current_task["subtasks"].append(subtask)
 
     return structured_data
-
 
 # ---------------------------------------------------
 # MAIN EXECUTION
