@@ -1,0 +1,184 @@
+[
+    {
+        "month": "October",
+        "range": "1st - 4th ",
+        "hours": 0.0,
+        "minutes": 0.0,
+        "summary": "0 Hrs 0 Min"
+    },
+    {
+        "month": "October",
+        "range": "5th - 11th",
+        "hours": 0.0,
+        "minutes": 0.0,
+        "summary": "0 Hrs 0 Min"
+    },
+    {
+        "month": "October",
+        "range": "12th - 18th",
+        "hours": 28.79,
+        "minutes": 1727.31,
+        "summary": "28 Hrs 48 Min"
+    },
+    {
+        "month": "October",
+        "range": "19th - 25th",
+        "hours": 0.0,
+        "minutes": 0.0,
+        "summary": "0 Hrs 0 Min"
+    },
+    {
+        "month": "October",
+        "range": "26th - 31th",
+        "hours": 12.0,
+        "minutes": 720.25,
+        "summary": "12 Hrs 0 Min"
+    },
+    {
+        "month": "November",
+        "range": "1st & 30th",
+        "hours": 5.27,
+        "minutes": 316.08,
+        "summary": "5 Hrs 16 Min"
+    },
+    {
+        "month": "November",
+        "range": "2nd - 8th",
+        "hours": 8.22,
+        "minutes": 493.49,
+        "summary": "8 Hrs 13 Min"
+    },
+    {
+        "month": "November",
+        "range": "9th - 15th",
+        "hours": 8.08,
+        "minutes": 484.98,
+        "summary": "8 Hrs 5 Min"
+    },
+    {
+        "month": "November",
+        "range": "16th - 22nd",
+        "hours": 19.42,
+        "minutes": 1165.39,
+        "summary": "19 Hrs 25 Min"
+    },
+    {
+        "month": "November",
+        "range": "23rd - 29th",
+        "hours": 20.8,
+        "minutes": 1248.08,
+        "summary": "20 Hrs 48 Min"
+    },
+    {
+        "month": "December",
+        "range": "1st - 6th",
+        "hours": 15.03,
+        "minutes": 901.25,
+        "summary": "15 hr 2 min"
+    },
+    {
+        "month": "December",
+        "range": "7th-13th",
+        "hours": 12.51,
+        "minutes": 750.63,
+        "summary": "12 hr 31 min"
+    },
+    {
+        "month": "December",
+        "range": "14th-20th",
+        "hours": 24.92,
+        "minutes": 1495.68,
+        "summary": "24 hr 55 min"
+    },
+    {
+        "month": "December",
+        "range": "21st-27th",
+        "hours": 24.81,
+        "minutes": 1488.69,
+        "summary": "24 hr 49 min"
+    },
+    {
+        "month": "December",
+        "range": "28th-31st",
+        "hours": 6.71,
+        "minutes": 402.64,
+        "summary": "6 hr 43 min"
+    },
+    {
+        "month": "January",
+        "range": "1st - 3rd",
+        "hours": 6.16,
+        "minutes": 369.88,
+        "summary": "6 hr 10 min"
+    },
+    {
+        "month": "January",
+        "range": "4th - 10th",
+        "hours": 28.74,
+        "minutes": 1724.68,
+        "summary": "28 hr 44 min"
+    },
+    {
+        "month": "January",
+        "range": "11th - 17th",
+        "hours": 27.26,
+        "minutes": 1635.38,
+        "summary": "27 hr 16 min"
+    },
+    {
+        "month": "January",
+        "range": "18th - 24th",
+        "hours": 6.66,
+        "minutes": 399.85,
+        "summary": "6 hr 40 min"
+    },
+    {
+        "month": "January",
+        "range": "25th - 31st",
+        "hours": 27.07,
+        "minutes": 1624.4,
+        "summary": "27 hr 4 min"
+    },
+    {
+        "month": "January",
+        "range": "1st - 31st",
+        "hours": 95.9,
+        "minutes": 5754.2,
+        "summary": "95 hr 54 min"
+    },
+    {
+        "month": "February",
+        "range": "1st - 7th",
+        "hours": 1554.89,
+        "minutes": 25.91,
+        "summary": "25 hr 55 min"
+    },
+    {
+        "month": "February",
+        "range": "8th - 14th",
+        "hours": 589.433,
+        "minutes": 9.823883333,
+        "summary": "9 hr 49 min"
+    },
+    {
+        "month": "February",
+        "range": "15th - 21st",
+        "hours": 970.63,
+        "minutes": 16.18,
+        "summary": "16 hr 11 min"
+    },
+    {
+        "month": "February",
+        "range": "22nd - 28th",
+        "hours": 893.1836833,
+        "minutes": 14.88639472,
+        "summary": "14 hr 53 min"
+    },
+    {
+        "month": "February",
+        "range": "1st - 28th",
+        "hours": 4008.14,
+        "minutes": 66.8,
+        "summary": "66 hr 48 min"
+    }
+]
