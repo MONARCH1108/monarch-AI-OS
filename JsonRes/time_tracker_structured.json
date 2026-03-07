@@ -1977,16 +1977,38 @@
         "task": "Monarch-Tasks",
         "task_id": "Task-007",
         "category": "PROJECT",
-        "status": "PENDING",
+        "status": "COMPLETED",
         "sessions": [
             {
                 "clock_in": "6:23:31 PM",
                 "clock_out": "6:53:47 PM",
-                "minutes": "",
-                "hours": ""
+                "minutes": 30.26,
+                "hours": 0.5
             },
             {
                 "clock_in": "7:28:32 PM",
+                "clock_out": "8:16:58 PM",
+                "minutes": 48.43,
+                "hours": 0.81
+            },
+            {
+                "clock_in": "8:58:16 PM",
+                "clock_out": "9:32:23 PM",
+                "minutes": 34.12,
+                "hours": 0.57
+            }
+        ]
+    },
+    {
+        "date": "3/7/2026",
+        "day": "Friday",
+        "task": "Monarch-Tasks",
+        "task_id": "Task-008",
+        "category": "PROJECT",
+        "status": "PENDING",
+        "sessions": [
+            {
+                "clock_in": "10:15:02 AM",
                 "clock_out": "",
                 "minutes": "",
                 "hours": ""

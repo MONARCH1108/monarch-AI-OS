@@ -81,25 +81,14 @@ def format_sheet_time_tracker_to_json(dataset):
     return structured_data
 
 def main():
-
     credentials_path = "config/Credentials.json"
     sheet_id = "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM"
-
-    # Fetch data
     dataset = authenticate_and_fetch_sheet_data(credentials_path, sheet_id)
-
-    # Clean dataset
     dataset = clean_sheet_time_tracker_data(dataset)
-
-    # Format to JSON structure
     structured_data = format_sheet_time_tracker_to_json(dataset)
-
-    # Save output for testing
-    with open("time_tracker_structured.json", "w", encoding="utf-8") as f:
+    with open("JsonRes/time_tracker_structured.json", "w", encoding="utf-8") as f:
         json.dump(structured_data, f, indent=4)
-
     print("Time Tracker JSON created successfully.")
-
 
 if __name__ == "__main__":
     main()
