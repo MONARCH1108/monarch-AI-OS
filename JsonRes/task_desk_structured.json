@@ -997,9 +997,9 @@
         ]
     },
     {
-        "date": "2026-03-03",
+        "date": "2026-03-06",
         "objective": "[Mn] Objective 1",
-        "task_id": "2026-03-03-task-007",
+        "task_id": "2026-03-06-task-007",
         "subtasks": [
             "Complete the baseline idea of the monarch management application",
             "Complete the repository set up of the project with information",
@@ -1009,16 +1009,35 @@
         ]
     },
     {
-        "date": "2026-03-03",
+        "date": "2026-03-07",
         "objective": "[Mn] Objective 1",
-        "task_id": "2026-03-03-task-008",
+        "task_id": "2026-03-07-task-008",
         "subtasks": [
             "Create an API or MCP Version of pulling daily & weekly hours",
-            "Do R&D on which is the best version for Pulling data MCP or API",
-            "Make a plan on complete automation of sheets with implementation",
-            "Complete the entire google sheets automation using any one server",
-            "make the server configurable where any react frontend app can fetch it",
-            "Complete the sheets input/output completly in automation"
+            "Formatting of data from sheets into a proper JSON, for better analystics",
+            "Applying that formatting for all the sheets data JSON",
+            "Start with basic daily hours formatting from time tracker JSON,"
+        ]
+    },
+    {
+        "date": "2026-03-09",
+        "objective": "[In] Objective 3",
+        "task_id": "2026-03-09-task-009",
+        "subtasks": [
+            "Complete the PA Dashbaord setup locally,",
+            "Run it locally with differnt CTI Integrations to see how they work",
+            "See for ways to integrate dailpad CTI in an another seperate react app",
+            "Try to atleast make a call from the local dailpad CTI from react app"
+        ]
+    },
+    {
+        "date": "2026-03-09",
+        "objective": "[Mn] Objective 1",
+        "task_id": "2026-03-09-task-010",
+        "subtasks": [
+            "Complete the DayWise Hours automation to & from sheets completly,",
+            "Complete the WeekWise Hours automation to & from sheets completly,",
+            "Create a flow for automation flow for day & week at one request"
         ]
     }
 ]

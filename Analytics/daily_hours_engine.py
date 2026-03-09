@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import gspread
+from datetime import datetime
 from google.oauth2.service_account import Credentials
 
 def load_sessions(json_path):
@@ -9,8 +10,11 @@ def load_sessions(json_path):
     return pd.DataFrame(data)
 
 def compute_daily_hours(session_df):
+
     session_df["minutes"] = pd.to_numeric(session_df["minutes"], errors="coerce").fillna(0)
     session_df["hours"] = pd.to_numeric(session_df["hours"], errors="coerce").fillna(0)
+
+    # Aggregate hours per day
     daily_df = (
         session_df
         .groupby("date")
@@ -20,27 +24,43 @@ def compute_daily_hours(session_df):
         )
         .reset_index()
     )
+
+    # Convert to datetime
+    daily_df["date"] = pd.to_datetime(daily_df["date"])
+
+    # Generate full date range
+    full_range = pd.date_range(
+        start=daily_df["date"].min(),
+        end=pd.Timestamp.today()
+    )
+
+    full_df = pd.DataFrame({"date": full_range})
+
+    # Merge with computed data
+    daily_df = full_df.merge(daily_df, on="date", how="left")
+
+    # Fill missing values
+    daily_df["minutes"] = daily_df["minutes"].fillna(0)
+    daily_df["hours"] = daily_df["hours"].fillna(0)
+
+    # Convert date back to string format
+    daily_df["date"] = daily_df["date"].dt.strftime("%Y-%m-%d")
+
     return daily_df
 
 def add_summary_column(daily_df):
-
     summaries = []
-
     for _, row in daily_df.iterrows():
-
         hours_val = float(row["hours"])
         minutes_val = float(row["minutes"])
-
         hours = int(hours_val)
         minutes = int(minutes_val % 60)
-
         summaries.append(f"{hours} Hours {minutes} Min")
-
     daily_df["summary"] = summaries
-
     return daily_df
 
 def daily_df_to_json(daily_df):
+    daily_df = daily_df.fillna(0)
     records = daily_df.to_dict(orient="records")
     return records
 
@@ -60,42 +80,69 @@ def update_daily_sheet(credentials_path, sheet_id, worksheet_name, records):
     client = gspread.authorize(credentials)
 
     sheet = client.open_by_key(sheet_id)
-
     worksheet = sheet.worksheet(worksheet_name)
 
-    rows = worksheet.get_all_values()
+    # Fetch existing sheet data
+    existing_data = worksheet.get_all_values()
 
-    for record in records:
+    if existing_data:
+        header = existing_data[0]
+        rows = existing_data[1:]
+    else:
+        header = ["Date", "Task", "Minutes", "Hours", "Summary"]
+        rows = []
 
-        date = record["date"]
+    # Convert existing rows into dataframe
+    if rows:
+        sheet_df = pd.DataFrame(rows, columns=header)
+    else:
+        sheet_df = pd.DataFrame(columns=header)
 
-        for i, row in enumerate(rows):
+    # Build analytics dataframe
+    analytics_df = pd.DataFrame(records)
 
-            if row[0] == date:
+    analytics_df["Date"] = pd.to_datetime(analytics_df["date"]).dt.strftime("%m/%d/%Y")
+    analytics_df = analytics_df.rename(columns={
+        "minutes": "Minutes",
+        "hours": "Hours",
+        "summary": "Summary"
+    })
 
-                worksheet.update(
-                    f"C{i+1}:E{i+1}",
-                    [[
-                        record["minutes"],
-                        record["hours"],
-                        record["summary"]
-                    ]]
-                )
+    analytics_df = analytics_df[["Date", "Minutes", "Hours", "Summary"]]
 
-                break
+    # Merge existing + new data
+    if not sheet_df.empty:
+
+        sheet_df["Date"] = sheet_df["Date"].astype(str)
+
+        merged_df = pd.concat([sheet_df, analytics_df])
+
+        merged_df = merged_df.drop_duplicates(subset=["Date"], keep="last")
+
+        merged_df = merged_df.sort_values("Date")
+
+    else:
+
+        merged_df = analytics_df
+
+    # Convert dataframe to rows for sheet
+    final_rows = [merged_df.columns.tolist()] + merged_df.values.tolist()
+
+    # One API call to update everything
+    worksheet.clear()
+    worksheet.update(
+        range_name="A1",
+        values=final_rows
+    )
+
+    print("Sheet successfully synced with analytics.")
 
 def run_daily_analytics():
-
     session_df = load_sessions("JsonRes/time_tracker_structured.json")
-
     daily_df = compute_daily_hours(session_df)
-
     daily_df = add_summary_column(daily_df)
-
     records = daily_df_to_json(daily_df)
-
     save_daily_json(records, "JsonRes/daily_hours.json")
-
     update_daily_sheet(
         "config/Credentials.json",
         "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM",   # spreadsheet ID
