@@ -57,6 +57,69 @@ def save_weekly_json(records, path):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(records, f, indent=4)
 
+def apply_weekly_formatting(sheet, worksheet, df):
+    sheet_id = worksheet.id
+    requests = []
+    start_dates = pd.to_datetime(df["Start"], format="%Y-%m-%d")
+    current_month = None
+    start_row = None
+    for idx, date_obj in enumerate(start_dates):
+        month = date_obj.month
+        sheet_row = idx + 1
+        if current_month is None:
+            current_month = month
+            start_row = sheet_row
+        elif month != current_month:
+            end_row = sheet_row
+            if current_month % 2 == 0:
+                color = {"red": 0.059, "green": 0.616, "blue": 0.345}
+            else:
+                color = {"red": 0.957, "green": 0.894, "blue": 0.000}
+            requests.append({
+                "repeatCell": {
+                    "range": {
+                        "sheetId": sheet_id,
+                        "startRowIndex": start_row,
+                        "endRowIndex": end_row,
+                        "startColumnIndex": 0,
+                        "endColumnIndex": 6
+                    },
+                    "cell": {
+                        "userEnteredFormat": {
+                            "backgroundColor": color
+                        }
+                    },
+                    "fields": "userEnteredFormat.backgroundColor"
+                }
+            })
+            current_month = month
+            start_row = sheet_row
+    if current_month is not None:
+        end_row = len(df) + 1
+        if current_month % 2 == 0:
+            color = {"red": 0.059, "green": 0.616, "blue": 0.345}
+        else:
+            color = {"red": 0.957, "green": 0.894, "blue": 0.000}
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": sheet_id,
+                    "startRowIndex": start_row,
+                    "endRowIndex": end_row,
+                    "startColumnIndex": 0,
+                    "endColumnIndex": 6
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "backgroundColor": color
+                    }
+                },
+                "fields": "userEnteredFormat.backgroundColor"
+            }
+        })
+    if requests:
+        sheet.batch_update({"requests": requests})
+    print("Weekly block formatting applied.")
 
 def update_weekly_sheet(credentials_path, sheet_id, worksheet_name, records):
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
@@ -82,6 +145,7 @@ def update_weekly_sheet(credentials_path, sheet_id, worksheet_name, records):
         range_name="A1",
         values=final_rows
     )
+    apply_weekly_formatting(sheet, worksheet, df)
     print("Weekly sheet updated.")
 
 
