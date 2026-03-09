@@ -72,9 +72,9 @@ def apply_weekly_formatting(sheet, worksheet, df):
         elif month != current_month:
             end_row = sheet_row
             if current_month % 2 == 0:
-                color = {"red": 0.059, "green": 0.616, "blue": 0.345}
+                color = {"red": 0.4, "green": 0.698, "blue": 1.0}
             else:
-                color = {"red": 0.957, "green": 0.894, "blue": 0.000}
+                color = {"red": 0.0, "green": 0.47, "blue": 0.84} 
             requests.append({
                 "repeatCell": {
                     "range": {
@@ -97,9 +97,9 @@ def apply_weekly_formatting(sheet, worksheet, df):
     if current_month is not None:
         end_row = len(df) + 1
         if current_month % 2 == 0:
-            color = {"red": 0.059, "green": 0.616, "blue": 0.345}
+            color = {"red": 0.4, "green": 0.698, "blue": 1.0}
         else:
-            color = {"red": 0.957, "green": 0.894, "blue": 0.000}
+            color = {"red": 0.0, "green": 0.47, "blue": 0.84} 
         requests.append({
             "repeatCell": {
                 "range": {
