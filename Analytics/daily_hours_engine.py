@@ -14,7 +14,6 @@ def compute_daily_hours(session_df):
     session_df["minutes"] = pd.to_numeric(session_df["minutes"], errors="coerce").fillna(0)
     session_df["hours"] = pd.to_numeric(session_df["hours"], errors="coerce").fillna(0)
 
-    # Aggregate hours per day
     daily_df = (
         session_df
         .groupby("date")
@@ -25,25 +24,22 @@ def compute_daily_hours(session_df):
         .reset_index()
     )
 
-    # Convert to datetime
     daily_df["date"] = pd.to_datetime(daily_df["date"])
 
-    # Generate full date range
-    full_range = pd.date_range(
-        start=daily_df["date"].min(),
-        end=pd.Timestamp.today()
-    )
+    # START DATE FIX
+    start_date = pd.Timestamp("2025-10-01")
+
+    end_date = pd.Timestamp.today()
+
+    full_range = pd.date_range(start=start_date, end=end_date)
 
     full_df = pd.DataFrame({"date": full_range})
 
-    # Merge with computed data
     daily_df = full_df.merge(daily_df, on="date", how="left")
 
-    # Fill missing values
     daily_df["minutes"] = daily_df["minutes"].fillna(0)
     daily_df["hours"] = daily_df["hours"].fillna(0)
 
-    # Convert date back to string format
     daily_df["date"] = daily_df["date"].dt.strftime("%Y-%m-%d")
 
     return daily_df
@@ -119,7 +115,11 @@ def update_daily_sheet(credentials_path, sheet_id, worksheet_name, records):
 
         merged_df = merged_df.drop_duplicates(subset=["Date"], keep="last")
 
+        merged_df["Date"] = pd.to_datetime(merged_df["Date"], format="%m/%d/%Y")
+
         merged_df = merged_df.sort_values("Date")
+        
+        merged_df["Date"] = merged_df["Date"].dt.strftime("%m/%d/%Y")
 
     else:
 
@@ -134,8 +134,47 @@ def update_daily_sheet(credentials_path, sheet_id, worksheet_name, records):
         range_name="A1",
         values=final_rows
     )
-
     print("Sheet successfully synced with analytics.")
+    apply_monthly_formatting(sheet, worksheet, merged_df)
+
+def apply_monthly_formatting(sheet, worksheet, merged_df):
+
+    sheet_id = worksheet.id
+    requests = []
+
+    for i, date_str in enumerate(merged_df["Date"], start=1):
+
+        date_obj = datetime.strptime(date_str, "%m/%d/%Y")
+        month = date_obj.month
+
+        # EVEN months → green
+        if month % 2 == 0:
+            color = {"red": 0.059, "green": 0.616, "blue": 0.345}  # green
+        else:
+            color = {"red": 0.957, "green": 0.894, "blue": 0.000}  # yellow
+
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": sheet_id,
+                    "startRowIndex": i,
+                    "endRowIndex": i + 1,
+                    "startColumnIndex": 0,
+                    "endColumnIndex": 4
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "backgroundColor": color
+                    }
+                },
+                "fields": "userEnteredFormat.backgroundColor"
+            }
+        })
+
+    if requests:
+        sheet.batch_update({"requests": requests})
+
+    print("Monthly color formatting applied.")
 
 def run_daily_analytics():
     session_df = load_sessions("JsonRes/time_tracker_structured.json")
