@@ -55,71 +55,63 @@ def save_daily_json(records, path):
         json.dump(records, f, indent=4)
 
 def update_daily_sheet(credentials_path, sheet_id, worksheet_name, records):
+
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
+
     credentials = Credentials.from_service_account_file(
         credentials_path,
         scopes=scopes
     )
+
     client = gspread.authorize(credentials)
+
     sheet = client.open_by_key(sheet_id)
     worksheet = sheet.worksheet(worksheet_name)
 
-    # Fetch existing sheet data
-    existing_data = worksheet.get_all_values()
-    if existing_data:
-        header = existing_data[0]
-        rows = existing_data[1:]
-    else:
-        header = ["Date", "Task", "Minutes", "Hours", "Summary"]
-        rows = []
-    if rows:
-        sheet_df = pd.DataFrame(rows, columns=header)
-    else:
-        sheet_df = pd.DataFrame(columns=header)
-    analytics_df = pd.DataFrame(records)
-    analytics_df["Date"] = pd.to_datetime(analytics_df["date"]).dt.strftime("%m/%d/%Y")
-    analytics_df = analytics_df.rename(columns={
+    # Build dataframe directly from analytics
+    df = pd.DataFrame(records)
+
+    df["Date"] = pd.to_datetime(df["date"]).dt.strftime("%m/%d/%Y")
+
+    df = df.rename(columns={
         "minutes": "Minutes",
         "hours": "Hours",
         "summary": "Summary"
     })
-    analytics_df = analytics_df[["Date", "Minutes", "Hours", "Summary"]]
 
-    # Merge existing + new data
-    if not sheet_df.empty:
-        sheet_df["Date"] = sheet_df["Date"].astype(str)
-        merged_df = pd.concat([sheet_df, analytics_df])
-        merged_df = merged_df.drop_duplicates(subset=["Date"], keep="last")
-        merged_df["Date"] = pd.to_datetime(merged_df["Date"], format="%m/%d/%Y")
-        merged_df = merged_df.sort_values("Date")
-        merged_df["Date"] = merged_df["Date"].dt.strftime("%m/%d/%Y")
-    else:
-        merged_df = analytics_df
+    df = df[["Date", "Minutes", "Hours", "Summary"]]
 
-    # Convert dataframe to rows for sheet
-    final_rows = [merged_df.columns.tolist()] + merged_df.values.tolist()
+    # Convert dataframe to sheet rows
+    final_rows = [df.columns.tolist()] + df.values.tolist()
 
-    # One API call to update everything
+    # Replace entire sheet
     worksheet.clear()
+
     worksheet.update(
         range_name="A1",
         values=final_rows
     )
-    print("Sheet successfully synced with analytics.")
-    apply_monthly_formatting(sheet, worksheet, merged_df)
 
-def apply_monthly_formatting(sheet, worksheet, merged_df):
+    print("Sheet rebuilt from analytics.")
+
+    # Apply monthly colors
+    apply_monthly_formatting(sheet, worksheet, df)
+
+def apply_monthly_formatting(sheet, worksheet, df):
+
     sheet_id = worksheet.id
     requests = []
-    for i, date_str in enumerate(merged_df["Date"], start=1):
+
+    for i, date_str in enumerate(df["Date"], start=1):
+
         date_obj = datetime.strptime(date_str, "%m/%d/%Y")
         month = date_obj.month
 
-        # EVEN months → green
         if month % 2 == 0:
             color = {"red": 0.059, "green": 0.616, "blue": 0.345}  # green
         else:
             color = {"red": 0.957, "green": 0.894, "blue": 0.000}  # yellow
+
         requests.append({
             "repeatCell": {
                 "range": {
@@ -140,6 +132,7 @@ def apply_monthly_formatting(sheet, worksheet, merged_df):
 
     if requests:
         sheet.batch_update({"requests": requests})
+
     print("Monthly color formatting applied.")
 
 def run_daily_analytics():
