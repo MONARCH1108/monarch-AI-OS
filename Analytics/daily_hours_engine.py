@@ -22,8 +22,6 @@ def compute_daily_hours(session_df):
         .reset_index()
     )
     daily_df["date"] = pd.to_datetime(daily_df["date"])
-
-    # START DATE FIX
     start_date = pd.Timestamp("2025-10-01")
     end_date = pd.Timestamp.today()
     full_range = pd.date_range(start=start_date, end=end_date)
@@ -55,69 +53,80 @@ def save_daily_json(records, path):
         json.dump(records, f, indent=4)
 
 def update_daily_sheet(credentials_path, sheet_id, worksheet_name, records):
-
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-
     credentials = Credentials.from_service_account_file(
         credentials_path,
         scopes=scopes
     )
-
     client = gspread.authorize(credentials)
-
     sheet = client.open_by_key(sheet_id)
     worksheet = sheet.worksheet(worksheet_name)
-
-    # Build dataframe directly from analytics
     df = pd.DataFrame(records)
-
     df["Date"] = pd.to_datetime(df["date"]).dt.strftime("%m/%d/%Y")
-
     df = df.rename(columns={
         "minutes": "Minutes",
         "hours": "Hours",
         "summary": "Summary"
     })
-
     df = df[["Date", "Minutes", "Hours", "Summary"]]
-
-    # Convert dataframe to sheet rows
     final_rows = [df.columns.tolist()] + df.values.tolist()
-
-    # Replace entire sheet
-    worksheet.clear()
-
     worksheet.update(
         range_name="A1",
         values=final_rows
     )
-
     print("Sheet rebuilt from analytics.")
-
-    # Apply monthly colors
     apply_monthly_formatting(sheet, worksheet, df)
 
 def apply_monthly_formatting(sheet, worksheet, df):
-
     sheet_id = worksheet.id
     requests = []
-
-    for i, date_str in enumerate(df["Date"], start=1):
-
-        date_obj = datetime.strptime(date_str, "%m/%d/%Y")
+    dates = pd.to_datetime(df["Date"], format="%m/%d/%Y")
+    current_month = None
+    start_row = None
+    for idx, date_obj in enumerate(dates):
         month = date_obj.month
+        sheet_row = idx + 1
+        if current_month is None:
+            current_month = month
+            start_row = sheet_row
+        elif month != current_month:
+            end_row = sheet_row
+            if current_month % 2 == 0:
+                color = {"red": 0.059, "green": 0.616, "blue": 0.345}  # green
+            else:
+                color = {"red": 0.957, "green": 0.894, "blue": 0.000}  # yellow
+            requests.append({
+                "repeatCell": {
+                    "range": {
+                        "sheetId": sheet_id,
+                        "startRowIndex": start_row,
+                        "endRowIndex": end_row,
+                        "startColumnIndex": 0,
+                        "endColumnIndex": 4
+                    },
+                    "cell": {
+                        "userEnteredFormat": {
+                            "backgroundColor": color
+                        }
+                    },
+                    "fields": "userEnteredFormat.backgroundColor"
+                }
+            })
+            current_month = month
+            start_row = sheet_row
 
-        if month % 2 == 0:
-            color = {"red": 0.059, "green": 0.616, "blue": 0.345}  # green
+    if current_month is not None:
+        end_row = len(df) + 1
+        if current_month % 2 == 0:
+            color = {"red": 0.059, "green": 0.616, "blue": 0.345}
         else:
-            color = {"red": 0.957, "green": 0.894, "blue": 0.000}  # yellow
-
+            color = {"red": 0.957, "green": 0.894, "blue": 0.000}
         requests.append({
             "repeatCell": {
                 "range": {
                     "sheetId": sheet_id,
-                    "startRowIndex": i,
-                    "endRowIndex": i + 1,
+                    "startRowIndex": start_row,
+                    "endRowIndex": end_row,
                     "startColumnIndex": 0,
                     "endColumnIndex": 4
                 },
@@ -132,8 +141,7 @@ def apply_monthly_formatting(sheet, worksheet, df):
 
     if requests:
         sheet.batch_update({"requests": requests})
-
-    print("Monthly color formatting applied.")
+    print("Monthly block formatting applied.")
 
 def run_daily_analytics():
     session_df = load_sessions("JsonRes/time_tracker_structured.json")
