@@ -10,10 +10,8 @@ def load_sessions(json_path):
     return pd.DataFrame(data)
 
 def compute_daily_hours(session_df):
-
     session_df["minutes"] = pd.to_numeric(session_df["minutes"], errors="coerce").fillna(0)
     session_df["hours"] = pd.to_numeric(session_df["hours"], errors="coerce").fillna(0)
-
     daily_df = (
         session_df
         .groupby("date")
@@ -23,25 +21,17 @@ def compute_daily_hours(session_df):
         )
         .reset_index()
     )
-
     daily_df["date"] = pd.to_datetime(daily_df["date"])
 
     # START DATE FIX
     start_date = pd.Timestamp("2025-10-01")
-
     end_date = pd.Timestamp.today()
-
     full_range = pd.date_range(start=start_date, end=end_date)
-
     full_df = pd.DataFrame({"date": full_range})
-
     daily_df = full_df.merge(daily_df, on="date", how="left")
-
     daily_df["minutes"] = daily_df["minutes"].fillna(0)
     daily_df["hours"] = daily_df["hours"].fillna(0)
-
     daily_df["date"] = daily_df["date"].dt.strftime("%Y-%m-%d")
-
     return daily_df
 
 def add_summary_column(daily_df):
@@ -65,64 +55,45 @@ def save_daily_json(records, path):
         json.dump(records, f, indent=4)
 
 def update_daily_sheet(credentials_path, sheet_id, worksheet_name, records):
-
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-
     credentials = Credentials.from_service_account_file(
         credentials_path,
         scopes=scopes
     )
-
     client = gspread.authorize(credentials)
-
     sheet = client.open_by_key(sheet_id)
     worksheet = sheet.worksheet(worksheet_name)
 
     # Fetch existing sheet data
     existing_data = worksheet.get_all_values()
-
     if existing_data:
         header = existing_data[0]
         rows = existing_data[1:]
     else:
         header = ["Date", "Task", "Minutes", "Hours", "Summary"]
         rows = []
-
-    # Convert existing rows into dataframe
     if rows:
         sheet_df = pd.DataFrame(rows, columns=header)
     else:
         sheet_df = pd.DataFrame(columns=header)
-
-    # Build analytics dataframe
     analytics_df = pd.DataFrame(records)
-
     analytics_df["Date"] = pd.to_datetime(analytics_df["date"]).dt.strftime("%m/%d/%Y")
     analytics_df = analytics_df.rename(columns={
         "minutes": "Minutes",
         "hours": "Hours",
         "summary": "Summary"
     })
-
     analytics_df = analytics_df[["Date", "Minutes", "Hours", "Summary"]]
 
     # Merge existing + new data
     if not sheet_df.empty:
-
         sheet_df["Date"] = sheet_df["Date"].astype(str)
-
         merged_df = pd.concat([sheet_df, analytics_df])
-
         merged_df = merged_df.drop_duplicates(subset=["Date"], keep="last")
-
         merged_df["Date"] = pd.to_datetime(merged_df["Date"], format="%m/%d/%Y")
-
         merged_df = merged_df.sort_values("Date")
-        
         merged_df["Date"] = merged_df["Date"].dt.strftime("%m/%d/%Y")
-
     else:
-
         merged_df = analytics_df
 
     # Convert dataframe to rows for sheet
@@ -138,12 +109,9 @@ def update_daily_sheet(credentials_path, sheet_id, worksheet_name, records):
     apply_monthly_formatting(sheet, worksheet, merged_df)
 
 def apply_monthly_formatting(sheet, worksheet, merged_df):
-
     sheet_id = worksheet.id
     requests = []
-
     for i, date_str in enumerate(merged_df["Date"], start=1):
-
         date_obj = datetime.strptime(date_str, "%m/%d/%Y")
         month = date_obj.month
 
@@ -152,7 +120,6 @@ def apply_monthly_formatting(sheet, worksheet, merged_df):
             color = {"red": 0.059, "green": 0.616, "blue": 0.345}  # green
         else:
             color = {"red": 0.957, "green": 0.894, "blue": 0.000}  # yellow
-
         requests.append({
             "repeatCell": {
                 "range": {
@@ -173,7 +140,6 @@ def apply_monthly_formatting(sheet, worksheet, merged_df):
 
     if requests:
         sheet.batch_update({"requests": requests})
-
     print("Monthly color formatting applied.")
 
 def run_daily_analytics():
