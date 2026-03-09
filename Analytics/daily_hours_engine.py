@@ -148,7 +148,7 @@ def run_daily_analytics():
     daily_df = compute_daily_hours(session_df)
     daily_df = add_summary_column(daily_df)
     records = daily_df_to_json(daily_df)
-    save_daily_json(records, "JsonRes/daily_hours.json")
+    save_daily_json(records, "Automation/daily_hours.json")
     update_daily_sheet(
         "config/Credentials.json",
         "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM",   # spreadsheet ID
