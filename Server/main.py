@@ -1,16 +1,16 @@
-from Components.GSheet_TaskDes import (
+from Server.APIExtraction.GSheet_TaskDes import (
     clean_sheet1_taskdesk_data,
     format_sheet1_taskdesk_to_json
 )
-from Components.GSheet_TimeTracker import (
+from Server.APIExtraction.GSheet_TimeTracker import (
     clean_sheet_time_tracker_data,
     format_sheet_time_tracker_to_json,
 )
-from Components.GSheet_DayHours import (
+from Test.GSheet_DayHours import (
     clean_sheet_day_hours_data,
     format_sheet_day_hours_to_json
 )
-from Components.GSheet_WeekHours import (
+from Test.GSheet_WeekHours import (
     clean_sheet_week_hours_data,
     format_sheet_week_hours_to_json
 )
@@ -63,7 +63,7 @@ async def get_task_desk_data() -> str:
         ]
     """
 
-    from Components.GSheet_TaskDes import authenticate_and_fetch_sheet_data as fetch_taskdesk_data
+    from Server.APIExtraction.GSheet_TaskDes import authenticate_and_fetch_sheet_data as fetch_taskdesk_data
 
     dataset = fetch_taskdesk_data(credentials_path, sheet_id)
     dataset = clean_sheet1_taskdesk_data(dataset)
@@ -111,7 +111,7 @@ async def get_time_tracker_data() -> str:
             }
         ]
     """
-    from Components.GSheet_TimeTracker import authenticate_and_fetch_sheet_data as fetch_timetracker_data
+    from Server.APIExtraction.GSheet_TimeTracker import authenticate_and_fetch_sheet_data as fetch_timetracker_data
 
     dataset = fetch_timetracker_data(credentials_path, sheet_id)
     dataset = clean_sheet_time_tracker_data(dataset)
@@ -151,7 +151,7 @@ async def get_day_hours_data() -> str:
         ]
     """
 
-    from Components.GSheet_DayHours import authenticate_and_fetch_sheet_data as fetch_dayhours_data
+    from Test.GSheet_DayHours import authenticate_and_fetch_sheet_data as fetch_dayhours_data
 
     dataset = fetch_dayhours_data(credentials_path, sheet_id)
     dataset = clean_sheet_day_hours_data(dataset)
@@ -191,7 +191,7 @@ async def get_weekly_hours_data() -> str:
         ]
     """
 
-    from Components.GSheet_WeekHours import authenticate_and_fetch_sheet_data as fetch_weekhours_data
+    from Test.GSheet_WeekHours import authenticate_and_fetch_sheet_data as fetch_weekhours_data
 
     dataset = fetch_weekhours_data(credentials_path, sheet_id)
     dataset = clean_sheet_week_hours_data(dataset)
