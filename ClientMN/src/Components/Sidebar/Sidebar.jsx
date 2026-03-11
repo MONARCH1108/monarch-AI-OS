@@ -6,12 +6,31 @@ import {
   BarChartOutlined
 } from "@ant-design/icons";
 import './sidebar.css'
+import logo from "../../assets/logo.png";
 
 const { Sider } = Layout;
 
 function Sidebar() {
   return (
     <Sider width={220} className="SideBar" style={{ background: "white" }}>
+
+    {/* TOP PROFILE SECTION */}
+    <div className="sidebar-profile">
+
+        <div className="logo">
+          <img src={logo} alt="Monarch Logo" />
+        </div>
+
+        <div className="profile-text">
+            <div className="profile-name">
+              E.Y.S.V.S Abhay
+            </div><br />
+
+            <div className="profile-role">
+               Productivity OS
+            </div>
+        </div>
+    </div>
 
       <Menu
         mode="inline"

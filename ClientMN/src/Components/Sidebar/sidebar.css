@@ -19,6 +19,7 @@
     border: 2px solid black;
     border-radius: 10px;
     margin-bottom: 8px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
 }
 
 /* CUSTOM selected item style */
@@ -30,4 +31,48 @@
 /* hover effect */
 .SideMenu .ant-menu-item:hover{
     background-color: #f0f0f0 !important;
+}
+
+/* profile container */
+.sidebar-profile{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+
+/* logo container */
+.logo{
+    flex-shrink: 0;
+}
+
+/* logo image */
+.logo img{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* text container */
+.profile-text{
+    display: flex;
+    flex-direction: column;
+}
+
+/* name */
+.profile-name{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* role */
+.profile-role{
+    font-size: 12px;
+    color: gray;
 }
