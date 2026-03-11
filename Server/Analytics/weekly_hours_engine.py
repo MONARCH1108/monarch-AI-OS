@@ -150,13 +150,13 @@ def update_weekly_sheet(credentials_path, sheet_id, worksheet_name, records):
 
 
 def run_weekly_analytics():
-    daily_df = load_daily_hours("Automation/daily_hours.json")
+    daily_df = load_daily_hours("Server/Automation/daily_hours.json")
     weekly_df = compute_weekly_hours(daily_df)
     weekly_df = add_weekly_summary(weekly_df)
     records = weekly_df_to_json(weekly_df)
-    save_weekly_json(records, "Automation/weekly_hours.json")
+    save_weekly_json(records, "Server/Automation/weekly_hours.json")
     update_weekly_sheet(
-        "config/Credentials.json",
+        "Server/config/Credentials.json",
         "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM",
         "Weekly-Review",
         records

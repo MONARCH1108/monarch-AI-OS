@@ -114,13 +114,13 @@ def update_monthly_sheet(credentials_path, sheet_id, worksheet_name, records):
     print("Monthly sheet updated.")
 
 def run_monthly_analytics():
-    daily_df = load_daily_hours("Automation/daily_hours.json")
+    daily_df = load_daily_hours("Server/Automation/daily_hours.json")
     monthly_df = compute_monthly_hours(daily_df)
     monthly_df = add_monthly_summary(monthly_df)
     records = monthly_df_to_json(monthly_df)
-    save_monthly_json(records, "Automation/monthly_hours.json")
+    save_monthly_json(records, "Server/Automation/monthly_hours.json")
     update_monthly_sheet(
-        "config/Credentials.json",
+        "Server/config/Credentials.json",
         "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM",
         "Monthy-Review",
         records

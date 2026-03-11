@@ -1,0 +1,974 @@
+[
+    {
+        "date": "2025-10-01",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-02",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-03",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-04",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-05",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-06",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-07",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-08",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-09",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-10",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-11",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-12",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-13",
+        "minutes": 607.77,
+        "hours": 10.12,
+        "summary": "10 Hours 7 Min"
+    },
+    {
+        "date": "2025-10-14",
+        "minutes": 431.94,
+        "hours": 7.1899999999999995,
+        "summary": "7 Hours 11 Min"
+    },
+    {
+        "date": "2025-10-15",
+        "minutes": 189.24,
+        "hours": 3.15,
+        "summary": "3 Hours 9 Min"
+    },
+    {
+        "date": "2025-10-16",
+        "minutes": 498.34,
+        "hours": 8.31,
+        "summary": "8 Hours 18 Min"
+    },
+    {
+        "date": "2025-10-17",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-18",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-19",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-20",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-21",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-22",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-23",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-24",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-25",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-26",
+        "minutes": 236.57999999999998,
+        "hours": 3.94,
+        "summary": "3 Hours 56 Min"
+    },
+    {
+        "date": "2025-10-27",
+        "minutes": 483.62,
+        "hours": 8.04,
+        "summary": "8 Hours 3 Min"
+    },
+    {
+        "date": "2025-10-28",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-29",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-30",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-10-31",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-01",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-02",
+        "minutes": 228.8,
+        "hours": 3.82,
+        "summary": "3 Hours 48 Min"
+    },
+    {
+        "date": "2025-11-03",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-04",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-05",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-06",
+        "minutes": 152.11,
+        "hours": 2.54,
+        "summary": "2 Hours 32 Min"
+    },
+    {
+        "date": "2025-11-07",
+        "minutes": 112.58,
+        "hours": 1.88,
+        "summary": "1 Hours 52 Min"
+    },
+    {
+        "date": "2025-11-08",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-09",
+        "minutes": 198.52,
+        "hours": 3.3200000000000003,
+        "summary": "3 Hours 18 Min"
+    },
+    {
+        "date": "2025-11-10",
+        "minutes": 142.27,
+        "hours": 2.37,
+        "summary": "2 Hours 22 Min"
+    },
+    {
+        "date": "2025-11-11",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-12",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-13",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-14",
+        "minutes": 144.19,
+        "hours": 2.4,
+        "summary": "2 Hours 24 Min"
+    },
+    {
+        "date": "2025-11-15",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-16",
+        "minutes": 181.64999999999998,
+        "hours": 3.0300000000000002,
+        "summary": "3 Hours 1 Min"
+    },
+    {
+        "date": "2025-11-17",
+        "minutes": 299.93,
+        "hours": 5.0,
+        "summary": "5 Hours 59 Min"
+    },
+    {
+        "date": "2025-11-18",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-19",
+        "minutes": 308.78000000000003,
+        "hours": 5.14,
+        "summary": "5 Hours 8 Min"
+    },
+    {
+        "date": "2025-11-20",
+        "minutes": 261.31,
+        "hours": 4.35,
+        "summary": "4 Hours 21 Min"
+    },
+    {
+        "date": "2025-11-21",
+        "minutes": 113.71000000000001,
+        "hours": 1.89,
+        "summary": "1 Hours 53 Min"
+    },
+    {
+        "date": "2025-11-22",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-23",
+        "minutes": 203.19,
+        "hours": 3.39,
+        "summary": "3 Hours 23 Min"
+    },
+    {
+        "date": "2025-11-24",
+        "minutes": 375.28999999999996,
+        "hours": 6.26,
+        "summary": "6 Hours 15 Min"
+    },
+    {
+        "date": "2025-11-25",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-26",
+        "minutes": 366.24,
+        "hours": 6.12,
+        "summary": "6 Hours 6 Min"
+    },
+    {
+        "date": "2025-11-27",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-28",
+        "minutes": 303.36,
+        "hours": 5.05,
+        "summary": "5 Hours 3 Min"
+    },
+    {
+        "date": "2025-11-29",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-11-30",
+        "minutes": 316.08,
+        "hours": 5.26,
+        "summary": "5 Hours 16 Min"
+    },
+    {
+        "date": "2025-12-01",
+        "minutes": 95.7,
+        "hours": 1.59,
+        "summary": "1 Hours 35 Min"
+    },
+    {
+        "date": "2025-12-02",
+        "minutes": 48.91,
+        "hours": 0.8200000000000001,
+        "summary": "0 Hours 48 Min"
+    },
+    {
+        "date": "2025-12-03",
+        "minutes": 117.2,
+        "hours": 1.95,
+        "summary": "1 Hours 57 Min"
+    },
+    {
+        "date": "2025-12-04",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-05",
+        "minutes": 479.72,
+        "hours": 7.99,
+        "summary": "7 Hours 59 Min"
+    },
+    {
+        "date": "2025-12-06",
+        "minutes": 159.72,
+        "hours": 2.67,
+        "summary": "2 Hours 39 Min"
+    },
+    {
+        "date": "2025-12-07",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-08",
+        "minutes": 315.81,
+        "hours": 5.26,
+        "summary": "5 Hours 15 Min"
+    },
+    {
+        "date": "2025-12-09",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-10",
+        "minutes": 141.84,
+        "hours": 2.37,
+        "summary": "2 Hours 21 Min"
+    },
+    {
+        "date": "2025-12-11",
+        "minutes": 292.97999999999996,
+        "hours": 4.89,
+        "summary": "4 Hours 52 Min"
+    },
+    {
+        "date": "2025-12-12",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-13",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-14",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-15",
+        "minutes": 199.82,
+        "hours": 3.33,
+        "summary": "3 Hours 19 Min"
+    },
+    {
+        "date": "2025-12-16",
+        "minutes": 178.33,
+        "hours": 2.97,
+        "summary": "2 Hours 58 Min"
+    },
+    {
+        "date": "2025-12-17",
+        "minutes": 200.08,
+        "hours": 3.33,
+        "summary": "3 Hours 20 Min"
+    },
+    {
+        "date": "2025-12-18",
+        "minutes": 272.62,
+        "hours": 4.54,
+        "summary": "4 Hours 32 Min"
+    },
+    {
+        "date": "2025-12-19",
+        "minutes": 103.24,
+        "hours": 1.72,
+        "summary": "1 Hours 43 Min"
+    },
+    {
+        "date": "2025-12-20",
+        "minutes": 541.59,
+        "hours": 9.02,
+        "summary": "9 Hours 1 Min"
+    },
+    {
+        "date": "2025-12-21",
+        "minutes": 690.32,
+        "hours": 11.51,
+        "summary": "11 Hours 30 Min"
+    },
+    {
+        "date": "2025-12-22",
+        "minutes": 171.83,
+        "hours": 2.86,
+        "summary": "2 Hours 51 Min"
+    },
+    {
+        "date": "2025-12-23",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-24",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-25",
+        "minutes": 283.61,
+        "hours": 4.73,
+        "summary": "4 Hours 43 Min"
+    },
+    {
+        "date": "2025-12-26",
+        "minutes": 342.91999999999996,
+        "hours": 5.71,
+        "summary": "5 Hours 42 Min"
+    },
+    {
+        "date": "2025-12-27",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-28",
+        "minutes": 188.82,
+        "hours": 3.15,
+        "summary": "3 Hours 8 Min"
+    },
+    {
+        "date": "2025-12-29",
+        "minutes": 213.82999999999998,
+        "hours": 3.56,
+        "summary": "3 Hours 33 Min"
+    },
+    {
+        "date": "2025-12-30",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2025-12-31",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-01",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-02",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-03",
+        "minutes": 369.88,
+        "hours": 6.18,
+        "summary": "6 Hours 9 Min"
+    },
+    {
+        "date": "2026-01-04",
+        "minutes": 463.41999999999996,
+        "hours": 7.71,
+        "summary": "7 Hours 43 Min"
+    },
+    {
+        "date": "2026-01-05",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-06",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-07",
+        "minutes": 434.66999999999996,
+        "hours": 7.24,
+        "summary": "7 Hours 14 Min"
+    },
+    {
+        "date": "2026-01-08",
+        "minutes": 370.36,
+        "hours": 6.17,
+        "summary": "6 Hours 10 Min"
+    },
+    {
+        "date": "2026-01-09",
+        "minutes": 273.47,
+        "hours": 4.5600000000000005,
+        "summary": "4 Hours 33 Min"
+    },
+    {
+        "date": "2026-01-10",
+        "minutes": 182.76000000000002,
+        "hours": 3.04,
+        "summary": "3 Hours 2 Min"
+    },
+    {
+        "date": "2026-01-11",
+        "minutes": 124.83,
+        "hours": 2.08,
+        "summary": "2 Hours 4 Min"
+    },
+    {
+        "date": "2026-01-12",
+        "minutes": 473.66,
+        "hours": 7.9,
+        "summary": "7 Hours 53 Min"
+    },
+    {
+        "date": "2026-01-13",
+        "minutes": 353.15999999999997,
+        "hours": 5.88,
+        "summary": "5 Hours 53 Min"
+    },
+    {
+        "date": "2026-01-14",
+        "minutes": 372.36,
+        "hours": 6.21,
+        "summary": "6 Hours 12 Min"
+    },
+    {
+        "date": "2026-01-15",
+        "minutes": 100.86000000000001,
+        "hours": 1.6800000000000002,
+        "summary": "1 Hours 40 Min"
+    },
+    {
+        "date": "2026-01-16",
+        "minutes": 210.51000000000002,
+        "hours": 3.51,
+        "summary": "3 Hours 30 Min"
+    },
+    {
+        "date": "2026-01-17",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-18",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-19",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-20",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-21",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-22",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-23",
+        "minutes": 399.85,
+        "hours": 6.66,
+        "summary": "6 Hours 39 Min"
+    },
+    {
+        "date": "2026-01-24",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-25",
+        "minutes": 74.63,
+        "hours": 1.24,
+        "summary": "1 Hours 14 Min"
+    },
+    {
+        "date": "2026-01-26",
+        "minutes": 550.21,
+        "hours": 9.17,
+        "summary": "9 Hours 10 Min"
+    },
+    {
+        "date": "2026-01-27",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-01-28",
+        "minutes": 282.6,
+        "hours": 4.71,
+        "summary": "4 Hours 42 Min"
+    },
+    {
+        "date": "2026-01-29",
+        "minutes": 322.12,
+        "hours": 5.359999999999999,
+        "summary": "5 Hours 22 Min"
+    },
+    {
+        "date": "2026-01-30",
+        "minutes": 394.85,
+        "hours": 6.58,
+        "summary": "6 Hours 34 Min"
+    },
+    {
+        "date": "2026-01-31",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-01",
+        "minutes": 169.36,
+        "hours": 2.82,
+        "summary": "2 Hours 49 Min"
+    },
+    {
+        "date": "2026-02-02",
+        "minutes": 364.49,
+        "hours": 6.08,
+        "summary": "6 Hours 4 Min"
+    },
+    {
+        "date": "2026-02-03",
+        "minutes": 310.3,
+        "hours": 5.17,
+        "summary": "5 Hours 10 Min"
+    },
+    {
+        "date": "2026-02-04",
+        "minutes": 421.4,
+        "hours": 7.02,
+        "summary": "7 Hours 1 Min"
+    },
+    {
+        "date": "2026-02-05",
+        "minutes": 289.33,
+        "hours": 4.82,
+        "summary": "4 Hours 49 Min"
+    },
+    {
+        "date": "2026-02-06",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-07",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-08",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-09",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-10",
+        "minutes": 311.23,
+        "hours": 5.2,
+        "summary": "5 Hours 11 Min"
+    },
+    {
+        "date": "2026-02-11",
+        "minutes": 278.19,
+        "hours": 4.640000000000001,
+        "summary": "4 Hours 38 Min"
+    },
+    {
+        "date": "2026-02-12",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-13",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-14",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-15",
+        "minutes": 172.45999999999998,
+        "hours": 2.86,
+        "summary": "2 Hours 52 Min"
+    },
+    {
+        "date": "2026-02-16",
+        "minutes": 202.39999999999998,
+        "hours": 3.37,
+        "summary": "3 Hours 22 Min"
+    },
+    {
+        "date": "2026-02-17",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-18",
+        "minutes": 345.48,
+        "hours": 5.77,
+        "summary": "5 Hours 45 Min"
+    },
+    {
+        "date": "2026-02-19",
+        "minutes": 250.31,
+        "hours": 4.17,
+        "summary": "4 Hours 10 Min"
+    },
+    {
+        "date": "2026-02-20",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-21",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-22",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-23",
+        "minutes": 277.58,
+        "hours": 4.63,
+        "summary": "4 Hours 37 Min"
+    },
+    {
+        "date": "2026-02-24",
+        "minutes": 226.21,
+        "hours": 3.7699999999999996,
+        "summary": "3 Hours 46 Min"
+    },
+    {
+        "date": "2026-02-25",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-02-26",
+        "minutes": 36.66,
+        "hours": 0.61,
+        "summary": "0 Hours 36 Min"
+    },
+    {
+        "date": "2026-02-27",
+        "minutes": 352.73,
+        "hours": 5.88,
+        "summary": "5 Hours 52 Min"
+    },
+    {
+        "date": "2026-02-28",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-03-01",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-03-02",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-03-03",
+        "minutes": 216.54,
+        "hours": 3.61,
+        "summary": "3 Hours 36 Min"
+    },
+    {
+        "date": "2026-03-04",
+        "minutes": 238.56,
+        "hours": 3.97,
+        "summary": "3 Hours 58 Min"
+    },
+    {
+        "date": "2026-03-05",
+        "minutes": 143.54000000000002,
+        "hours": 2.39,
+        "summary": "2 Hours 23 Min"
+    },
+    {
+        "date": "2026-03-06",
+        "minutes": 440.33,
+        "hours": 7.34,
+        "summary": "7 Hours 20 Min"
+    },
+    {
+        "date": "2026-03-07",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-03-08",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-03-09",
+        "minutes": 320.45,
+        "hours": 5.34,
+        "summary": "5 Hours 20 Min"
+    },
+    {
+        "date": "2026-03-10",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    },
+    {
+        "date": "2026-03-11",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
+    }
+]

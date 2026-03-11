@@ -1,0 +1,62 @@
+[
+    {
+        "year": 2025,
+        "month": 10,
+        "minutes": 2447.49,
+        "hours": 40.75,
+        "start_date": "2025-10-01",
+        "end_date": "2025-10-31",
+        "month_label": "2025-10",
+        "summary": "40 Hours 47 Min"
+    },
+    {
+        "year": 2025,
+        "month": 11,
+        "minutes": 3708.01,
+        "hours": 61.82,
+        "start_date": "2025-11-01",
+        "end_date": "2025-11-30",
+        "month_label": "2025-11",
+        "summary": "61 Hours 48 Min"
+    },
+    {
+        "year": 2025,
+        "month": 12,
+        "minutes": 5038.89,
+        "hours": 83.97,
+        "start_date": "2025-12-01",
+        "end_date": "2025-12-31",
+        "month_label": "2025-12",
+        "summary": "83 Hours 58 Min"
+    },
+    {
+        "year": 2026,
+        "month": 1,
+        "minutes": 5754.2,
+        "hours": 95.88,
+        "start_date": "2026-01-01",
+        "end_date": "2026-01-31",
+        "month_label": "2026-01",
+        "summary": "95 Hours 54 Min"
+    },
+    {
+        "year": 2026,
+        "month": 2,
+        "minutes": 4008.13,
+        "hours": 66.81,
+        "start_date": "2026-02-01",
+        "end_date": "2026-02-28",
+        "month_label": "2026-02",
+        "summary": "66 Hours 48 Min"
+    },
+    {
+        "year": 2026,
+        "month": 3,
+        "minutes": 1359.42,
+        "hours": 22.65,
+        "start_date": "2026-03-01",
+        "end_date": "2026-03-11",
+        "month_label": "2026-03",
+        "summary": "22 Hours 39 Min"
+    }
+]
