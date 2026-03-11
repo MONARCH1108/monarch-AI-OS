@@ -1,0 +1,33 @@
+.SideBar{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* Remove AntD default background */
+.SideMenu{
+    background: transparent !important;
+    border: none !important;
+    padding: 10px;
+}
+
+/* menu item spacing */
+.SideMenu .ant-menu-item{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+/* CUSTOM selected item style */
+.SideMenu .ant-menu-item-selected{
+    background-color: #dcdcdc !important;
+    color: black !important;
+}
+
+/* hover effect */
+.SideMenu .ant-menu-item:hover{
+    background-color: #f0f0f0 !important;
+}
