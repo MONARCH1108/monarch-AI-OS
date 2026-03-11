@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 import json
 import os
 
@@ -30,6 +31,18 @@ from Analytics.monthly_hours_engine import run_monthly_analytics
 app = FastAPI(
     title="Productivity Analytics API",
     version="1.0"
+)
+
+# -------------------------------
+# CORS CONFIG
+# -------------------------------
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow any origin (dev mode)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # -------------------------------
