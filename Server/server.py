@@ -1,5 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import json
+import os
+
 
 # -------------------------------
 # IMPORT COMPONENT PIPELINES
@@ -43,6 +45,25 @@ SESSION_JSON_PATH = "JsonRes/time_tracker_structured.json"
 DAILY_JSON_PATH = "Automation/daily_hours.json"
 WEEKLY_JSON_PATH = "Automation/weekly_hours.json"
 MONTHLY_JSON_PATH = "Automation/monthly_hours.json"
+
+# -------------------------------
+# GET /health
+# -------------------------------
+
+@app.get("/health")
+def health_check():
+
+    checks = {
+        "tasks_json_exists": os.path.exists("JsonRes/task_desk_structured.json"),
+        "sessions_json_exists": os.path.exists("JsonRes/time_tracker_structured.json"),
+        "daily_json_exists": os.path.exists("Automation/daily_hours.json")
+    }
+
+    return {
+        "status": "ok",
+        "service": "Productivity Analytics API",
+        "checks": checks
+    }
 
 # -------------------------------
 # STEP 1
