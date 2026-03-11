@@ -90,12 +90,12 @@ def format_sheet1_taskdesk_to_json(dataset):
 # ---------------------------------------------------
 
 def main():
-    credentials_path = "Server/config/Credentials.json"
+    credentials_path = "config/Credentials.json"
     sheet_id = "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM"
     dataset = authenticate_and_fetch_sheet_data(credentials_path, sheet_id)
     dataset = clean_sheet1_taskdesk_data(dataset)
     structured_data = format_sheet1_taskdesk_to_json(dataset)
-    with open("Server/JsonRes/task_desk_structured.json", "w", encoding="utf-8") as f:
+    with open("JsonRes/task_desk_structured.json", "w", encoding="utf-8") as f:
         json.dump(structured_data, f, indent=4)
     print("Structured JSON created successfully.")
 

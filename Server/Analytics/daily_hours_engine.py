@@ -144,13 +144,13 @@ def apply_monthly_formatting(sheet, worksheet, df):
     print("Monthly block formatting applied.")
 
 def run_daily_analytics():
-    session_df = load_sessions("Server/JsonRes/time_tracker_structured.json")
+    session_df = load_sessions("JsonRes/time_tracker_structured.json")
     daily_df = compute_daily_hours(session_df)
     daily_df = add_summary_column(daily_df)
     records = daily_df_to_json(daily_df)
-    save_daily_json(records, "Server/Automation/daily_hours.json")
+    save_daily_json(records, "Automation/daily_hours.json")
     update_daily_sheet(
-        "Server/config/Credentials.json",
+        "config/Credentials.json",
         "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM",   # spreadsheet ID
         "Day-Hours-Review",                              # worksheet name
         records

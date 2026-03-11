@@ -41,3 +41,6 @@ As of 2026-03-08, the core data pipeline and analytics foundation are implemente
   - Updates Day-Hours-Review sheet with computed metrics.
 - `JsonRes/`
   - Stores generated structured and analytics JSON outputs used for tracking and report workflows.
+
+Cmd for the Server app:
+` python -m uvicorn server:app --reload `
