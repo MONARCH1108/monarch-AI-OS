@@ -1046,9 +1046,36 @@
         "subtasks": [
             "With all the analytics completed previously build a flow,",
             "Live server with extract & analytical API from sheets",
-            "MCP Tools to Claude or local LLM with API integration with STDIO (for test)",
-            "Plan on a complete server flow with both API & MCP endpoints",
-            "Plan on further objectives beyond this task"
+            "Test all endpoints from live server with postman,",
+            "Create a Basic frontend for all the Live API's present",
+            "Create a Basic Design Pattern for the frontend with API functionality"
         ]
+    },
+    {
+        "date": "2026-03-12",
+        "objective": "[In] Objective 5",
+        "task_id": "2026-03-12-task-012",
+        "subtasks": [
+            "Clone the HCAF repo locally, and download all the dependencies,",
+            "Execute the code base to see if it is working properly",
+            "Test different basic features of the HCAF & Understand the backend process"
+        ]
+    },
+    {
+        "date": "2026-03-12",
+        "objective": "[In] Objective 4",
+        "task_id": "2026-03-12-task-013",
+        "subtasks": [
+            "Segregate the dialpad embedded config and files to seperate directory",
+            "Build a flow for the 8x8 integration using dashbaord,",
+            "Implement the flow in the dashboard in a separate directory using cursor",
+            "Read and understand how the integration took place & review the code"
+        ]
+    },
+    {
+        "date": "2026-03-12",
+        "objective": "[Mn] Objective 1",
+        "task_id": "2026-03-12-task-014",
+        "subtasks": []
     }
 ]
