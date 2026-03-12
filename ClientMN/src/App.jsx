@@ -2,6 +2,7 @@ import { Layout } from "antd";
 import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import Tracker from "./Components/Tracker/Tracker";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const { Content } = Layout;
@@ -16,6 +17,7 @@ function App() {
           <Content style={{ padding: "20px" }}>
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/Tracker" element={<Tracker />} />
             </Routes>
           </Content>
         </Layout>

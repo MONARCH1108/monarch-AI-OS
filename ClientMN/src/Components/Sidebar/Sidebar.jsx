@@ -9,8 +9,13 @@ import './sidebar.css'
 import logo from "../../assets/logo.png";
 
 const { Sider } = Layout;
+import { useNavigate } from "react-router-dom";
+
 
 function Sidebar() {
+
+  const navigate = useNavigate();
+
   return (
     <Sider width={220} className="SideBar" style={{ background: "white" }}>
 
@@ -37,6 +42,10 @@ function Sidebar() {
         defaultSelectedKeys={["1"]}
         style={{ height: "100%" }}
         className="SideMenu"
+        onClick={({ key }) => {
+          if (key === "1") navigate("/");
+          if (key === "2") navigate("/tracker");
+        }}
         items={[
           {
             key: "1",
@@ -46,7 +55,7 @@ function Sidebar() {
           {
             key: "2",
             icon: <UnorderedListOutlined />,
-            label: "Tasks",
+            label: "Tracker",
           },
           {
             key: "3",
