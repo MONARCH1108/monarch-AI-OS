@@ -17,6 +17,10 @@ From the `Server` directory:
 python -m uvicorn server:app --reload
 ```
 
+```bash
+python -m uvicorn server:app --host 0.0.0.0 --port 8000
+```
+
 Default local URL:
 
 ```text

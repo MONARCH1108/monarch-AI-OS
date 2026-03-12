@@ -1,0 +1,15 @@
+.dashboard{
+  width: 100%;
+}
+
+.metrics-row{
+  display: flex;
+  gap: 20px;
+}
+
+.metric-card{
+  flex: 1;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 20px;
+}

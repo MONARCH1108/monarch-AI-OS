@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import './Dashboard.css'
 
 function Dashboard(){
     const [Hours, setHours] = useState(0)
@@ -11,7 +12,7 @@ function Dashboard(){
     const [LongestEnd, setLongestEnd] = useState(null);
 
     const fetchHours = async() =>{
-        const response = await fetch("http://127.0.0.1:8000/analytics/daily")
+        const response = await fetch("/analytics/daily")
         const data = await response.json()
 
         // Total hours
@@ -77,15 +78,37 @@ function Dashboard(){
     
     return(
         <div>
-            <h2>Dashboard</h2>
-            <p>Daily Hours:{Hours}</p>
-            <p>Working Days Logged: {DaysWorked}</p>
+            <div className="dashboard">
+                <div className="metrics-row">
 
-            <p>Current Streak: {CurrentStreak} days</p>
-            <p>From: {CurrentStart} → {CurrentEnd}</p>
+                    <div className="metric-card">
+                        <h3>Total Hours Logged</h3>
+                        <p>{Hours}</p>
+                    </div>
 
-            <p>Longest Streak: {LongestStreak} days</p>
-            <p>From: {LongestStart} → {LongestEnd}</p>
+                    <div className="metric-card">
+                        <h3>Working Days</h3>
+                        <p>{DaysWorked}</p>
+                    </div>
+
+                    <div className="metric-card">
+                        <h3>Current Streak</h3>
+                        <p>{CurrentStreak} days</p>
+                        <small>
+                            {CurrentStart} → {CurrentEnd}
+                        </small>
+                    </div>
+
+                    <div className="metric-card">
+                        <h3>Best Streak</h3>
+                        <p>{LongestStreak} days</p>
+                        <small>
+                            {LongestStart} → {LongestEnd}
+                        </small>
+                    </div>
+
+                </div>
+            </div>
         </div>
     )
 }
