@@ -84,12 +84,12 @@ function DailyHours() {
 
       {/* CHART */}
       <div className="chart-wrapper">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height={300}>
           <BarChart data={filteredData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="date"
-              tickFormatter={(date)=>date.slice(5)}
+              tickFormatter={(date)=>date.slice(8)}
               minTickGap={25}
             />
 
