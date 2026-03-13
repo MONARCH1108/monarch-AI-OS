@@ -40,7 +40,7 @@ function Sidebar() {
       <Menu
         mode="inline"
         defaultSelectedKeys={["1"]}
-        style={{ height: "100%" }}
+        
         className="SideMenu"
         onClick={({ key }) => {
           if (key === "1") navigate("/");
