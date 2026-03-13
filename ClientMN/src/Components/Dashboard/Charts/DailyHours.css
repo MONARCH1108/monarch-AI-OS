@@ -11,7 +11,6 @@
 }
 
 /* header section */
-
 .daily-header{
   display:flex;
   justify-content: space-between;
@@ -25,7 +24,6 @@
 }
 
 /* filter dropdowns */
-
 .daily-filters{
   display:flex;
   gap:10px;
@@ -41,7 +39,6 @@
 }
 
 /* chart wrapper */
-
 .chart-wrapper{
   width:100%;
   min-height:280px;
