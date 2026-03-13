@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import './Dashboard.css'
+import DailyHours from "./Charts/DailyHours";
 
 function Dashboard(){
     const [Hours, setHours] = useState(0)
@@ -108,6 +109,9 @@ function Dashboard(){
                     </div>
 
                 </div>
+            </div>
+            <div>
+                <DailyHours />
             </div>
         </div>
     )
