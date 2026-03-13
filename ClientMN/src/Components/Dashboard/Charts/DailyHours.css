@@ -3,19 +3,21 @@
   border-radius: 20px;
   padding: 20px;
   background: #fff;
-  margin-top: 25px;
 
   display: flex;
   flex-direction: column;
+
+  height: 100%;
   width: 100%;
 }
 
 /* header section */
+
 .daily-header{
   display:flex;
   justify-content: space-between;
   align-items:center;
-  margin-bottom:20px;
+  margin-bottom:15px;
 }
 
 .daily-title{
@@ -24,6 +26,7 @@
 }
 
 /* filter dropdowns */
+
 .daily-filters{
   display:flex;
   gap:10px;
@@ -38,9 +41,10 @@
   cursor:pointer;
 }
 
-/* chart wrapper */
+/* chart area fills remaining space */
+
 .chart-wrapper{
   width:100%;
-  min-height:280px;
-  height: clamp(260px, 32vh, 360px);
+  flex:1;
+  min-height:260px;
 }

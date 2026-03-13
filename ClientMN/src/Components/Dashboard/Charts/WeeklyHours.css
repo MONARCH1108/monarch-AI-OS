@@ -1,0 +1,36 @@
+.weekly-card{
+  border:2px solid black;
+  border-radius:20px;
+  padding:20px;
+  background:white;
+  height:100%;
+}
+
+.weekly-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.weekly-title{
+  font-size:18px;
+  font-weight:600;
+}
+
+.weekly-filters{
+  display:flex;
+  gap:10px;
+}
+
+.weekly-filters select{
+  padding:6px 10px;
+  border-radius:8px;
+  border:1px solid #aaa;
+  background:white;
+}
+
+.weekly-chart{
+  width:100%;
+  height:300px;
+}
