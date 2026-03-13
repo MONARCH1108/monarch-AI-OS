@@ -84,8 +84,8 @@ function DailyHours() {
 
       {/* CHART */}
       <div className="chart-wrapper">
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={filteredData}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={filteredData} margin={{ top: 10, right: 5, left: -30, bottom: -5 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="date"
@@ -100,7 +100,7 @@ function DailyHours() {
               formatter={(value)=>`${value} hrs`}
             />
 
-            <Bar dataKey="hours">
+            <Bar dataKey="hours" radius={[4,4,0,0]}>
 
               {filteredData.map((entry,index)=>(
                 <Cell

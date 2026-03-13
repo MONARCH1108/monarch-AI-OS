@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import './Dashboard.css'
 import DailyHours from "./Charts/DailyHours";
+import Split from "react-split"
 
 function Dashboard(){
     const [Hours, setHours] = useState(0)
@@ -110,8 +111,25 @@ function Dashboard(){
 
                 </div>
             </div>
-            <div>
-                <DailyHours />
+            <div className="chart-section">
+
+              <Split
+                className="split"
+                sizes={[60, 40]}
+                minSize={300}
+                gutterSize={10}
+              >
+            
+                <div>
+                  <DailyHours />
+                </div>
+                
+                <div className="weekly-monthly-card">
+                  Weekly & Monthly Hours
+                </div>
+                
+              </Split>
+                
             </div>
         </div>
     )

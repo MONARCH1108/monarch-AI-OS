@@ -4,6 +4,10 @@
   padding: 20px;
   background: #fff;
   margin-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 /* header section */
@@ -40,5 +44,6 @@
 
 .chart-wrapper{
   width:100%;
-  height:320px;
+  min-height:280px;
+  height: clamp(260px, 32vh, 360px);
 }
