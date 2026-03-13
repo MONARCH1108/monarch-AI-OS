@@ -8,7 +8,7 @@ export default defineConfig({
     allowedHosts: true,
     proxy: {
       "/analytics": {
-        target: "http://192.168.0.5:8000",
+        target: "http://192.168.0.7:8000",
         changeOrigin: true,
         secure: false
       }
