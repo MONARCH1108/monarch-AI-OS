@@ -11,7 +11,7 @@ import {
 
 import "./WeeklyHours.css"
 
-const API = "analytics/weekly"
+const API = "/analytics/weekly"
 
 function WeeklyHours(){
 
@@ -34,13 +34,20 @@ function WeeklyHours(){
 
   useEffect(()=>{
 
-    const filteredData = data.filter(d=>{
-      return d.month === Number(month) && d.year === Number(year)
+    const filteredData = data.filter(d => {
+
+      const date = new Date(d.start_date)
+      const itemMonth = date.getMonth()+1
+      const itemYear = d.iso_year
+
+      return itemMonth === Number(month) && itemYear === Number(year)
+
     })
 
     setFiltered(filteredData)
 
   },[data,month,year])
+
 
   return(
 
@@ -88,13 +95,23 @@ function WeeklyHours(){
 
             <CartesianGrid strokeDasharray="3 3" />
 
-            <XAxis dataKey="week"/>
+            <XAxis
+              dataKey="iso_week"
+              tickFormatter={(w)=>`W${w}`}
+            />
 
             <YAxis/>
 
-            <Tooltip formatter={(v)=>`${v} hrs`} />
+            <Tooltip
+              labelFormatter={(label)=>`Week ${label}`}
+              formatter={(v)=>`${v} hrs`}
+            />
 
-            <Bar dataKey="hours" fill="#3b82f6" radius={[4,4,0,0]}/>
+            <Bar
+              dataKey="hours"
+              fill="#3b82f6"
+              radius={[4,4,0,0]}
+            />
 
           </BarChart>
 
