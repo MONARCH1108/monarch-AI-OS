@@ -116,15 +116,16 @@ function Dashboard(){
             <div className="chart-section">
               <Split className="split" sizes={[60, 40]} minSize={300} gutterSize={10}>
                 <div>
-                  <DailyHours />
+                  <MonthlyHours />
                 </div>
                 <div className="weekly-monthly-card">
                 <WeeklyHours />
                 </div>
               </Split>
             </div>
-            <div>
-                <MonthlyHours />
+            <div className="daily-full">
+            
+                <DailyHours />
             </div>
         </div>
     )
