@@ -7,6 +7,8 @@ import {
 } from "@ant-design/icons";
 import './sidebar.css'
 import logo from "../../assets/logo.png";
+import { FaGithub, FaLinkedin, FaTwitter, FaMedium  } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 const { Sider } = Layout;
 import { useNavigate } from "react-router-dom";
@@ -34,6 +36,28 @@ function Sidebar() {
             <div className="profile-role">
                Productivity OS
             </div>
+        </div>
+        <div className="sidebar-links">
+          <a href="https://github.com/MONARCH1108" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+
+          <a href="https://www.linkedin.com/in/e-y-s-v-s-abhay/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="https://abhayemani.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <FiExternalLink />
+          </a>
+
+          <a href="https://x.com/abhay_emani" target="_blank" rel="noopener noreferrer">
+            <FaTwitter />
+          </a>
+
+          <a href="https://medium.com/@abhayemani8" target="_blank" rel="noopener noreferrer">
+            <FaMedium />
+          </a>
         </div>
     </div>
 
