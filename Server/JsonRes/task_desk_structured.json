@@ -1102,6 +1102,14 @@
         "date": "2026-03-12",
         "objective": "[Mn] Objective 1",
         "task_id": "2026-03-12-task-015",
-        "subtasks": []
+        "subtasks": [
+            "Complete the MonthWise Automation in Charts in Dasbaord",
+            "Make the UI better, interchage the days section and month section",
+            "Complete the Dashbaord Basic Style bugfixing & improvisation",
+            "Embed the Pipeline automation API in the tracker ensure its working",
+            "Complete the Iframe embedding Google Sheets and make sure it is editable",
+            "Add all social's links as icons in the profile section for easy navigation",
+            "Update the UI a bit for ICONS and all the Socials in profile section"
+        ]
     }
 ]

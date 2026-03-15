@@ -232,11 +232,21 @@
     {
         "iso_year": 2026,
         "iso_week": 11,
-        "minutes": 1228.74,
-        "hours": 20.48,
+        "minutes": 1360.1299999999999,
+        "hours": 22.67,
         "start_date": "2026-03-09",
         "end_date": "2026-03-15",
         "week_label": "2026-W11",
-        "summary": "20 Hours 28 Min"
+        "summary": "22 Hours 40 Min"
+    },
+    {
+        "iso_year": 2026,
+        "iso_week": 12,
+        "minutes": 0.0,
+        "hours": 0.0,
+        "start_date": "2026-03-16",
+        "end_date": "2026-03-16",
+        "week_label": "2026-W12",
+        "summary": "0 Hours 0 Min"
     }
 ]

@@ -52,11 +52,11 @@
     {
         "year": 2026,
         "month": 3,
-        "minutes": 2267.71,
-        "hours": 37.79,
+        "minutes": 2399.1,
+        "hours": 39.980000000000004,
         "start_date": "2026-03-01",
-        "end_date": "2026-03-15",
+        "end_date": "2026-03-16",
         "month_label": "2026-03",
-        "summary": "37 Hours 47 Min"
+        "summary": "39 Hours 59 Min"
     }
 ]
