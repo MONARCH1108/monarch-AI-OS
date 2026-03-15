@@ -979,8 +979,20 @@
     },
     {
         "date": "2026-03-13",
-        "minutes": 62.87,
-        "hours": 1.05,
-        "summary": "1 Hours 2 Min"
+        "minutes": 305.86,
+        "hours": 5.09,
+        "summary": "5 Hours 5 Min"
+    },
+    {
+        "date": "2026-03-14",
+        "minutes": 146.31,
+        "hours": 2.44,
+        "summary": "2 Hours 26 Min"
+    },
+    {
+        "date": "2026-03-15",
+        "minutes": 6.19,
+        "hours": 0.1,
+        "summary": "0 Hours 6 Min"
     }
 ]

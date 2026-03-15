@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import './Dashboard.css'
 import DailyHours from "./Charts/DailyHours";
 import WeeklyHours from "./Charts/WeeklyHours";
+import MonthlyHours from "./Charts/MonthlyHours";
 import Split from "react-split"
 
 function Dashboard(){
@@ -121,6 +122,9 @@ function Dashboard(){
                 <WeeklyHours />
                 </div>
               </Split>
+            </div>
+            <div>
+                <MonthlyHours />
             </div>
         </div>
     )

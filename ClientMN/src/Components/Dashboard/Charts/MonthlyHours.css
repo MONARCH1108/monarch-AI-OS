@@ -1,0 +1,32 @@
+.monthly-card{
+  border:2px solid black;
+  border-radius:20px;
+  padding:20px;
+  background:white;
+  height:100%;
+  margin-top: 10px;
+}
+
+.monthly-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.monthly-title{
+  font-size:18px;
+  font-weight:600;
+}
+
+.monthly-filters select{
+  padding:6px 10px;
+  border-radius:8px;
+  border:1px solid #aaa;
+  background:white;
+}
+
+.monthly-chart{
+  width:100%;
+  height:300px;
+}

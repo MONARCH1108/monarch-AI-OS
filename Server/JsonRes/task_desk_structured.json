@@ -1076,6 +1076,32 @@
         "date": "2026-03-12",
         "objective": "[Mn] Objective 1",
         "task_id": "2026-03-12-task-014",
+        "subtasks": [
+            "Complete the UI of Basic Metric Row,",
+            "Complete the UI Chart of the daily Hours with filter",
+            "Complete the UI Chart of Weekly Hours with Filter",
+            "Make the section Dragable using the React module",
+            "Complete the Routing with Tracker Example page,",
+            "Fix Some Basic UI Bugs related to extra white space and everything",
+            "Make a plan on how to embed the monthy chart and everything",
+            "Complete the Proxy Backend IPV4 Server & Ngrok for frontend",
+            "With hosted backend & frontend, use MAC for hassle free developement"
+        ]
+    },
+    {
+        "date": "2026-03-12",
+        "objective": "[Mn] Objective 1",
+        "task_id": "2026-03-12-task-015",
+        "subtasks": [
+            "Clean the entire workspace",
+            "Do a Deep Clean of the work table, and around the section",
+            "Keep the system Ready for the next week"
+        ]
+    },
+    {
+        "date": "2026-03-12",
+        "objective": "[Mn] Objective 1",
+        "task_id": "2026-03-12-task-015",
         "subtasks": []
     }
 ]
