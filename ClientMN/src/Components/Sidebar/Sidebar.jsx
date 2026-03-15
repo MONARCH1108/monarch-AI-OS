@@ -57,16 +57,6 @@ function Sidebar() {
             icon: <UnorderedListOutlined />,
             label: "Tracker",
           },
-          {
-            key: "3",
-            icon: <ClockCircleOutlined />,
-            label: "Sessions",
-          },
-          {
-            key: "4",
-            icon: <BarChartOutlined />,
-            label: "Analytics",
-          },
         ]}
       />
 

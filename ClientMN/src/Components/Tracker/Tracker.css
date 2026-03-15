@@ -1,0 +1,60 @@
+.tracker{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+
+  /* fill entire page height */
+  height:100%;
+}
+
+/* header */
+
+.tracker-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* refresh button */
+
+.refresh-btn{
+  padding:8px 16px;
+  border-radius:8px;
+  border:2px solid black;
+  background:white;
+  cursor:pointer;
+  font-weight:500;
+}
+
+.refresh-btn:hover{
+  background:#f5f5f5;
+}
+
+/* sheet containers */
+
+.sheet-container{
+  border:2px solid black;
+  border-radius:20px;
+  padding:15px;
+  background:white;
+
+  /* allow container to expand */
+  display:flex;
+  flex-direction:column;
+
+  flex:1;
+  
+}
+
+/* iframe */
+
+.sheet-frame{
+  width:100%;
+  border:none;
+  height: 100%;
+
+  /* this is the important change */
+  flex:1;
+  min-height:250px;
+}
+

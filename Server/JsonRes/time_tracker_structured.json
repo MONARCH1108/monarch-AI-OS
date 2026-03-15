@@ -3911,5 +3911,18 @@
         "clock_out": "19:32:04",
         "minutes": 6.19,
         "hours": 0.1
+    },
+    {
+        "session_id": "2026-03-15-task-016-s2",
+        "date": "2026-03-15",
+        "day": "Sunday",
+        "task": "Monarch-Tasks",
+        "task_id": "2026-03-15-task-016",
+        "category": "PROJECT",
+        "status": "PENDING",
+        "clock_in": "19:32:13",
+        "clock_out": "22:02:49",
+        "minutes": 150.6,
+        "hours": 2.51
     }
 ]

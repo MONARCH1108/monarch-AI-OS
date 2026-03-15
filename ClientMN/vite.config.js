@@ -7,11 +7,18 @@ export default defineConfig({
     host: true,
     allowedHosts: true,
     proxy: {
+
       "/analytics": {
         target: "http://192.168.0.5:8000",
+        changeOrigin: true
+      },
+
+      "/pipeline": {
+        target: "http://192.168.0.5:8000",
         changeOrigin: true,
-        secure: false
+        rewrite: (path) => path.replace(/^\/pipeline/, "/pipeline")
       }
+
     }
   }
 })
