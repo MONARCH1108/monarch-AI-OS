@@ -22,6 +22,11 @@ From the `Server` folder:
 python -m uvicorn server:app --reload
 ```
 
+```bash
+python -m uvicorn server:app --host 0.0.0.0 --port 8000
+```
+The Above command is to host backend with Local IPV4 Address
+
 Backend runs on:
 
 ```text
