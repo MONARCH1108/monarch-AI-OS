@@ -4015,5 +4015,31 @@
         "clock_out": "21:07:41",
         "minutes": 40.54,
         "hours": 0.68
+    },
+    {
+        "session_id": "2026-03-16-task-018-s1",
+        "date": "2026-03-16",
+        "day": "Monday",
+        "task": "Monarch-Tasks",
+        "task_id": "2026-03-16-task-018",
+        "category": "PROJECT",
+        "status": "PENDING",
+        "clock_in": "22:16:20",
+        "clock_out": "22:47:06",
+        "minutes": 30.76,
+        "hours": 0.51
+    },
+    {
+        "session_id": "2026-03-16-task-018-s2",
+        "date": "2026-03-16",
+        "day": "Monday",
+        "task": "Monarch-Tasks",
+        "task_id": "2026-03-16-task-018",
+        "category": "PROJECT",
+        "status": "PENDING",
+        "clock_in": "23:24:35",
+        "clock_out": "23:31:02",
+        "minutes": 6.44,
+        "hours": 0.11
     }
 ]
