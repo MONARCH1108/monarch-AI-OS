@@ -114,3 +114,62 @@
 .ant-layout-sider-children{
     background:#141414;
 }
+
+
+.sidebar-bottom{
+  position:absolute;
+  bottom:20px;
+  left:10px;
+  right:10px;
+}
+
+.run-analytics-btn{
+  width:100%;
+
+  padding:12px;
+
+  border-radius:12px;
+
+  border:2px solid #d4af37;
+
+  background:#0a0a0a;
+
+  color:#ffffff;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:all 0.2s ease;
+}
+
+.run-analytics-btn{
+  width:100%;
+
+  padding:12px;
+
+  border-radius:12px;
+
+  border:2px solid #d4af37;
+
+  background:#0a0a0a;
+
+  color:#ffffff;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:all 0.2s ease;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.run-analytics-btn:hover{
+  background:#d4af37;
+  color:#000000;
+}
+

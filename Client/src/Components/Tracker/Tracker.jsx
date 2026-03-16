@@ -25,13 +25,6 @@ function Tracker(){
 
     return(
         <div className="tracker">
-            <div className="tracker-header">
-                <h2>Tracker</h2>
-                <button
-                    className="refresh-btn" onClick={runPipeline} disabled={loading}>
-                    {loading ? "Running Pipeline..." : "Refresh Analytics"}
-                </button>
-            </div>
             <div className="sheet-container">
                 <h3>Time Tracker</h3>
                 <iframe src={TIMETRACKER_SHEET} className="sheet-frame" />

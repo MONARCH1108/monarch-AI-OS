@@ -1073,9 +1073,9 @@
         ]
     },
     {
-        "date": "2026-03-12",
+        "date": "2026-03-14",
         "objective": "[Mn] Objective 1",
-        "task_id": "2026-03-12-task-014",
+        "task_id": "2026-03-14-task-014",
         "subtasks": [
             "Complete the UI of Basic Metric Row,",
             "Complete the UI Chart of the daily Hours with filter",
@@ -1089,9 +1089,9 @@
         ]
     },
     {
-        "date": "2026-03-12",
+        "date": "2026-03-14",
         "objective": "[Mn] Objective 1",
-        "task_id": "2026-03-12-task-015",
+        "task_id": "2026-03-14-task-015",
         "subtasks": [
             "Clean the entire workspace",
             "Do a Deep Clean of the work table, and around the section",
@@ -1099,9 +1099,9 @@
         ]
     },
     {
-        "date": "2026-03-12",
+        "date": "2026-03-15",
         "objective": "[Mn] Objective 1",
-        "task_id": "2026-03-12-task-015",
+        "task_id": "2026-03-15-task-015",
         "subtasks": [
             "Complete the MonthWise Automation in Charts in Dasbaord",
             "Make the UI better, interchage the days section and month section",
@@ -1110,6 +1110,25 @@
             "Complete the Iframe embedding Google Sheets and make sure it is editable",
             "Add all social's links as icons in the profile section for easy navigation",
             "Update the UI a bit for ICONS and all the Socials in profile section"
+        ]
+    },
+    {
+        "date": "2026-03-15",
+        "objective": "[Mn] Objective 1",
+        "task_id": "2026-03-15-task-016",
+        "subtasks": [
+            "Select a basic color palatte based on my website",
+            "apply and test different color palatte for the basic Site completed,",
+            "Complete the Header and sidebar colors schema",
+            "Select the overall body color and apply it"
+        ]
+    },
+    {
+        "date": "2026-03-16",
+        "objective": "[Mn] Objective 1",
+        "task_id": "2026-03-16-task-017",
+        "subtasks": [
+            "Fill It--"
         ]
     }
 ]

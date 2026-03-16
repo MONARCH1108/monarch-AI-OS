@@ -1,4 +1,5 @@
 import { Layout, Menu } from "antd";
+import { useState } from "react";
 import {
   DashboardOutlined,
   UnorderedListOutlined,
@@ -14,9 +15,26 @@ const { Sider } = Layout;
 import { useNavigate } from "react-router-dom";
 
 
+
 function Sidebar() {
 
   const navigate = useNavigate();
+  const [loading,setLoading] = useState(false)
+
+  const runPipeline = async () => {
+    try{
+      setLoading(true)
+      await fetch("/pipeline/run",{ method:"POST" })
+      alert("Pipeline executed successfully")
+    }
+    catch(err){
+      console.error(err)
+      alert("Pipeline failed")
+    }
+    finally{
+      setLoading(false)
+    }
+  }
 
   return (
     <Sider width={220} className="SideBar" style={{ background: "white" }}>
@@ -62,28 +80,38 @@ function Sidebar() {
     </div>
 
       <Menu
-        mode="inline"
-        defaultSelectedKeys={["1"]}
-        
-        className="SideMenu"
-        onClick={({ key }) => {
-          if (key === "1") navigate("/");
-          if (key === "2") navigate("/tracker");
-        }}
-        items={[
-          {
-            key: "1",
-            icon: <DashboardOutlined />,
-            label: "Dashboard",
-          },
-          {
-            key: "2",
-            icon: <UnorderedListOutlined />,
-            label: "Tracker",
-          },
-        ]}
-      />
+              mode="inline"
+              defaultSelectedKeys={["1"]}
 
+              className="SideMenu"
+              onClick={({ key }) => {
+                if (key === "1") navigate("/");
+                if (key === "2") navigate("/tracker");
+              }}
+              items={[
+                {
+                  key: "1",
+                  icon: <DashboardOutlined />,
+                  label: "Dashboard",
+                },
+                {
+                  key: "2",
+                  icon: <UnorderedListOutlined />,
+                  label: "Tracker",
+                },
+              ]}
+            />
+
+            <div className="sidebar-bottom">
+        <button
+          className="run-analytics-btn"
+          onClick={runPipeline}
+          disabled={loading}
+        >
+        <BarChartOutlined style={{ marginRight: "8px" }} />
+        {loading ? "Running..." : "Run Analytics"}
+        </button>
+      </div>
     </Sider>
   );
 }
