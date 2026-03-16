@@ -4,6 +4,12 @@ import json
 from datetime import datetime
 from google.oauth2.service_account import Credentials
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.s3_utils import upload_json
+
 
 # ---------------------------------------------------
 # FUNCTION 1
@@ -95,9 +101,12 @@ def main():
     dataset = authenticate_and_fetch_sheet_data(credentials_path, sheet_id)
     dataset = clean_sheet1_taskdesk_data(dataset)
     structured_data = format_sheet1_taskdesk_to_json(dataset)
-    with open("JsonRes/task_desk_structured.json", "w", encoding="utf-8") as f:
-        json.dump(structured_data, f, indent=4)
-    print("Structured JSON created successfully.")
+    upload_json(
+        structured_data,
+        "JsonRes/task_desk_structured.json"
+    )
+
+    print("Uploaded JsonRes/task_desk_structured.json to S3")
 
 
 if __name__ == "__main__":

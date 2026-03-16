@@ -4,6 +4,12 @@ from google.oauth2.service_account import Credentials
 from datetime import datetime
 import json
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.s3_utils import upload_json
+
 # ---------------------------------------------------
 # FUNCTION 1
 # Authentication + Fetch Data
@@ -186,9 +192,11 @@ def main():
     dataset = authenticate_and_fetch_sheet_data(credentials_path, sheet_id)
     dataset = clean_sheet_time_tracker_data(dataset)
     structured_data = format_sheet_time_tracker_to_json(dataset)
-    with open("JsonRes/time_tracker_structured.json", "w", encoding="utf-8") as f:
-        json.dump(structured_data, f, indent=4)
-    print("Time Tracker JSON created successfully.")
+    upload_json(
+        structured_data,
+        "JsonRes/time_tracker_structured.json"
+    )
+    print("Uploaded JsonRes/time_tracker_structured.json to S3")
 
 if __name__ == "__main__":
     main()

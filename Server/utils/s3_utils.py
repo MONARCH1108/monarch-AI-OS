@@ -1,6 +1,9 @@
 import boto3
 import json
 import os
+from dotenv import load_dotenv
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "config", ".env"))
 
 s3 = boto3.client(
     "s3",
