@@ -24,7 +24,7 @@ function Sidebar() {
   const runPipeline = async () => {
     try{
       setLoading(true)
-      await fetch("/pipeline/run",{ method:"POST" })
+      await fetch("http://127.0.0.1:8000/pipeline/run",{ method:"POST" })
       alert("Pipeline executed successfully")
     }
     catch(err){

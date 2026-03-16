@@ -16,7 +16,7 @@ function Dashboard(){
     const [LongestEnd, setLongestEnd] = useState(null);
 
     const fetchHours = async() =>{
-        const response = await fetch("/analytics/daily")
+        const response = await fetch("http://127.0.0.1:8000/analytics/daily")
         const data = await response.json()
 
         // Total hours

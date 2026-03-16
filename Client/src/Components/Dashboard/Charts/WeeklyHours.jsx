@@ -11,7 +11,7 @@ import {
 
 import "./WeeklyHours.css"
 
-const API = "/analytics/weekly"
+const API = "http://127.0.0.1:8000/analytics/weekly"
 
 function WeeklyHours(){
   const [data,setData] = useState([])

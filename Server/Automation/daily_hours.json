@@ -997,8 +997,14 @@
     },
     {
         "date": "2026-03-16",
-        "minutes": 213.07,
-        "hours": 3.56,
-        "summary": "3 Hours 33 Min"
+        "minutes": 220.07999999999998,
+        "hours": 3.6700000000000004,
+        "summary": "3 Hours 40 Min"
+    },
+    {
+        "date": "2026-03-17",
+        "minutes": 0.0,
+        "hours": 0.0,
+        "summary": "0 Hours 0 Min"
     }
 ]

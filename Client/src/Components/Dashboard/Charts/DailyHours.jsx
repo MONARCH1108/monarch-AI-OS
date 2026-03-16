@@ -10,7 +10,7 @@ import {
   Cell
 } from "recharts"
 import "./DailyHours.css"
-const API = "/analytics/daily"
+const API = "http://127.0.0.1:8000/analytics/daily"
 
 function DailyHours() {
   const [data, setData] = useState([])
