@@ -4,6 +4,7 @@ import json
 import os
 
 from utils.s3_utils import upload_json, read_json
+from mangum import Mangum
 
 
 # -------------------------------
@@ -188,3 +189,9 @@ def get_monthly():
             status_code=500,
             detail=str(e)
         )
+
+# -------------------------------
+# LAMBDA HANDLER
+# -------------------------------
+
+handler = Mangum(app)
