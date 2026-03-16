@@ -1,8 +1,10 @@
 .daily-card{
-  border: 2px solid black;
+  border: 2px solid #d4af37;
   border-radius: 20px;
-  padding: 20px;
-  background: #fff;
+
+  padding: 16px;
+
+  background: #0a0a0a;
 
   display: flex;
   flex-direction: column;
@@ -17,34 +19,51 @@
   display:flex;
   justify-content: space-between;
   align-items:center;
-  margin-bottom:15px;
+
+  margin-bottom:12px;
 }
 
 .daily-title{
-  font-size:18px;
+  font-size:16px;
   font-weight:600;
+
+  color:#d4af37;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
 }
 
-/* filter dropdowns */
+/* filters */
 
 .daily-filters{
   display:flex;
-  gap:10px;
+  gap:8px;
 }
+
+/* dropdown */
 
 .daily-select{
   padding:6px 10px;
+
   border-radius:8px;
-  border:1px solid #aaa;
-  font-size:14px;
-  background:white;
+
+  border:1px solid #d4af37;
+
+  font-size:13px;
+
+  background:#141414;
+
+  color:#ffffff;
+
   cursor:pointer;
 }
 
 /* chart area fills remaining space */
-
 .chart-wrapper{
   width:100%;
+
   flex:1;
-  min-height:260px;
+
+  min-height:220px;
 }

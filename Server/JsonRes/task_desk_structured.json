@@ -1128,7 +1128,18 @@
         "objective": "[Mn] Objective 1",
         "task_id": "2026-03-16-task-017",
         "subtasks": [
-            "Fill It--"
+            "Completed the HCAF SetUp Locally with new branch",
+            "Run it and build a basic flow with it using cursor to create the CSV",
+            "Check the perfomance and everything and get basic understanding",
+            "Complete the InitAPI update with new \"Comment\" update in DB&Req body",
+            "Complete the Documentation conversion into MD files as well",
+            "Verify and reformat the MD files accordingly so we can push it to gitlab"
         ]
+    },
+    {
+        "date": "2026-03-16",
+        "objective": "[Mn] Objective 1",
+        "task_id": "2026-03-16-task-018",
+        "subtasks": []
     }
 ]

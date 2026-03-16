@@ -86,21 +86,27 @@ function DailyHours() {
       <div className="chart-wrapper">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={filteredData} margin={{ top: 10, right: 5, left: -30, bottom: -5 }}>
-            <CartesianGrid strokeDasharray="3 3" />
+            <CartesianGrid
+              stroke="#1f1f1f"
+              strokeDasharray="4 4"
+              vertical={false}
+            />
             <XAxis
               dataKey="date"
               tickFormatter={(date)=>date.slice(8)}
               minTickGap={25}
+              stroke="#888"
+              tick={{ fill: "#aaa", fontSize: 12 }}
             />
 
-            <YAxis />
+            <YAxis stroke="#888" tick={{ fill: "#aaa", fontSize: 12 }}/>
 
             <Tooltip
               labelFormatter={(label)=>`Date: ${label}`}
               formatter={(value)=>`${value} hrs`}
             />
 
-            <Bar dataKey="hours" radius={[4,4,0,0]}>
+            <Bar dataKey="hours" radius={[20,20,6,6]}>
 
               {filteredData.map((entry,index)=>(
                 <Cell
