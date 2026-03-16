@@ -4,9 +4,14 @@ import gspread
 from datetime import datetime
 from google.oauth2.service_account import Credentials
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.s3_utils import upload_json, read_json
+
 def load_sessions(json_path):
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = read_json(json_path)
     return pd.DataFrame(data)
 
 def compute_daily_hours(session_df):
@@ -49,8 +54,7 @@ def daily_df_to_json(daily_df):
     return records
 
 def save_daily_json(records, path):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(records, f, indent=4)
+    upload_json(records, path)
 
 def update_daily_sheet(credentials_path, sheet_id, worksheet_name, records):
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]

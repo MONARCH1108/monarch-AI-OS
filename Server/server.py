@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 import json
 import os
 
+from utils.s3_utils import upload_json, read_json
+
 
 # -------------------------------
 # IMPORT COMPONENT PIPELINES
@@ -67,15 +69,13 @@ MONTHLY_JSON_PATH = "Automation/monthly_hours.json"
 def health_check():
 
     checks = {
-        "tasks_json_exists": os.path.exists("JsonRes/task_desk_structured.json"),
-        "sessions_json_exists": os.path.exists("JsonRes/time_tracker_structured.json"),
-        "daily_json_exists": os.path.exists("Automation/daily_hours.json")
+        "storage": "s3"
     }
 
     return {
         "status": "ok",
         "service": "Productivity Analytics API",
-        "checks": checks
+        "storage": "s3"
     }
 
 # -------------------------------
@@ -87,8 +87,7 @@ def build_taskdesk_json():
     dataset = fetch_taskdesk(CREDENTIALS_PATH, SHEET_ID)
     dataset = clean_sheet1_taskdesk_data(dataset)
     structured_data = format_sheet1_taskdesk_to_json(dataset)
-    with open(TASK_JSON_PATH, "w", encoding="utf-8") as f:
-        json.dump(structured_data, f, indent=4)
+    upload_json(structured_data, TASK_JSON_PATH)
 
 # -------------------------------
 # STEP 2
@@ -99,8 +98,7 @@ def build_timetracker_json():
     dataset = fetch_timetracker(CREDENTIALS_PATH, SHEET_ID)
     dataset = clean_sheet_time_tracker_data(dataset)
     structured_data = format_sheet_time_tracker_to_json(dataset)
-    with open(SESSION_JSON_PATH, "w", encoding="utf-8") as f:
-        json.dump(structured_data, f, indent=4)
+    upload_json(structured_data, SESSION_JSON_PATH)
 
 # -------------------------------
 # MASTER PIPELINE
@@ -138,8 +136,7 @@ def run_full_pipeline():
 @app.get("/tasks")
 def get_tasks():
     try:
-        with open(TASK_JSON_PATH, "r") as f:
-            data = json.load(f)
+        data = read_json(TASK_JSON_PATH)
         return data
     except Exception as e:
         raise HTTPException(
@@ -154,8 +151,7 @@ def get_tasks():
 @app.get("/analytics/daily")
 def get_daily():
     try:
-        with open(DAILY_JSON_PATH, "r") as f:
-            data = json.load(f)
+        data = read_json(DAILY_JSON_PATH)
         return data
     except Exception as e:
         raise HTTPException(
@@ -170,8 +166,7 @@ def get_daily():
 @app.get("/analytics/weekly")
 def get_weekly():
     try:
-        with open(WEEKLY_JSON_PATH, "r") as f:
-            data = json.load(f)
+        data = read_json(WEEKLY_JSON_PATH)
         return data
     except Exception as e:
         raise HTTPException(
@@ -186,8 +181,7 @@ def get_weekly():
 @app.get("/analytics/monthly")
 def get_monthly():
     try:
-        with open(MONTHLY_JSON_PATH, "r") as f:
-            data = json.load(f)
+        data = read_json(MONTHLY_JSON_PATH)
         return data
     except Exception as e:
         raise HTTPException(

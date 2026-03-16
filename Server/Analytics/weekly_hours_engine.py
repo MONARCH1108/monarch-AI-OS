@@ -3,9 +3,14 @@ import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.s3_utils import upload_json, read_json
+
 def load_daily_hours(json_path):
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = read_json(json_path)
     return pd.DataFrame(data)
 
 
@@ -54,8 +59,7 @@ def weekly_df_to_json(weekly_df):
 
 
 def save_weekly_json(records, path):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(records, f, indent=4)
+    upload_json(records, path)
 
 def apply_weekly_formatting(sheet, worksheet, df):
     sheet_id = worksheet.id
