@@ -65,21 +65,42 @@ function WeeklyHours(){
       <div className="weekly-chart">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={filtered} margin={{ top: 10, right: 5, left: -30, bottom: -5 }}>
-            <CartesianGrid strokeDasharray="3 3" />
+                  
+            <CartesianGrid
+              stroke="#1f1f1f"
+              strokeDasharray="4 4"
+              vertical={false}
+            />
+        
             <XAxis
               dataKey="iso_week"
               tickFormatter={(w)=>`W${w}`}
+              stroke="#888"
+              tick={{ fill:"#aaa", fontSize:12 }}
             />
-            <YAxis/>
+        
+            <YAxis
+              stroke="#888"
+              tick={{ fill:"#aaa", fontSize:12 }}
+            />
+        
             <Tooltip
+              contentStyle={{
+                background:"#0a0a0a",
+                border:"1px solid #d4af37",
+                borderRadius:"8px",
+                color:"#fff"
+              }}
               labelFormatter={(label)=>`Week ${label}`}
               formatter={(v)=>`${v} hrs`}
             />
+        
             <Bar
               dataKey="hours"
               fill="#3b82f6"
-              radius={[4,4,0,0]}
+              radius={[20,20,6,6]}
             />
+        
           </BarChart>
         </ResponsiveContainer>
       </div>
