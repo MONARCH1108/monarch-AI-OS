@@ -9,12 +9,12 @@ export default defineConfig({
     proxy: {
 
       "/analytics": {
-        target: "http://192.168.0.5:8000",
+        target: "http://192.168.0.8:8000",
         changeOrigin: true
       },
 
       "/pipeline": {
-        target: "http://192.168.0.5:8000",
+        target: "http://192.168.0.8:8000",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/pipeline/, "/pipeline")
       }

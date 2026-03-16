@@ -3,3 +3,11 @@ body{
   color: #111;
   font-family: 'DM Sans', sans-serif;
 }
+
+.ant-layout{
+  background: #141414 !important;
+}
+
+.ant-layout-content{
+  background: #141414 !important;
+}
