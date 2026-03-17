@@ -29,19 +29,7 @@ def authenticate_and_fetch_sheet_data(sheet_id):
     sheet = client.open_by_key(sheet_id)
     worksheet = sheet.worksheet("Time-Tracker")
     data = worksheet.get_all_values()
-
-        # 🔥 DEBUG PRINT
-    print("RAW DATA:", data[:5])
-
-    if not data or len(data) < 2:
-        raise Exception("Sheet data is empty or malformed")
-
-    headers = [col.strip() for col in data[0]]  # clean headers
-
-    print("HEADERS:", headers)
-
-
-    dataset = pd.DataFrame(data[1:], columns=headers)
+    dataset = pd.DataFrame(data[1:], columns=data[0])
     return dataset
 
 # ---------------------------------------------------
@@ -49,8 +37,6 @@ def authenticate_and_fetch_sheet_data(sheet_id):
 # Cleaning logic specific to Time Tracker Sheet
 # ---------------------------------------------------
 def clean_sheet_time_tracker_data(dataset):
-    if "Date" not in dataset.columns:
-        raise Exception(f"Missing 'Date' column. Found columns: {list(dataset.columns)}")
     dataset.replace("", pd.NA, inplace=True)
     dataset["Date"] = dataset["Date"].ffill()
     dataset["Day"] = dataset["Day"].ffill()
