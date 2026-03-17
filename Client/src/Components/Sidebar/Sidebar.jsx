@@ -10,6 +10,7 @@ import logo from "../../assets/logo.png";
 import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import { RocketOutlined  } from '@ant-design/icons';
 
 const { Sider } = Layout;
 
@@ -128,7 +129,8 @@ function Sidebar() {
         )}
 
         <button className="start-server-btn"  onClick={startServer}  disabled={loading}>
-          🚀 Start Server
+          <RocketOutlined style={{ marginRight: '6px' }} />
+          Start Server
         </button>
         <button className="run-analytics-btn" onClick={runPipeline} disabled={loading}>
           <BarChartOutlined style={{ marginRight: "8px" }} />
