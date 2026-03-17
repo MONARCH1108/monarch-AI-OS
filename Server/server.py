@@ -116,19 +116,20 @@ def run_pipeline():
 # POST /pipeline/run
 # -------------------------------
 
+import traceback
+
 @app.post("/pipeline/run")
 def run_full_pipeline():
     try:
         run_pipeline()
-        return {
-            "status": "success",
-            "message": "Pipeline executed successfully"
-        }
+        return {"status": "success"}
     except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=str(e)
-        )
+        error_trace = traceback.format_exc()
+        print(error_trace)  # shows in Render logs
+        return {
+            "error": str(e),
+            "trace": error_trace
+        }
 
 # -------------------------------
 # GET /tasks
