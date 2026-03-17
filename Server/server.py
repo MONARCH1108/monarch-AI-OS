@@ -52,7 +52,7 @@ app.add_middleware(
 # CONFIG
 # -------------------------------
 
-CREDENTIALS_PATH = "config\Credentials.json"
+#CREDENTIALS_PATH = "config\Credentials.json"
 SHEET_ID = "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM"
 
 TASK_JSON_PATH = "JsonRes/task_desk_structured.json"
@@ -85,7 +85,7 @@ def health_check():
 # -------------------------------
 
 def build_taskdesk_json():
-    dataset = fetch_taskdesk(CREDENTIALS_PATH, SHEET_ID)
+    dataset = fetch_taskdesk(SHEET_ID)
     dataset = clean_sheet1_taskdesk_data(dataset)
     structured_data = format_sheet1_taskdesk_to_json(dataset)
     upload_json(structured_data, TASK_JSON_PATH)
@@ -96,7 +96,7 @@ def build_taskdesk_json():
 # -------------------------------
 
 def build_timetracker_json():
-    dataset = fetch_timetracker(CREDENTIALS_PATH, SHEET_ID)
+    dataset = fetch_timetracker(SHEET_ID)
     dataset = clean_sheet_time_tracker_data(dataset)
     structured_data = format_sheet_time_tracker_to_json(dataset)
     upload_json(structured_data, SESSION_JSON_PATH)

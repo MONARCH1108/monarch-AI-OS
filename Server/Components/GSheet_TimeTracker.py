@@ -9,16 +9,19 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from utils.s3_utils import upload_json
+from config_loader import load_config 
 
 # ---------------------------------------------------
 # FUNCTION 1
 # Authentication + Fetch Data
 # ---------------------------------------------------
-def authenticate_and_fetch_sheet_data(credentials_path, sheet_id):
+def authenticate_and_fetch_sheet_data(sheet_id):
 
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-    credentials = Credentials.from_service_account_file(
-        credentials_path,
+    config = load_config()
+
+    credentials = Credentials.from_service_account_info(
+        config["google"],
         scopes=scopes
     )
 
@@ -187,9 +190,8 @@ def format_sheet_time_tracker_to_json(dataset, flatten=True):
     return structured_data
 
 def main():
-    credentials_path = "config/Credentials.json"
     sheet_id = "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM"
-    dataset = authenticate_and_fetch_sheet_data(credentials_path, sheet_id)
+    dataset = authenticate_and_fetch_sheet_data(sheet_id)
     dataset = clean_sheet_time_tracker_data(dataset)
     structured_data = format_sheet_time_tracker_to_json(dataset)
     upload_json(

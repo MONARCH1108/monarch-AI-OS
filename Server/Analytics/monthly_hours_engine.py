@@ -8,6 +8,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from utils.s3_utils import upload_json, read_json
+from config_loader import load_config  
 
 
 def load_daily_hours(json_path):
@@ -90,10 +91,11 @@ def apply_monthly_formatting(sheet, worksheet, df):
         sheet.batch_update({"requests": requests})
     print("Monthly formatting applied.")
 
-def update_monthly_sheet(credentials_path, sheet_id, worksheet_name, records):
+def update_monthly_sheet(sheet_id, worksheet_name, records):
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-    credentials = Credentials.from_service_account_file(
-        credentials_path,
+    config = load_config()
+    credentials = Credentials.from_service_account_info(
+        config["google"],
         scopes=scopes
     )
     client = gspread.authorize(credentials)
@@ -124,7 +126,6 @@ def run_monthly_analytics():
     records = monthly_df_to_json(monthly_df)
     save_monthly_json(records, "Automation/monthly_hours.json")
     update_monthly_sheet(
-        "config/Credentials.json",
         "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM",
         "Monthy-Review",
         records

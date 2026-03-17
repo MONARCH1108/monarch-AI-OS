@@ -9,7 +9,7 @@ import {
   ResponsiveContainer
 } from "recharts"
 import "./MonthlyHours.css"
-const API = "http://127.0.0.1:8000/analytics/monthly"
+const API = "https://productivity-api-b5hg.onrender.com/analytics/monthly"
 
 function MonthlyHours(){
   const [data,setData] = useState([])

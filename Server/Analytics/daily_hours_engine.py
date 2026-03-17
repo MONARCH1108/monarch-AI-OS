@@ -9,6 +9,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from utils.s3_utils import upload_json, read_json
+from config_loader import load_config
 
 def load_sessions(json_path):
     data = read_json(json_path)
@@ -56,10 +57,11 @@ def daily_df_to_json(daily_df):
 def save_daily_json(records, path):
     upload_json(records, path)
 
-def update_daily_sheet(credentials_path, sheet_id, worksheet_name, records):
+def update_daily_sheet(sheet_id, worksheet_name, records):
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-    credentials = Credentials.from_service_account_file(
-        credentials_path,
+    config = load_config()
+    credentials = Credentials.from_service_account_info(
+        config["google"],
         scopes=scopes
     )
     client = gspread.authorize(credentials)
@@ -154,7 +156,6 @@ def run_daily_analytics():
     records = daily_df_to_json(daily_df)
     save_daily_json(records, "Automation/daily_hours.json")
     update_daily_sheet(
-        "config/Credentials.json",
         "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM",   # spreadsheet ID
         "Day-Hours-Review",                              # worksheet name
         records

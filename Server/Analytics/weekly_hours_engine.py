@@ -8,6 +8,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from utils.s3_utils import upload_json, read_json
+from config_loader import load_config
 
 def load_daily_hours(json_path):
     data = read_json(json_path)
@@ -125,10 +126,11 @@ def apply_weekly_formatting(sheet, worksheet, df):
         sheet.batch_update({"requests": requests})
     print("Weekly block formatting applied.")
 
-def update_weekly_sheet(credentials_path, sheet_id, worksheet_name, records):
+def update_weekly_sheet(sheet_id, worksheet_name, records):
     scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-    credentials = Credentials.from_service_account_file(
-        credentials_path,
+    config = load_config()
+    credentials = Credentials.from_service_account_info(
+        config["google"],
         scopes=scopes
     )
     client = gspread.authorize(credentials)
@@ -160,7 +162,6 @@ def run_weekly_analytics():
     records = weekly_df_to_json(weekly_df)
     save_weekly_json(records, "Automation/weekly_hours.json")
     update_weekly_sheet(
-        "config/Credentials.json",
         "1x0CJgCUpj-DDvGyClKXdc9OhBpOwNO9AUIdoZ1nnAvM",
         "Weekly-Review",
         records
