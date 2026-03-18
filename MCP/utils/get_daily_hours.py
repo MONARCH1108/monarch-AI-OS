@@ -1,5 +1,5 @@
 import json
-from config import get_s3_client, get_bucket_name
+from utils.config import get_s3_client, get_bucket_name
 
 FILE_KEY = "Automation/daily_hours.json"
 
