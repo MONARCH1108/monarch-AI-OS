@@ -14,13 +14,15 @@ def get_daily_hours():
 
         data = json.loads(response["Body"].read().decode("utf-8"))
 
-        print("\n✅ Daily Hours JSON:\n")
-        print(json.dumps(data, indent=2))
+        return data  # ✅ return instead of print
 
     except Exception as e:
-        print("❌ Error fetching daily hours:")
-        print(e)
+        return {
+            "status": "error",
+            "message": str(e)
+        }
 
 
 if __name__ == "__main__":
-    get_daily_hours()
+    result = get_daily_hours()
+    print(json.dumps(result, indent=2))  # optional for testing
