@@ -87,80 +87,89 @@ function MonthlyStreak() {
   ];
 
   return (
-<div className="monthly-streak-card">
-
-  {/* HEADER */}
-  <div className="monthly-streak-header">
-    <h3 className="monthly-streak-title">Monthly Consistency</h3>
-
-    <div className="monthly-streak-filters">
-      <select
-        value={selectedMonth}
-        onChange={(e) => setSelectedMonth(Number(e.target.value))}
-      >
-        {months.map((m, i) => (
-          <option key={i} value={i}>{m}</option>
-        ))}
-      </select>
-
-      <select
-        value={selectedYear}
-        onChange={(e) => setSelectedYear(Number(e.target.value))}
-      >
-        {years.map((y) => (
-          <option key={y} value={y}>{y}</option>
-        ))}
-      </select>
-    </div>
-  </div>
-
-  {/* BODY */}
-  <div className="monthly-streak-body">
-
-    {/* CENTERED CHART */}
-    <div className="monthly-streak-chart-wrapper">
-      <div className="monthly-streak-chart">
-        <PieChart width={260} height={260}>
-          <Pie
-            data={chartData}
-            cx="50%"
-            cy="50%"
-            outerRadius={90}
-            innerRadius={0}
-            dataKey="value"
-            labelLine={false}
-            label={({ cx, cy, midAngle, outerRadius, value }) => {
-              const RADIAN = Math.PI / 180;
-              const radius = outerRadius * 0.65;
-              const x = cx + radius * Math.cos(-midAngle * RADIAN);
-              const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-              return (
-                <text
-                  x={x}
-                  y={y}
-                  fill="#fff"
-                  textAnchor="middle"
-                  dominantBaseline="central"
-                  style={{ fontSize: 12, fontWeight: 500 }}
-                >
-                  {value}
-                </text>
-              );
-            }}
-          >
-            {chartData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index]} />
-            ))}
-          </Pie>
-
-          <Tooltip formatter={(value, name) => [`${value} days`, name]} />
-        </PieChart>
-      </div>
-    </div>
-
-  </div>
-</div>
+        <div className="monthly-streak-card">
+        
+          {/* HEADER */}
+          <div className="monthly-streak-header">
+            <h3 className="monthly-streak-title">Monthly Consistency</h3>
+        
+            <div className="monthly-streak-filters">
+              <select
+                value={selectedMonth}
+                onChange={(e) => setSelectedMonth(Number(e.target.value))}
+              >
+                {months.map((m, i) => (
+                  <option key={i} value={i}>{m}</option>
+                ))}
+              </select>
+            
+              <select
+                value={selectedYear}
+                onChange={(e) => setSelectedYear(Number(e.target.value))}
+              >
+                {years.map((y) => (
+                  <option key={y} value={y}>{y}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+            
+          {/* BODY */}
+          <div className="monthly-streak-body">
+            
+            {/* CENTERED CHART */}
+            <div className="monthly-streak-chart-wrapper">
+              <div className="monthly-streak-chart">
+                <PieChart width={260} height={260}>
+                  <Pie
+                    data={chartData}
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={90}
+                    innerRadius={0}
+                    dataKey="value"
+                    labelLine={false}
+                    label={({ cx, cy, midAngle, outerRadius, value }) => {
+                      const RADIAN = Math.PI / 180;
+                      const radius = outerRadius * 0.65;
+                      const x = cx + radius * Math.cos(-midAngle * RADIAN);
+                      const y = cy + radius * Math.sin(-midAngle * RADIAN);
+                    
+                      return (
+                        <text
+                          x={x}
+                          y={y}
+                          fill="#fff"
+                          textAnchor="middle"
+                          dominantBaseline="central"
+                          style={{ fontSize: 12, fontWeight: 500 }}
+                        >
+                          {value}
+                        </text>
+                      );
+                    }}
+                  >
+                    {chartData.map((entry, index) => (
+                      <Cell
+                          key={`cell-${index}`}
+                          fill={
+                            entry.name === "Worked"
+                              ? "#3b82f6"
+                              : entry.name === "Missed"
+                              ? "#6b7280"
+                              : "#d4af37"
+                          }
+                        />
+                    ))}
+                  </Pie>
+                
+                  <Tooltip formatter={(value, name) => [`${value} days`, name]} />
+                </PieChart>
+              </div>
+            </div>
+                
+          </div>
+        </div>
   );
 }
 
