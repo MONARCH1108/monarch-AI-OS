@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Tracker from "./Components/Tracker/Tracker";
+import MonthlyAnalytics from "./Components/MonthlyAnalytics/MonthlyAnalytics";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const { Content } = Layout;
@@ -17,6 +18,7 @@ function App() {
           <Content style={{ padding: "20px" }}>
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/monthly-analytics" element={<MonthlyAnalytics />} />
               <Route path="/Tracker" element={<Tracker />} />
             </Routes>
           </Content>

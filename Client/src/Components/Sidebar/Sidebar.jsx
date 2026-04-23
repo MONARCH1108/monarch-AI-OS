@@ -110,11 +110,13 @@ function Sidebar() {
         className="SideMenu"
         onClick={({ key }) => {
           if (key === "1") navigate("/");
-          if (key === "2") navigate("/tracker");
+          if (key === "2") navigate("/monthly-analytics");  
+          if (key === "3") navigate("/tracker");
         }}
         items={[
           { key: "1", icon: <DashboardOutlined />,    label: "Dashboard" },
-          { key: "2", icon: <UnorderedListOutlined />, label: "Tracker"   },
+          { key: "2", icon: <BarChartOutlined />,     label: "Monthly Analytics" },
+          { key: "3", icon: <UnorderedListOutlined />, label: "Tracker"   },
         ]}
       />
 
