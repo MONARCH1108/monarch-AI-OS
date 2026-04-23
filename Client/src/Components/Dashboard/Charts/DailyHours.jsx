@@ -102,8 +102,15 @@ function DailyHours() {
             <YAxis stroke="#888" tick={{ fill: "#aaa", fontSize: 12 }}/>
 
             <Tooltip
-              labelFormatter={(label)=>`Date: ${label}`}
-              formatter={(value)=>`${value} hrs`}
+              labelFormatter={(label) => `Date: ${label}`}
+              formatter={(value) => [value, "Hours"]}
+              contentStyle={{
+                backgroundColor: "#000",
+                border: "1px solid #d4af37",
+                borderRadius: "8px"
+              }}
+              labelStyle={{ color: "#d4af37" }}
+              itemStyle={{ color: "#3b82f6" }} // 🔵 BLUE text
             />
 
             <Bar dataKey="hours" radius={[20,20,6,6]}>
