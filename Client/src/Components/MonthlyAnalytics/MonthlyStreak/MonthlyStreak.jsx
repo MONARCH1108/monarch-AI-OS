@@ -3,7 +3,12 @@ import "./MonthlyStreak.css";
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 function MonthlyStreak() {
+  const today = new Date();
+
+  const [selectedMonth, setSelectedMonth] = useState(today.getMonth());
+  const [selectedYear, setSelectedYear] = useState(today.getFullYear());
   const [chartData, setChartData] = useState([]);
+  const [years, setYears] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,39 +17,58 @@ function MonthlyStreak() {
         const data = await res.json();
         if (!Array.isArray(data)) return;
 
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // ✅ normalize
+        const now = new Date();
+        now.setHours(0, 0, 0, 0);
 
-        const currentMonth = today.getMonth();
-        const currentYear = today.getFullYear();
-        const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+        // ✅ Extract years dynamically from API
+        const uniqueYears = [
+          ...new Set(
+            data.map((d) => new Date(d.date + "T00:00:00").getFullYear())
+          ),
+        ].sort((a, b) => b - a);
+
+        setYears(uniqueYears);
+
+        const isCurrentMonth =
+          selectedMonth === now.getMonth() &&
+          selectedYear === now.getFullYear();
+
+        const daysInMonth = new Date(selectedYear, selectedMonth + 1, 0).getDate();
 
         const filteredDays = data.filter((d) => {
-          const date = new Date(d.date + "T00:00:00"); // ✅ safe parsing
-          return (
-            date.getMonth() === currentMonth &&
-            date.getFullYear() === currentYear &&
-            date <= today
-          );
+          const date = new Date(d.date + "T00:00:00");
+
+          if (isCurrentMonth) {
+            return (
+              date.getMonth() === selectedMonth &&
+              date.getFullYear() === selectedYear &&
+              date <= now
+            );
+          } else {
+            return (
+              date.getMonth() === selectedMonth &&
+              date.getFullYear() === selectedYear
+            );
+          }
         });
 
         const passedDays = filteredDays.length;
 
-        // ✅ handle empty case
         if (passedDays === 0) {
-          setChartData([
-            { name: "Remaining", value: daysInMonth }
-          ]);
+          setChartData([{ name: "Remaining", value: daysInMonth }]);
           return;
         }
 
         const worked = filteredDays.filter((d) => d.hours > 0).length;
         const missed = passedDays - worked;
-        const remaining = daysInMonth - passedDays;
+        const remaining = isCurrentMonth
+          ? daysInMonth - passedDays
+          : 0;
+
         setChartData([
           { name: "Worked", value: worked },
           { name: "Missed", value: missed },
-          { name: "Remaining", value: remaining }
+          ...(remaining > 0 ? [{ name: "Remaining", value: remaining }] : []),
         ]);
 
       } catch (err) {
@@ -53,53 +77,88 @@ function MonthlyStreak() {
     };
 
     fetchData();
-  }, []);
+  }, [selectedMonth, selectedYear]);
 
-  const COLORS = ["#3b82f6", "#6b7280" ,"#d4af37"];
+  const COLORS = ["#3b82f6", "#6b7280", "#d4af37"];
+
+  const months = [
+  "January","February","March","April","May","June",
+  "July","August","September","October","November","December"
+  ];
 
   return (
 <div className="monthly-streak-card">
-  <h3 className="monthly-streak-title">Monthly Consistency</h3>
 
-  <div className="monthly-streak-chart">
-    <PieChart width={260} height={260}>
-<Pie
-  data={chartData}
-  cx="50%"
-  cy="50%"
-  outerRadius={90}   // full circle
-  innerRadius={0}    // ❌ removes donut → makes it solid circle
-  dataKey="value"
-  labelLine={false}  // ❌ removes those small lines
-  label={({ cx, cy, midAngle, outerRadius, value }) => {
-    const RADIAN = Math.PI / 180;
-    const radius = outerRadius * 0.65; // move text slightly inside
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+  {/* HEADER */}
+  <div className="monthly-streak-header">
+    <h3 className="monthly-streak-title">Monthly Consistency</h3>
 
-    return (
-      <text
-        x={x}
-        y={y}
-        fill="#fff"
-        textAnchor="middle"
-        dominantBaseline="central"
-        style={{ fontSize: 12, fontWeight: 500 }}
+    <div className="monthly-streak-filters">
+      <select
+        value={selectedMonth}
+        onChange={(e) => setSelectedMonth(Number(e.target.value))}
       >
-        {value}
-      </text>
-    );
-  }}
->
-  {chartData.map((entry, index) => (
-    <Cell key={`cell-${index}`} fill={COLORS[index]} />
-  ))}
-</Pie>
+        {months.map((m, i) => (
+          <option key={i} value={i}>{m}</option>
+        ))}
+      </select>
 
-      <Tooltip
-        formatter={(value, name) => [`${value} days`, name]}
-      />
-    </PieChart>
+      <select
+        value={selectedYear}
+        onChange={(e) => setSelectedYear(Number(e.target.value))}
+      >
+        {years.map((y) => (
+          <option key={y} value={y}>{y}</option>
+        ))}
+      </select>
+    </div>
+  </div>
+
+  {/* BODY */}
+  <div className="monthly-streak-body">
+
+    {/* CENTERED CHART */}
+    <div className="monthly-streak-chart-wrapper">
+      <div className="monthly-streak-chart">
+        <PieChart width={260} height={260}>
+          <Pie
+            data={chartData}
+            cx="50%"
+            cy="50%"
+            outerRadius={90}
+            innerRadius={0}
+            dataKey="value"
+            labelLine={false}
+            label={({ cx, cy, midAngle, outerRadius, value }) => {
+              const RADIAN = Math.PI / 180;
+              const radius = outerRadius * 0.65;
+              const x = cx + radius * Math.cos(-midAngle * RADIAN);
+              const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+              return (
+                <text
+                  x={x}
+                  y={y}
+                  fill="#fff"
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  style={{ fontSize: 12, fontWeight: 500 }}
+                >
+                  {value}
+                </text>
+              );
+            }}
+          >
+            {chartData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index]} />
+            ))}
+          </Pie>
+
+          <Tooltip formatter={(value, name) => [`${value} days`, name]} />
+        </PieChart>
+      </div>
+    </div>
+
   </div>
 </div>
   );

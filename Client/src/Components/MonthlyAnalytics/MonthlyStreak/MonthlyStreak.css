@@ -1,3 +1,4 @@
+/* CARD */
 .monthly-streak-card {
   background: #000;
   border: 1.5px solid #d4af37;
@@ -7,38 +8,95 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
   transition: all 0.3s ease;
 }
 
-.monthly-streak-card:hover {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+/* HEADER */
+.monthly-streak-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+/* TITLE */
 .monthly-streak-title {
   color: #d4af37;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
-
-  margin-bottom: 15px;
   text-transform: uppercase;
 }
 
+/* FILTERS (TOP RIGHT) */
+.monthly-streak-filters {
+  display: flex;
+  gap: 10px;
+}
+
+/* DROPDOWN STYLE */
+.monthly-streak-filters select {
+  background: #000;
+  color: #fff;
+
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+
+  padding: 6px 12px;
+  font-size: 13px;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  min-width: 110px;
+  height: 34px;
+}
+
+/* HOVER */
+.monthly-streak-filters select:hover {
+  border-color: #ffd700;
+}
+
+/* FOCUS */
+.monthly-streak-filters select:focus {
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+}
+
+/* OPTIONS */
+.monthly-streak-filters select option {
+  background: #000;
+  color: #fff;
+}
+
+/* BODY */
+.monthly-streak-body {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* CENTER ALWAYS */
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* CHART WRAPPER */
+.monthly-streak-chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* CHART */
 .monthly-streak-chart {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-/* Tooltip styling override (Recharts) */
-.recharts-tooltip-wrapper {
-  outline: none;
-}
-
+/* TOOLTIP */
 .recharts-default-tooltip {
   background-color: #000 !important;
   border: 1px solid #d4af37 !important;
@@ -47,7 +105,7 @@
   font-size: 12px;
 }
 
-/* Optional: labels inside pie */
+/* LABELS */
 .recharts-pie-label-text {
   fill: #ffffff;
   font-size: 12px;
