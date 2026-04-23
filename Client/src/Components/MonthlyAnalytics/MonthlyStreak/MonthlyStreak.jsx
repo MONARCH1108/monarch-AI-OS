@@ -91,8 +91,8 @@ function MonthlyStreak() {
         
           {/* HEADER */}
           <div className="monthly-streak-header">
-            <h3 className="monthly-streak-title">Monthly Consistency</h3>
-        
+            <h3 className="monthly-streak-title">Monthly Streak</h3>
+
             <div className="monthly-streak-filters">
               <select
                 value={selectedMonth}
