@@ -55,28 +55,53 @@ function MonthlyStreak() {
     fetchData();
   }, []);
 
-  const COLORS = ["#1890ff", "#ff4d4f", "#8c8c8c"];
+  const COLORS = ["#3b82f6", "#6b7280" ,"#d4af37"];
 
   return (
-    <div className="Testing">
-      <h3>Monthly Consistency</h3>
-      <PieChart width={260} height={260}>
-        <Pie
-          data={chartData}
-          cx="50%"
-          cy="50%"
-          outerRadius={90}
-          dataKey="value"
-          label={({ value }) => value}
-        >
-          {chartData.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index]} />
-          ))}
-        </Pie>
+<div className="monthly-streak-card">
+  <h3 className="monthly-streak-title">Monthly Consistency</h3>
 
-        <Tooltip formatter={(value, name) => [`${value} days`, name]} />
-      </PieChart>
-    </div>
+  <div className="monthly-streak-chart">
+    <PieChart width={260} height={260}>
+<Pie
+  data={chartData}
+  cx="50%"
+  cy="50%"
+  outerRadius={90}   // full circle
+  innerRadius={0}    // ❌ removes donut → makes it solid circle
+  dataKey="value"
+  labelLine={false}  // ❌ removes those small lines
+  label={({ cx, cy, midAngle, outerRadius, value }) => {
+    const RADIAN = Math.PI / 180;
+    const radius = outerRadius * 0.65; // move text slightly inside
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+    return (
+      <text
+        x={x}
+        y={y}
+        fill="#fff"
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{ fontSize: 12, fontWeight: 500 }}
+      >
+        {value}
+      </text>
+    );
+  }}
+>
+  {chartData.map((entry, index) => (
+    <Cell key={`cell-${index}`} fill={COLORS[index]} />
+  ))}
+</Pie>
+
+      <Tooltip
+        formatter={(value, name) => [`${value} days`, name]}
+      />
+    </PieChart>
+  </div>
+</div>
   );
 }
 

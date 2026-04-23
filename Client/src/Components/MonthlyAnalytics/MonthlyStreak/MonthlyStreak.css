@@ -1,3 +1,55 @@
-.Testing{
-    color: aliceblue;
+.monthly-streak-card {
+  background: #000;
+  border: 1.5px solid #d4af37;
+  border-radius: 16px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+  transition: all 0.3s ease;
+}
+
+.monthly-streak-card:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+.monthly-streak-title {
+  color: #d4af37;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.monthly-streak-chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tooltip styling override (Recharts) */
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.recharts-default-tooltip {
+  background-color: #000 !important;
+  border: 1px solid #d4af37 !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  font-size: 12px;
+}
+
+/* Optional: labels inside pie */
+.recharts-pie-label-text {
+  fill: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
 }
