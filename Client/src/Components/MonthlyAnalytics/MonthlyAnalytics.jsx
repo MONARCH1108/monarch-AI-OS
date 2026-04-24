@@ -2,6 +2,7 @@ import { Row, Col } from "antd";
 import './MonthlyAnalytics.css'
 import MonthlyStreak from "./MonthlyStreak/MonthlyStreak";
 import DailyAvgHrs from "./DailyAvgHours/DailyAvgHrs";
+import WeeklyAvgHours from "./WeeklyAvgHours/WeeklyAvgHours";
 
 function MonthlyAnalytics() {
   return (
@@ -18,6 +19,8 @@ function MonthlyAnalytics() {
         <Col xs={24} md={12} style={{ display: "flex" }}>
           <DailyAvgHrs />
         </Col>
+
+        <WeeklyAvgHours />
 
       </Row>
 
