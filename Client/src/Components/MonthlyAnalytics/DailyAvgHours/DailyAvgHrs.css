@@ -68,3 +68,41 @@
 
   letter-spacing: 0.5px;
 }
+
+/* HEADER */
+.daily-avg-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* FILTERS (top right, horizontal) */
+.daily-avg-filters {
+  display: flex;
+  gap: 8px;
+}
+
+/* dropdown style same as monthly */
+.daily-avg-filters select {
+  background: #000;
+  color: #fff;
+
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+
+  padding: 6px 10px;
+  font-size: 12px;
+
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.daily-avg-filters select:hover {
+  border-color: #ffd700;
+}
+
+.daily-avg-filters select:focus {
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+}
