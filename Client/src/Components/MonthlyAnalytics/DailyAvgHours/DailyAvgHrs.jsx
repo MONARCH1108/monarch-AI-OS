@@ -9,7 +9,7 @@ import "./DailyAvgHrs.css";
 function DailyAvgHrs() {
   const [avgHours, setAvgHours] = useState(0);
 
-  const GOAL = 8;
+  const GOAL = 12;
 
   useEffect(() => {
     const fetchAvg = async () => {
@@ -73,7 +73,7 @@ return (
         startAngle={90}
         endAngle={-270}
         data={[
-          { name: "bg", value: 100, fill: "#1f2937" },        // background
+          { name: "bg", value: 100, fill: "#1e293b" },        // background
           { name: "progress", value: percentage, fill: "#3b82f6" } // progress
         ]}
       >

@@ -3,20 +3,25 @@
   border: 1.5px solid #d4af37;
   border-radius: 16px;
 
-  padding: 16px;
+  padding: 18px 16px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+  transition: all 0.25s ease;
+}
+
+.daily-avg-card:hover {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
 }
 
 /* title */
 .daily-avg-title {
   color: #d4af37;
   font-size: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   letter-spacing: 1px;
 }
 
@@ -27,8 +32,8 @@
   align-items: center;
   justify-content: center;
 
-  height: 140px;  /* 🔥 REQUIRED */
-  width: 140px;
+  height: 150px;
+  width: 150px;
 }
 
 /* center text */
@@ -37,21 +42,29 @@
   text-align: center;
 }
 
+/* main value */
 .daily-avg-center h2 {
   color: #3b82f6;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 600;
   margin: 0;
 }
 
+/* percentage */
 .daily-avg-center span {
   display: block;
-  color: #aaa;
-  font-size: 11px;
+  margin-top: 4px;   /* 🔥 spacing fix */
+  color: #9ca3af;    /* softer grey */
+  font-size: 12px;
 }
 
 /* target label */
 .daily-avg-goal {
-  margin-top: 8px;
+  margin-top: 12px;
   font-size: 11px;
-  color: #888;
+
+  color: #d4af37;  /* 🔥 match dashboard */
+  opacity: 0.7;
+
+  letter-spacing: 0.5px;
 }
