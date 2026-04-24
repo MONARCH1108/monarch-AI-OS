@@ -13,10 +13,6 @@
   transition: all 0.3s ease;
 }
 
-.daily-avg-card:hover {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
-}
-
 /* HEADER */
 .daily-avg-header {
   width: 100%;
