@@ -1,0 +1,57 @@
+.daily-avg-card {
+  background: #000;
+  border: 1.5px solid #d4af37;
+  border-radius: 16px;
+
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+/* title */
+.daily-avg-title {
+  color: #d4af37;
+  font-size: 12px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* chart wrapper */
+.daily-avg-chart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 140px;  /* 🔥 REQUIRED */
+  width: 140px;
+}
+
+/* center text */
+.daily-avg-center {
+  position: absolute;
+  text-align: center;
+}
+
+.daily-avg-center h2 {
+  color: #3b82f6;
+  font-size: 20px;
+  margin: 0;
+}
+
+.daily-avg-center span {
+  display: block;
+  color: #aaa;
+  font-size: 11px;
+}
+
+/* target label */
+.daily-avg-goal {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #888;
+}
