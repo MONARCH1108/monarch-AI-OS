@@ -1,0 +1,89 @@
+.weekly-avg-card {
+  background: #000;
+  border: 1.5px solid #d4af37;
+  border-radius: 16px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+/* HEADER */
+.weekly-avg-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* TITLE */
+.weekly-avg-title {
+  color: #d4af37;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* FILTERS */
+.weekly-avg-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.weekly-avg-filters select {
+  background: #000;
+  color: #fff;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+
+  padding: 6px 12px;
+  font-size: 13px;
+
+  min-width: 110px;
+  height: 34px;
+}
+
+/* CHART */
+.weekly-avg-chart {
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 260px;
+  width: 100%;
+}
+
+/* CENTER TEXT */
+.weekly-avg-center {
+  position: absolute;
+  text-align: center;
+}
+
+.weekly-avg-center h2 {
+  color: #3b82f6;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.weekly-avg-center span {
+  display: block;
+  margin-top: 4px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* GOAL */
+.weekly-avg-goal {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #d4af37;
+  opacity: 0.7;
+  text-align: center;
+}
