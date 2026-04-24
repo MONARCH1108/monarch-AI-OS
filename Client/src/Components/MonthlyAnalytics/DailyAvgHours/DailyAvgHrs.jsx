@@ -85,29 +85,29 @@ function DailyAvgHrs() {
     <div className="daily-avg-card">
 
       {/* HEADER */}
-      <div className="daily-avg-header">
-        <p className="daily-avg-title">Avg Hours / Day</p>
+<div className="daily-avg-header">
+  <h3 className="daily-avg-title">Avg Hours / Day</h3>
 
-        <div className="daily-avg-filters">
-          <select
-            value={selectedMonth}
-            onChange={(e) => setSelectedMonth(Number(e.target.value))}
-          >
-            {months.map((m, i) => (
-              <option key={i} value={i}>{m}</option>
-            ))}
-          </select>
+  <div className="daily-avg-filters">
+    <select
+      value={selectedMonth}
+      onChange={(e) => setSelectedMonth(Number(e.target.value))}
+    >
+      {months.map((m, i) => (
+        <option key={i} value={i}>{m}</option>
+      ))}
+    </select>
 
-          <select
-            value={selectedYear}
-            onChange={(e) => setSelectedYear(Number(e.target.value))}
-          >
-            {years.map((y) => (
-              <option key={y} value={y}>{y}</option>
-            ))}
-          </select>
-        </div>
-      </div>
+    <select
+      value={selectedYear}
+      onChange={(e) => setSelectedYear(Number(e.target.value))}
+    >
+      {years.map((y) => (
+        <option key={y} value={y}>{y}</option>
+      ))}
+    </select>
+  </div>
+</div>
 
       {/* CHART */}
       <div className="daily-avg-chart">

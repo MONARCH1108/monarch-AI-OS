@@ -1,89 +1,46 @@
+/* CARD */
 .daily-avg-card {
   background: #000;
   border: 1.5px solid #d4af37;
   border-radius: 16px;
 
-  padding: 18px 16px;
+  padding: 20px;   /* ✅ same as monthly */
 
   display: flex;
   flex-direction: column;
-  align-items: center;
 
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
-  transition: all 0.25s ease;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+  transition: all 0.3s ease;
 }
 
 .daily-avg-card:hover {
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
-}
-
-/* title */
-.daily-avg-title {
-  color: #d4af37;
-  font-size: 12px;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-/* chart wrapper */
-.daily-avg-chart {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 150px;
-  width: 150px;
-}
-
-/* center text */
-.daily-avg-center {
-  position: absolute;
-  text-align: center;
-}
-
-/* main value */
-.daily-avg-center h2 {
-  color: #3b82f6;
-  font-size: 22px;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* percentage */
-.daily-avg-center span {
-  display: block;
-  margin-top: 4px;   /* 🔥 spacing fix */
-  color: #9ca3af;    /* softer grey */
-  font-size: 12px;
-}
-
-/* target label */
-.daily-avg-goal {
-  margin-top: 12px;
-  font-size: 11px;
-
-  color: #d4af37;  /* 🔥 match dashboard */
-  opacity: 0.7;
-
-  letter-spacing: 0.5px;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
 }
 
 /* HEADER */
 .daily-avg-header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-/* FILTERS (top right, horizontal) */
+/* TITLE (match monthly) */
+.daily-avg-title {
+  color: #d4af37;
+  font-size: 14px;       /* ✅ same */
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* FILTERS */
 .daily-avg-filters {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
-/* dropdown style same as monthly */
+/* DROPDOWNS (exact match) */
 .daily-avg-filters select {
   background: #000;
   color: #fff;
@@ -91,12 +48,16 @@
   border: 1px solid #d4af37;
   border-radius: 8px;
 
-  padding: 6px 10px;
-  font-size: 12px;
+  padding: 6px 12px;
+  font-size: 13px;
 
-  cursor: pointer;
   outline: none;
+  cursor: pointer;
+
   transition: all 0.2s ease;
+
+  min-width: 110px;
+  height: 34px;
 }
 
 .daily-avg-filters select:hover {
@@ -105,4 +66,51 @@
 
 .daily-avg-filters select:focus {
   box-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+}
+
+.daily-avg-filters select option {
+  background: #000;
+  color: #fff;
+}
+
+/* BODY */
+.daily-avg-chart {
+  margin-top: 10px;   /* match monthly spacing */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 150px;
+  width: 150px;
+  align-self: center; /* 🔥 centers like monthly */
+}
+
+/* CENTER TEXT */
+.daily-avg-center {
+  position: absolute;
+  text-align: center;
+}
+
+.daily-avg-center h2 {
+  color: #3b82f6;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.daily-avg-center span {
+  display: block;
+  margin-top: 4px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* TARGET */
+.daily-avg-goal {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #d4af37;
+  opacity: 0.7;
+  text-align: center;
 }
