@@ -112,8 +112,8 @@ function DailyAvgHrs() {
       {/* CHART */}
       <div className="daily-avg-chart">
         <RadialBarChart
-          width={140}
-          height={140}
+          width={260}
+          height={260}
           cx="50%"
           cy="50%"
           innerRadius="70%"

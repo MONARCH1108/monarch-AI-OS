@@ -77,8 +77,9 @@
   align-items: center;
   justify-content: center;
 
-  height: 150px;
-  width: 150px;
+  height: 260px;
+  width: 100%;
+
   align-self: center; /* 🔥 centers like monthly */
 }
 
