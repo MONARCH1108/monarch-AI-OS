@@ -4,6 +4,7 @@ import './MonthlyAnalytics.css';
 import MonthlyStreak from "./MonthlyStreak/MonthlyStreak";
 import DailyAvgHrs from "./DailyAvgHours/DailyAvgHrs";
 import WeeklyAvgHours from "./WeeklyAvgHours/WeeklyAvgHours";
+import Clock from "./Clock/Clock";
 
 function MonthlyAnalytics() {
   return (
@@ -11,20 +12,26 @@ function MonthlyAnalytics() {
 
       <Row gutter={[16, 16]} align="stretch">
 
-        {/* LEFT */}
+        {/* TOP ROW */}
         <Col xs={24} md={8} style={{ display: "flex" }}>
           <MonthlyStreak />
         </Col>
 
-        {/* CENTER */}
         <Col xs={24} md={8} style={{ display: "flex" }}>
           <DailyAvgHrs />
         </Col>
 
-        {/* RIGHT */}
         <Col xs={24} md={8} style={{ display: "flex" }}>
           <WeeklyAvgHours />
         </Col>
+
+        {/* BOTTOM ROW */}
+        <Col xs={24} md={12} style={{ display: "flex" }}>
+          <Clock />
+        </Col>
+
+        {/* EMPTY SPACE (for next card) */}
+        <Col xs={24} md={12}></Col>
 
       </Row>
 
