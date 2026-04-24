@@ -12,25 +12,53 @@ function DailyAvgHrs() {
   const [selectedYear, setSelectedYear] = useState(today.getFullYear());
   const [avgHours, setAvgHours] = useState(0);
   const [years, setYears] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const GOAL = 12;
 
   useEffect(() => {
+    const controller = new AbortController();
+
     const fetchAvg = async () => {
+      setLoading(true);
+      setError(null);
+
       try {
-        const res = await fetch("https://productivity-api-b5hg.onrender.com/analytics/daily");
+        const timeoutId = setTimeout(() => controller.abort(), 8000);
+
+        const res = await fetch(
+          "https://productivity-api-b5hg.onrender.com/analytics/daily",
+          { signal: controller.signal }
+        );
+
+        clearTimeout(timeoutId);
+
+        if (!res.ok) throw new Error("API error");
+
         const data = await res.json();
 
-        if (!Array.isArray(data)) return;
+        if (!Array.isArray(data)) {
+          throw new Error("Invalid data format");
+        }
 
-        // 🔹 dynamic years
+        // ✅ Safe date parsing + validation
+        const parsedData = data.map((d) => {
+          const date = new Date(d.date);
+          date.setHours(0, 0, 0, 0);
+
+          return {
+            date,
+            hours: typeof d.hours === "number" ? d.hours : 0
+          };
+        });
+
+        // ✅ dynamic years
         const uniqueYears = [
-          ...new Set(
-            data.map((d) => new Date(d.date + "T00:00:00").getFullYear())
-          )
+          ...new Set(parsedData.map((d) => d.date.getFullYear()))
         ].sort((a, b) => b - a);
 
-        setYears(uniqueYears);
+        setYears(uniqueYears.length ? uniqueYears : [today.getFullYear()]);
 
         const now = new Date();
         now.setHours(0, 0, 0, 0);
@@ -39,39 +67,58 @@ function DailyAvgHrs() {
           selectedMonth === now.getMonth() &&
           selectedYear === now.getFullYear();
 
-        const filtered = data.filter((d) => {
-          const date = new Date(d.date + "T00:00:00");
+        // ✅ Filter relevant days
+        const filtered = parsedData.filter((d) => {
+          if (isNaN(d.date)) return false;
 
           if (isCurrentMonth) {
             return (
-              date.getMonth() === selectedMonth &&
-              date.getFullYear() === selectedYear &&
-              date <= now
+              d.date.getMonth() === selectedMonth &&
+              d.date.getFullYear() === selectedYear &&
+              d.date <= now
             );
           } else {
             return (
-              date.getMonth() === selectedMonth &&
-              date.getFullYear() === selectedYear
+              d.date.getMonth() === selectedMonth &&
+              d.date.getFullYear() === selectedYear
             );
           }
         });
 
-        if (filtered.length === 0) {
+        // ✅ STRICT AVG LOGIC (IMPORTANT)
+        let totalDays = 0;
+
+        if (isCurrentMonth) {
+          totalDays = now.getDate(); // days till today
+        } else {
+          totalDays = new Date(selectedYear, selectedMonth + 1, 0).getDate();
+        }
+
+        if (totalDays === 0) {
           setAvgHours(0);
           return;
         }
 
         const totalHours = filtered.reduce((sum, d) => sum + d.hours, 0);
-        const avg = totalHours / filtered.length;
+
+        const avg = totalHours / totalDays;
 
         setAvgHours(Number(avg.toFixed(2)));
 
       } catch (err) {
-        console.error("Error fetching avg hours:", err);
+        if (err.name !== "AbortError") {
+          console.error("Error fetching avg hours:", err);
+          setError("Failed to load data");
+          setAvgHours(0);
+        }
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchAvg();
+
+    return () => controller.abort();
   }, [selectedMonth, selectedYear]);
 
   const percentage = Math.min((avgHours / GOAL) * 100, 100);
@@ -85,29 +132,29 @@ function DailyAvgHrs() {
     <div className="daily-avg-card">
 
       {/* HEADER */}
-<div className="daily-avg-header">
-  <h3 className="daily-avg-title">Avg Hours / Day</h3>
+      <div className="daily-avg-header">
+        <h3 className="daily-avg-title">Avg Hours / Day</h3>
 
-  <div className="daily-avg-filters">
-    <select
-      value={selectedMonth}
-      onChange={(e) => setSelectedMonth(Number(e.target.value))}
-    >
-      {months.map((m, i) => (
-        <option key={i} value={i}>{m}</option>
-      ))}
-    </select>
+        <div className="daily-avg-filters">
+          <select
+            value={selectedMonth}
+            onChange={(e) => setSelectedMonth(Number(e.target.value))}
+          >
+            {months.map((m, i) => (
+              <option key={i} value={i}>{m}</option>
+            ))}
+          </select>
 
-    <select
-      value={selectedYear}
-      onChange={(e) => setSelectedYear(Number(e.target.value))}
-    >
-      {years.map((y) => (
-        <option key={y} value={y}>{y}</option>
-      ))}
-    </select>
-  </div>
-</div>
+          <select
+            value={selectedYear}
+            onChange={(e) => setSelectedYear(Number(e.target.value))}
+          >
+            {(years.length ? years : [today.getFullYear()]).map((y) => (
+              <option key={y} value={y}>{y}</option>
+            ))}
+          </select>
+        </div>
+      </div>
 
       {/* CHART */}
       <div className="daily-avg-chart">
@@ -130,12 +177,16 @@ function DailyAvgHrs() {
         </RadialBarChart>
 
         <div className="daily-avg-center">
-          <h2>{avgHours}</h2>
-          <span>{Math.round(percentage)}%</span>
+          <h2>{loading ? "--" : avgHours}</h2>
+          <span>
+            {loading ? "--" : error ? "Err" : `${Math.round(percentage)}%`}
+          </span>
         </div>
       </div>
 
-      <p className="daily-avg-goal">Target: {GOAL} hrs</p>
+      <p className="daily-avg-goal">
+        {error ? "Error loading data" : `Target: ${GOAL} hrs`}
+      </p>
 
     </div>
   );
