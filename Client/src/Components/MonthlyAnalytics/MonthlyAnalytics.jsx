@@ -5,6 +5,7 @@ import MonthlyStreak from "./MonthlyStreak/MonthlyStreak";
 import DailyAvgHrs from "./DailyAvgHours/DailyAvgHrs";
 import WeeklyAvgHours from "./WeeklyAvgHours/WeeklyAvgHours";
 import Clock from "./Clock/Clock";
+import DailyHours from "./DailyHours/DailyHours";
 
 function MonthlyAnalytics() {
   return (
@@ -25,13 +26,16 @@ function MonthlyAnalytics() {
           <WeeklyAvgHours />
         </Col>
 
-        {/* SECOND ROW (FIXED) */}
+        {/* SECOND ROW */}
         <Col xs={24} md={8} style={{ display: "flex" }}>
           <Clock />
         </Col>
 
-        {/* PLACEHOLDER FOR NEXT CARDS */}
-        <Col xs={24} md={8}></Col>
+        <Col xs={24} md={8} style={{ display: "flex" }}>
+          <DailyHours />
+        </Col>
+
+        {/* EMPTY SLOT */}
         <Col xs={24} md={8}></Col>
 
       </Row>

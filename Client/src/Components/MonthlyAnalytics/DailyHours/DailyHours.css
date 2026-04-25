@@ -1,0 +1,94 @@
+.daily-hours-card {
+  background: #000;
+  border: 1.5px solid #d4af37;
+  border-radius: 16px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+/* HEADER */
+.daily-hours-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.daily-hours-title {
+  color: #d4af37;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* TOGGLE */
+.daily-hours-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.daily-hours-toggle button {
+  background: #000;
+  border: 1px solid #d4af37;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.daily-hours-toggle button:hover {
+  border-color: #ffd700;
+}
+
+.daily-hours-toggle button.active {
+  background: #d4af37;
+  color: #000;
+}
+
+/* CHART */
+.daily-hours-chart {
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* CENTER TEXT */
+.daily-hours-center {
+  position: absolute;
+  text-align: center;
+}
+
+.daily-hours-center h2 {
+  color: #3b82f6;
+  font-size: 22px;
+  margin: 0;
+}
+
+.daily-hours-center span {
+  display: block;
+  margin-top: 4px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* FOOTER */
+.daily-hours-goal {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #d4af37;
+  opacity: 0.7;
+  text-align: center;
+}
