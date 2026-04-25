@@ -283,3 +283,25 @@ Claude Flow:
 - **Extensibility**: New tools can mix data from multiple sources
 
 All tools should return consistent JSON formats for Claude's easy interpretation.
+
+
+the MCP_Config Format, 
+
+{
+  "mcpServers": {
+    "analytics": {
+      "command": "C:\\Users\\abhay\\OneDrive\\Desktop\\MonarchOS\\monarch-AI-OS\\MCP\\.venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Users\\abhay\\OneDrive\\Desktop\\MonarchOS\\monarch-AI-OS\\MCP\\mcp_server.py"
+      ],
+      "transport": "stdio"
+    }
+  },
+  "preferences": {
+    "coworkScheduledTasksEnabled": false,
+    "ccdScheduledTasksEnabled": false,
+    "sidebarMode": "chat",
+    "coworkWebSearchEnabled": true,
+    "floatingAtollActive": true
+  }
+}
