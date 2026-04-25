@@ -56,10 +56,21 @@ function Clock() {
     return Math.floor(diff / (1000 * 60 * 60 * 24));
   };
 
+  // 🔥 REMOVE AM/PM from time string (IMPORTANT FIX)
+  const timeParts = new Intl.DateTimeFormat("en-IN", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true
+  }).formatToParts(time);
+
+  const formattedTime = timeParts
+    .filter(part => part.type !== "dayPeriod")
+    .map(part => part.value)
+    .join("");
+
   return (
     <div className="clock-card">
-
-      <h3 className="clock-title">Clock</h3>
 
       <div className="clock-body">
 
@@ -91,13 +102,11 @@ function Clock() {
           {/* TIME + AM/PM */}
           <div className="time-row">
             <div className="digital-time">
-              {time.toLocaleTimeString("en-IN", {
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit"
-              })}
+              {formattedTime}
             </div>
-            <div className="ampm">{isPM ? "PM" : "AM"}</div>
+            <div className="ampm">
+              {isPM ? "PM" : "AM"}
+            </div>
           </div>
 
           {/* DATE */}
