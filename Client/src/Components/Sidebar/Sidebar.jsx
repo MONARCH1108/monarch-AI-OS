@@ -11,6 +11,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaMedium } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { RocketOutlined  } from '@ant-design/icons';
+import { PoweroffOutlined } from "@ant-design/icons";
 
 const { Sider } = Layout;
 
@@ -61,6 +62,11 @@ function Sidebar() {
       setLoading(false);
     }
   };
+
+  const logout = () => {
+      localStorage.removeItem("auth"); // clears login
+      window.location.href = "/login"; // force redirect
+    };
 
   // ── server ──────────────────────────────────────────────────────────────────
   const startServer = async () => {
@@ -138,6 +144,11 @@ function Sidebar() {
           <BarChartOutlined style={{ marginRight: "8px" }} />
           {loading ? "Running..." : "Run Analytics"}
         </button>
+          {/* 🔐 LOGOUT */}
+          <button className="logout-btn" onClick={logout}>
+            <PoweroffOutlined style={{ marginRight: "8px" }} />
+            Logout
+          </button>
 
       </div>
     </Sider>
