@@ -128,68 +128,68 @@ function DailyAvgHrs() {
     "July","August","September","October","November","December"
   ];
 
-  return (
-    <div className="daily-avg-card">
+return (
+  <div className="daily-avg-card">
 
-      {/* HEADER */}
-      <div className="daily-avg-header">
-        <h3 className="daily-avg-title">Avg Hours / Day</h3>
+    {/* HEADER */}
+    <div className="daily-avg-header">
+      <h3 className="daily-avg-title">Avg Hours / Day</h3>
 
-        <div className="daily-avg-filters">
-          <select
-            value={selectedMonth}
-            onChange={(e) => setSelectedMonth(Number(e.target.value))}
-          >
-            {months.map((m, i) => (
-              <option key={i} value={i}>{m}</option>
-            ))}
-          </select>
-
-          <select
-            value={selectedYear}
-            onChange={(e) => setSelectedYear(Number(e.target.value))}
-          >
-            {(years.length ? years : [today.getFullYear()]).map((y) => (
-              <option key={y} value={y}>{y}</option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      {/* CHART */}
-      <div className="daily-avg-chart">
-        <RadialBarChart
-          width={260}
-          height={260}
-          cx="50%"
-          cy="50%"
-          innerRadius="70%"
-          outerRadius="100%"
-          barSize={10}
-          startAngle={90}
-          endAngle={-270}
-          data={[
-            { name: "bg", value: 100, fill: "#1e293b" },
-            { name: "progress", value: percentage, fill: "#3b82f6" }
-          ]}
+      <div className="daily-avg-filters">
+        <select
+          value={selectedMonth}
+          onChange={(e) => setSelectedMonth(Number(e.target.value))}
         >
-          <RadialBar dataKey="value" cornerRadius={10} clockWise />
-        </RadialBarChart>
+          {months.map((m, i) => (
+            <option key={i} value={i}>{m}</option>
+          ))}
+        </select>
 
-        <div className="daily-avg-center">
-          <h2>{loading ? "--" : avgHours}</h2>
-          <span>
-            {loading ? "--" : error ? "Err" : `${Math.round(percentage)}%`}
-          </span>
-        </div>
+        <select
+          value={selectedYear}
+          onChange={(e) => setSelectedYear(Number(e.target.value))}
+        >
+          {(years.length ? years : [today.getFullYear()]).map((y) => (
+            <option key={y} value={y}>{y}</option>
+          ))}
+        </select>
       </div>
-
-      <p className="daily-avg-goal">
-        {error ? "Error loading data" : `Target: ${GOAL} hrs`}
-      </p>
-
     </div>
-  );
+
+    {/* CHART */}
+    <div className="daily-avg-chart">
+      <RadialBarChart
+        width={220}
+        height={220}
+        cx="50%"
+        cy="50%"
+        innerRadius="68%"
+        outerRadius="100%"
+        barSize={8}
+        startAngle={90}
+        endAngle={-270}
+        data={[
+          { name: "bg",       value: 100,        fill: "#0d0d0d" },
+          { name: "progress", value: percentage,  fill: "#3b82f6" }
+        ]}
+      >
+        <RadialBar dataKey="value" cornerRadius={8} clockWise />
+      </RadialBarChart>
+
+      <div className="daily-avg-center">
+        <h2>{loading ? "--" : avgHours}</h2>
+        <span>
+          {loading ? "--" : error ? "Err" : `${Math.round(percentage)}%`}
+        </span>
+      </div>
+    </div>
+
+    <p className="daily-avg-goal">
+      {error ? "Error loading data" : `Target — ${GOAL} hrs / day`}
+    </p>
+
+  </div>
+);
 }
 
 export default DailyAvgHrs;

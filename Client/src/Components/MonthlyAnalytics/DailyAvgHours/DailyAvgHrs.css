@@ -1,113 +1,192 @@
-/* CARD */
-.daily-avg-card {
-  background: #000;
-  border: 1.5px solid #d4af37;
-  border-radius: 16px;
+/* ─────────────────────────────────────────
+   DAILY AVG HRS CARD — Refined Dark Luxury Theme (Improved)
+   ───────────────────────────────────────── */
 
-  padding: 20px;   /* ✅ same as monthly */
+:root {
+  --gold:         #d4af37;
+  --gold-dim:     #a8892a;
+  --gold-faint:   rgba(212, 175, 55, 0.08);
+  --gold-glow:    rgba(212, 175, 55, 0.18);
+  --gold-line:    rgba(212, 175, 55, 0.25);
+
+  --surface:      #000000;
+  --surface-2:    #0d0d0d;
+  --surface-3:    #141414;
+
+  --text-primary:   #f0e8d0;
+  --text-secondary: #7a7264;
+
+  --radius-card:  18px;
+  --radius-inner: 10px;
+
+  --font-sans: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+}
+
+/* ── CARD ── */
+.daily-avg-card {
+  background:    var(--surface);
+  border:        1px solid var(--gold-line);
+  border-radius: var(--radius-card);
+  padding:       24px;
+
+  width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
 
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
-  transition: all 0.3s ease;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.6),
+    0 0 32px var(--gold-glow),
+    inset 0 1px 0 rgba(212, 175, 55, 0.12),
+    inset 0 0 60px rgba(0,0,0,0.4);
+
+  font-family: var(--font-sans);
+  position: relative;
+  overflow: hidden;
 }
 
-/* HEADER */
+.daily-avg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  background: linear-gradient(
+    160deg,
+    rgba(212, 175, 55, 0.04) 0%,
+    transparent 45%
+  );
+}
+
+/* ── HEADER ── */
 .daily-avg-header {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ── TITLE ── */
+.daily-avg-title {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  margin: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
 }
 
-/* TITLE (match monthly) */
-.daily-avg-title {
-  color: #d4af37;
-  font-size: 14px;       /* ✅ same */
+.daily-avg-title::after {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-line), transparent);
+}
+
+/* ── FILTERS ── */
+.daily-avg-filters {
+  display: flex;
+  gap: 6px;
+}
+
+/* ✅ FIX: Always white text */
+.daily-avg-filters select {
+  background: var(--gold-faint);
+  border: 1px solid var(--gold-line);
+  color: #ffffff !important;
+
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-}
+  font-family: var(--font-mono);
 
-/* FILTERS */
-.daily-avg-filters {
-  display: flex;
-  gap: 10px;
-}
-
-/* DROPDOWNS (exact match) */
-.daily-avg-filters select {
-  background: #000;
-  color: #fff;
-
-  border: 1px solid #d4af37;
-  border-radius: 8px;
-
-  padding: 6px 12px;
-  font-size: 13px;
-
-  outline: none;
   cursor: pointer;
-
-  transition: all 0.2s ease;
-
-  min-width: 110px;
-  height: 34px;
+  min-width: 90px;
+  height: 28px;
 }
 
-.daily-avg-filters select:hover {
-  border-color: #ffd700;
-}
-
-.daily-avg-filters select:focus {
-  box-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
-}
-
+/* Dropdown options */
 .daily-avg-filters select option {
-  background: #000;
-  color: #fff;
+  background: #0d0d0d;
+  color: #ffffff !important;
 }
 
-/* BODY */
+/* ── CHART SECTION ── */
 .daily-avg-chart {
-  margin-top: 10px;   /* match monthly spacing */
-  position: relative;
+  margin-top: 16px;
+  flex: 1;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  height: 260px;
-  width: 100%;
+  position: relative;
 
-  align-self: center; /* 🔥 centers like monthly */
+  background: var(--surface-3);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: var(--radius-inner);
+  padding: 16px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 1px 3px rgba(0,0,0,0.4);
 }
 
-/* CENTER TEXT */
+/* ── CENTER TEXT ── */
 .daily-avg-center {
   position: absolute;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+/* ✅ FIX: Blur glow white number */
 .daily-avg-center h2 {
+  font-size: 34px;
+  font-weight: 300;
+  letter-spacing: -1px;
   color: #3b82f6;
-  font-size: 22px;
-  font-weight: 600;
+  font-family: var(--font-sans);
   margin: 0;
 }
 
+/* ✅ FIX: GOLD percentage */
 .daily-avg-center span {
   display: block;
-  margin-top: 4px;
-  color: #9ca3af;
-  font-size: 12px;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: var(--gold);
+
+  font-family: var(--font-mono);
 }
 
-/* TARGET */
+/* ── GOAL ── */
 .daily-avg-goal {
   margin-top: 12px;
+  padding: 10px 16px;
+
   font-size: 11px;
-  color: #d4af37;
-  opacity: 0.7;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: var(--gold);
+  font-family: var(--font-mono);
+
+  background: var(--gold-faint);
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-inner);
   text-align: center;
 }
