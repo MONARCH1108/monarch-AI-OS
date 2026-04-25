@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import logo from "../../assets/logo.png";
+import './Login.css'
 
 const USERNAME = "monarch";
 const PASSWORD = "8125887355";
@@ -25,28 +28,50 @@ function Login() {
     }
   };
 
-  return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h2>Login</h2>
+return (
+<div className="login-page">
+  <div className="login-container">
 
+    {/* Logo */}
+    <div className="login-logo">
+      <img src={logo} alt="Monarch Logo" />
+    </div>
+
+    {/* Title */}
+    <div className="login-title">MonarchOS</div>
+    <div className="login-subtitle">Access your productivity system</div>
+
+    {/* Username */}
+    <div className="input-group">
+      <UserOutlined className="input-icon" />
       <input
+        className="login-input"
         placeholder="Username"
         value={user}
         onChange={(e) => setUser(e.target.value)}
       />
-      <br /><br />
+    </div>
 
+    {/* Password */}
+    <div className="input-group">
+      <LockOutlined className="input-icon" />
       <input
+        className="login-input"
         type="password"
         placeholder="Password"
         value={pass}
         onChange={(e) => setPass(e.target.value)}
       />
-      <br /><br />
-
-      <button onClick={handleLogin}>Login</button>
     </div>
-  );
+
+    {/* Button */}
+    <button className="login-btn" onClick={handleLogin}>
+      Login
+    </button>
+
+  </div>
+</div>
+);
 }
 
 export default Login;
