@@ -13,51 +13,45 @@
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
 }
 
-/* HEADER */
-.clock-title {
-  color: #d4af37;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
 /* MAIN */
 .clock-body {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 30px;
-  flex-wrap: wrap;
+  align-items: center; /* 🔥 vertical align */
+  justify-content: flex-start; /* 🔥 start from left */
+  gap: 70px; /* 🔥 more breathing space */
+  width: 100%;
+  height: 100%;
 }
 
 /* LEFT */
 .clock-analog {
-  flex: 0.8;
+  flex: 0 0 auto;
+
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* RIGHT */
 .clock-digital {
-  flex: 1.2;
+  flex: 1;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* 🔥 fills vertical space nicely */
+
   align-items: flex-start;
 }
 
 /* ANALOG */
 .clock-face {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 200px;   /* 🔥 increased */
+  height: 200px;  /* 🔥 increased */
   border-radius: 50%;
   border: 2px solid #d4af37;
 
-  box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.2);
+  box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.25);
 }
 
 .clock-center {
@@ -80,20 +74,20 @@
 }
 
 .hand.hour {
-  width: 4px;
-  height: 30px;
+  width: 5px;
+  height: 45px;
   background: #d4af37;
 }
 
 .hand.minute {
   width: 3px;
-  height: 45px;
+  height: 65px;
   background: #ffffff;
 }
 
 .hand.second {
   width: 2px;
-  height: 55px;
+  height: 80px;
   background: #3b82f6;
 }
 
@@ -131,7 +125,7 @@
 
 /* EXTRA INFO */
 .extra-info {
-  margin-top: 12px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -167,6 +161,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 20px;
   }
 
   .clock-digital {
