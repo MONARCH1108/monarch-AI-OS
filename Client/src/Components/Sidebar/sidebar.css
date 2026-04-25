@@ -298,7 +298,10 @@
 /* ── In-sidebar Toast ── */
 .sidebar-toast {
   position: absolute;
-  bottom: 110px; /* sits just above the buttons */
+
+  /* 👇 KEY CHANGE */
+  bottom: calc(100% + 10px);
+
   left: 10px;
   right: 10px;
 
@@ -317,7 +320,6 @@
 
   box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
 
-  /* animate in from button */
   transform-origin: bottom center;
   animation: toastIn 0.25s ease forwards;
   z-index: 100;
@@ -325,6 +327,17 @@
 
 .sidebar-toast.hide {
   animation: toastOut 0.25s ease forwards;
+}
+
+.sidebar-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+
+  /* 👇 ADD THIS */
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-toast.success { border-color: #4caf50; box-shadow: 0 0 10px rgba(76,175,80,0.2); }
