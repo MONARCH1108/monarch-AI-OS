@@ -57,6 +57,7 @@
     rgba(212, 175, 55, 0.04) 0%,
     transparent 45%
   );
+  pointer-events: none;
 }
 
 /* ── HEADER ── */

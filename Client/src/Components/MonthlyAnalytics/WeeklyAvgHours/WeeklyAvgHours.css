@@ -1,89 +1,177 @@
-.weekly-avg-card {
-  background: #000;
-  border: 1.5px solid #d4af37;
-  border-radius: 16px;
+/* ─────────────────────────────────────────
+   WEEKLY AVG HRS CARD — Refined Dark Luxury Theme (Improved)
+   ───────────────────────────────────────── */
 
-  padding: 20px;
+/* ── CARD ── */
+.weekly-avg-card {
+  background: var(--surface);
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-card);
+  padding: 24px;
+
+  width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
 
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.6),
+    0 0 32px var(--gold-glow),
+    inset 0 1px 0 rgba(212, 175, 55, 0.12),
+    inset 0 0 60px rgba(0,0,0,0.4);
+
+  font-family: var(--font-sans);
+  position: relative;
+  overflow: hidden;
 }
 
-/* HEADER */
+.weekly-avg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  background: linear-gradient(
+    160deg,
+    rgba(212, 175, 55, 0.04) 0%,
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+/* ── HEADER ── */
 .weekly-avg-header {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ── TITLE ── */
+.weekly-avg-title {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  margin: 0;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
 }
 
-/* TITLE */
-.weekly-avg-title {
-  color: #d4af37;
-  font-size: 14px;
+.weekly-avg-title::after {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-line), transparent);
+}
+
+/* ── FILTERS ── */
+.weekly-avg-filters {
+  display: flex;
+  gap: 6px;
+}
+
+/* ✅ Always white text */
+.weekly-avg-filters select {
+  background: var(--gold-faint);
+  border: 1px solid var(--gold-line);
+  color: #ffffff !important;
+
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-family: var(--font-mono);
+
+  cursor: pointer;
+  min-width: 90px;
+  height: 28px;
 }
 
-/* FILTERS */
-.weekly-avg-filters {
-  display: flex;
-  gap: 10px;
+/* Dropdown options */
+.weekly-avg-filters select option {
+  background: #0d0d0d;
+  color: #ffffff !important;
 }
 
-.weekly-avg-filters select {
-  background: #000;
-  color: #fff;
-  border: 1px solid #d4af37;
-  border-radius: 8px;
-
-  padding: 6px 12px;
-  font-size: 13px;
-
-  min-width: 110px;
-  height: 34px;
-}
-
-/* CHART */
+/* ── CHART ── */
 .weekly-avg-chart {
-  margin-top: 10px;
+  margin-top: 16px;
+  flex: 1;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  height: 260px;
-  width: 100%;
+  position: relative;
+
+  background: var(--surface-3);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: var(--radius-inner);
+  padding: 16px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 1px 3px rgba(0,0,0,0.4);
 }
 
-/* CENTER TEXT */
+/* ── CENTER TEXT ── */
 .weekly-avg-center {
   position: absolute;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+/* ✅ Glow number */
 .weekly-avg-center h2 {
-  color: #3b82f6;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 34px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  color: #ffffff;
+  font-family: var(--font-sans);
   margin: 0;
+
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.15),
+    0 0 12px rgba(255,255,255,0.1);
 }
 
+/* ✅ GOLD percentage */
 .weekly-avg-center span {
   display: block;
-  margin-top: 4px;
-  color: #9ca3af;
-  font-size: 12px;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: var(--gold);
+
+  font-family: var(--font-mono);
 }
 
-/* GOAL */
+/* ── GOAL FOOTER ── */
 .weekly-avg-goal {
   margin-top: 12px;
+  padding: 10px 16px;
+
   font-size: 11px;
-  color: #d4af37;
-  opacity: 0.7;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: var(--gold);
+  font-family: var(--font-mono);
+
+  background: var(--gold-faint);
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-inner);
   text-align: center;
 }

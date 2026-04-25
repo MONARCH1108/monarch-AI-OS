@@ -141,66 +141,66 @@ function WeeklyAvgHours() {
     "July","August","September","October","November","December"
   ];
 
-  return (
-    <div className="weekly-avg-card">
+return (
+  <div className="weekly-avg-card">
 
-      <div className="weekly-avg-header">
-        <h3 className="weekly-avg-title">Avg Hours / Week</h3>
+    <div className="weekly-avg-header">
+      <h3 className="weekly-avg-title">Avg Hours / Week</h3>
 
-        <div className="weekly-avg-filters">
-          <select
-            value={selectedMonth}
-            onChange={(e) => setSelectedMonth(Number(e.target.value))}
-          >
-            {months.map((m, i) => (
-              <option key={i} value={i}>{m}</option>
-            ))}
-          </select>
-
-          <select
-            value={selectedYear}
-            onChange={(e) => setSelectedYear(Number(e.target.value))}
-          >
-            {(years.length ? years : [today.getFullYear()]).map((y) => (
-              <option key={y} value={y}>{y}</option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      <div className="weekly-avg-chart">
-        <RadialBarChart
-          width={260}
-          height={260}
-          cx="50%"
-          cy="50%"
-          innerRadius="70%"
-          outerRadius="100%"
-          barSize={14}
-          startAngle={90}
-          endAngle={-270}
-          data={[
-            { name: "bg", value: 100, fill: "#1e293b" },
-            { name: "progress", value: percentage, fill: "#3b82f6" }
-          ]}
+      <div className="weekly-avg-filters">
+        <select
+          value={selectedMonth}
+          onChange={(e) => setSelectedMonth(Number(e.target.value))}
         >
-          <RadialBar dataKey="value" cornerRadius={10} clockWise />
-        </RadialBarChart>
+          {months.map((m, i) => (
+            <option key={i} value={i}>{m}</option>
+          ))}
+        </select>
 
-        <div className="weekly-avg-center">
-          <h2>{loading ? "--" : avgHours}</h2>
-          <span>
-            {loading ? "--" : error ? "Err" : `${Math.round(percentage)}%`}
-          </span>
-        </div>
+        <select
+          value={selectedYear}
+          onChange={(e) => setSelectedYear(Number(e.target.value))}
+        >
+          {(years.length ? years : [today.getFullYear()]).map((y) => (
+            <option key={y} value={y}>{y}</option>
+          ))}
+        </select>
       </div>
-
-      <p className="weekly-avg-goal">
-        {error ? "Error loading data" : `Target: ${GOAL} hrs`}
-      </p>
-
     </div>
-  );
+
+    <div className="weekly-avg-chart">
+      <RadialBarChart
+        width={220}
+        height={220}
+        cx="50%"
+        cy="50%"
+        innerRadius="68%"
+        outerRadius="100%"
+        barSize={8}
+        startAngle={90}
+        endAngle={-270}
+        data={[
+          { name: "bg",       value: 100,       fill: "#1a1610" },
+          { name: "progress", value: percentage, fill: "#d4af37" }
+        ]}
+      >
+        <RadialBar dataKey="value" cornerRadius={8} clockWise />
+      </RadialBarChart>
+
+      <div className="weekly-avg-center">
+        <h2>{loading ? "--" : avgHours}</h2>
+        <span>
+          {loading ? "--" : error ? "Err" : `${Math.round(percentage)}%`}
+        </span>
+      </div>
+    </div>
+
+    <p className="weekly-avg-goal">
+      {error ? "Error loading data" : `Target — ${GOAL} hrs / week`}
+    </p>
+
+  </div>
+);
 }
 
 export default WeeklyAvgHours;
