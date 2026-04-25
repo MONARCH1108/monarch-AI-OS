@@ -1,84 +1,195 @@
-.momentum-card {
-  background: #000;
-  border: 1.5px solid #d4af37;
-  border-radius: 16px;
-  padding: 20px;
+/* ─────────────────────────────────────────
+   MOMENTUM CARD — Refined Dark Luxury Theme
+   ───────────────────────────────────────── */
 
-  width: 100%;
+:root {
+  --gold:         #d4af37;
+  --gold-dim:     #a8892a;
+  --gold-faint:   rgba(212, 175, 55, 0.08);
+  --gold-glow:    rgba(212, 175, 55, 0.18);
+  --gold-line:    rgba(212, 175, 55, 0.25);
+
+  --surface:      #000000;
+  --surface-2:    #0d0d0d;
+  --surface-3:    #141414;
+
+  --text-primary:   #f0e8d0;
+  --text-secondary: #7a7264;
+  --text-muted:     #3d3830;
+
+  --positive:     #3b82f6;
+  --negative:     #ef4444;
+
+  --radius-card:  18px;
+  --radius-inner: 10px;
+
+  --font-sans: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+}
+
+/* ── CARD ── */
+.momentum-card {
+  background:    var(--surface);
+  border:        1px solid var(--gold-line);
+  border-radius: var(--radius-card);
+  padding:       24px;
+
+  width:  100%;
   height: 100%;
 
-  display: flex;
+  display:        flex;
   flex-direction: column;
 
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
-}
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.6),
+    0 0 32px var(--gold-glow),
+    inset 0 1px 0 rgba(212, 175, 55, 0.12),
+    inset 0 0 60px rgba(0,0,0,0.4);
 
-/* TITLE */
-.momentum-title {
-  color: #d4af37;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-/* BODY */
-.momentum-body {
-  margin-top: 20px;
-
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-
-  justify-content: space-between; /* 🔥 fills height */
-}
-
-/* SECTION */
-.momentum-section {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* LABEL */
-.label {
-  font-size: 12px;
-  color: #9ca3af;
-}
-
-/* VALUE */
-.momentum-section h2 {
-  font-size: 28px; /* 🔥 bigger */
-  font-weight: 600;
-  margin: 0;
-}
-
-/* COLORS */
-.positive {
-  color: #3b82f6;
-}
-
-.negative {
-  color: #ef4444;
-}
-
-/* BAR */
-.momentum-bar {
-  height: 8px;
-  border-radius: 6px;
-  background: #1e293b;
+  font-family: var(--font-sans);
+  position: relative;
   overflow: hidden;
 }
 
-.momentum-fill {
-  height: 100%;
-  border-radius: 6px;
+/* Subtle top-edge shine */
+.momentum-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  background: linear-gradient(
+    160deg,
+    rgba(212, 175, 55, 0.04) 0%,
+    transparent 45%
+  );
+  pointer-events: none;
 }
 
-/* STATUS */
-.momentum-status {
+/* ── TITLE ── */
+.momentum-title {
+  color:          var(--gold);
+  font-size:      10px;
+  font-weight:    700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family:    var(--font-mono);
+
+  display:     flex;
+  align-items: center;
+  gap:         8px;
+}
+
+/* Decorative line after title */
+.momentum-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-line), transparent);
+}
+
+/* ── BODY ── */
+.momentum-body {
   margin-top: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #d4af37;
+
+  display:        flex;
+  flex-direction: column;
+  flex:           1;
+
+  padding:         0;
+  gap:             12px;
+  justify-content: space-between;
+}
+
+/* ── SECTION ── */
+.momentum-section {
+  display:        flex;
+  flex-direction: column;
+  gap:            8px;
+
+  background:    var(--surface-3);
+  border:        1px solid rgba(212, 175, 55, 0.1);
+  border-radius: var(--radius-inner);
+  padding:       14px 16px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Left accent stripe */
+.momentum-section::before {
+  content: '';
+  display: block;
+  width:  2px;
+  height: 100%;
+  /* handled via border-left instead for simplicity */
+}
+
+/* ── LABEL ── */
+.label {
+  font-size:      10px;
+  font-weight:    600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color:          var(--text-secondary);
+  font-family:    var(--font-mono);
+}
+
+/* ── VALUE ── */
+.momentum-section h2 {
+  font-size:   30px;
+  font-weight: 300;
+  margin:      0;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color:       var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+/* ── COLORS ── */
+.positive { color: var(--positive); }
+.negative { color: var(--negative); }
+
+/* ── BAR ── */
+.momentum-bar {
+  height:        6px;
+  border-radius: 99px;
+  background:    var(--surface-2);
+  overflow:      hidden;
+  border:        1px solid rgba(255,255,255,0.04);
+  margin-top:    4px;
+}
+
+.momentum-fill {
+  height:        100%;
+  border-radius: 99px;
+  background:    linear-gradient(90deg, var(--gold-dim), var(--gold));
+  box-shadow:    0 0 8px var(--gold-glow);
+}
+
+.momentum-fill.positive {
+  background: linear-gradient(90deg, #1d4ed8, var(--positive));
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+
+.momentum-fill.negative {
+  background: linear-gradient(90deg, #991b1b, var(--negative));
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
+}
+
+/* ── STATUS ── */
+.momentum-status {
+  margin-top:     16px;
+  padding:        10px 16px;
+  font-size:      11px;
+  font-weight:    700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color:          var(--gold);
+  font-family:    var(--font-mono);
+
+  background:    var(--gold-faint);
+  border:        1px solid var(--gold-line);
+  border-radius: var(--radius-inner);
+  text-align:    center;
 }

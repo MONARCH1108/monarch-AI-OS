@@ -1,151 +1,103 @@
 import { useEffect, useState } from "react";
 import "./Clock.css";
 
+// ── Helpers ──────────────────────────────────────────
+const greeting = (h) =>
+  h < 12 ? "Good Morning" : h < 18 ? "Good Afternoon" : "Good Evening";
+
+const dayProgress = (h, m, s) =>
+  Math.floor(((h * 3600 + m * 60 + s) / 86400) * 100);
+
+const weekNumber = () => {
+  const now   = new Date();
+  const start = new Date(now.getFullYear(), 0, 1);
+  return Math.ceil((now - start) / (7 * 24 * 60 * 60 * 1000));
+};
+
+const dayOfYear = () => {
+  const now   = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  return Math.floor((now - start) / (1000 * 60 * 60 * 24));
+};
+
+const stripAmPm = (date) =>
+  new Intl.DateTimeFormat("en-IN", {
+    hour:   "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  })
+    .formatToParts(date)
+    .filter((p) => p.type !== "dayPeriod")
+    .map((p) => p.value)
+    .join("");
+
+// ── Clock ─────────────────────────────────────────────
 function Clock() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
-
-    return () => clearInterval(interval);
+    const id = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(id);
   }, []);
 
-  const seconds = time.getSeconds();
-  const minutes = time.getMinutes();
-  const hours = time.getHours();
+  const h = time.getHours();
+  const m = time.getMinutes();
+  const s = time.getSeconds();
 
-  // 🔥 Smooth movement
-  const secondDeg = seconds * 6 + time.getMilliseconds() * 0.006;
-  const minuteDeg = minutes * 6 + seconds * 0.1;
-  const hourDeg = (hours % 12) * 30 + minutes * 0.5;
-
-  // 🔥 AM / PM
-  const isPM = hours >= 12;
-
-  // 🔥 Greeting
-  const getGreeting = () => {
-    if (hours < 12) return "Good Morning";
-    if (hours < 18) return "Good Afternoon";
-    return "Good Evening";
-  };
-
-  // 🔥 Day Progress
-  const getDayProgress = () => {
-    const totalSeconds = 86400;
-    const passed =
-      hours * 3600 + minutes * 60 + seconds;
-
-    return Math.floor((passed / totalSeconds) * 100);
-  };
-
-  // 🔥 Week Number
-  const getWeekNumber = () => {
-    const now = new Date();
-    const start = new Date(now.getFullYear(), 0, 1);
-    const diff = now - start;
-    return Math.ceil(diff / (7 * 24 * 60 * 60 * 1000));
-  };
-
-  // 🔥 Day of Year
-  const getDayOfYear = () => {
-    const now = new Date();
-    const start = new Date(now.getFullYear(), 0, 0);
-    const diff = now - start;
-    return Math.floor(diff / (1000 * 60 * 60 * 24));
-  };
-
-  // 🔥 REMOVE AM/PM from time string (IMPORTANT FIX)
-  const timeParts = new Intl.DateTimeFormat("en-IN", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true
-  }).formatToParts(time);
-
-  const formattedTime = timeParts
-    .filter(part => part.type !== "dayPeriod")
-    .map(part => part.value)
-    .join("");
+  const progress = dayProgress(h, m, s);
 
   return (
     <div className="clock-card">
+      <h3 className="clock-title">Clock</h3>
 
       <div className="clock-body">
 
-        {/* LEFT → ANALOG */}
-        <div className="clock-analog">
-          <div className="clock-face">
-            <div className="clock-center"></div>
+        {/* Digital */}
+        <div className="clock-section digital">
 
-            <div
-              className="hand hour"
-              style={{ transform: `rotate(${hourDeg}deg)` }}
-            ></div>
-
-            <div
-              className="hand minute"
-              style={{ transform: `rotate(${minuteDeg}deg)` }}
-            ></div>
-
-            <div
-              className="hand second"
-              style={{ transform: `rotate(${secondDeg}deg)` }}
-            ></div>
-          </div>
-        </div>
-
-        {/* RIGHT → DIGITAL */}
-        <div className="clock-digital">
-
-          {/* TIME + AM/PM */}
+          {/* Time + AM/PM */}
           <div className="time-row">
-            <div className="digital-time">
-              {formattedTime}
-            </div>
-            <div className="ampm">
-              {isPM ? "PM" : "AM"}
-            </div>
+            <div className="digital-time">{stripAmPm(time)}</div>
+            <div className="ampm">{h >= 12 ? "PM" : "AM"}</div>
           </div>
 
-          {/* DATE */}
+          {/* Date */}
           <div className="digital-date">
-            {time.toLocaleDateString("en-IN", {
-              weekday: "long"
-            })}
+            {time.toLocaleDateString("en-IN", { weekday: "long" })}
           </div>
 
           <div className="digital-subdate">
             {time.toLocaleDateString("en-IN", {
-              day: "2-digit",
-              month: "long",
-              year: "numeric"
+              day: "2-digit", month: "long", year: "numeric",
             })}
           </div>
 
-          {/* EXTRA INFO */}
-          <div className="extra-info">
+          <div className="clock-divider" />
 
-            <div className="greeting">{getGreeting()}</div>
+          {/* Greeting */}
+          <div className="greeting">{greeting(h)}</div>
 
-            <div className="day-progress">
-              Day Progress: {getDayProgress()}%
-            </div>
-
-            <div className="meta-row">
-              <span>Week {getWeekNumber()}</span>
-              <span>Day {getDayOfYear()}</span>
-            </div>
-
-            <div className="timezone">
-              IST (GMT+5:30)
-            </div>
-
+          {/* Day progress bar */}
+          <div className="day-progress-row">
+            <span className="day-progress-label">Day Progress</span>
+            <span className="day-progress-pct">{progress}%</span>
           </div>
 
-        </div>
+          <div className="progress-bar">
+            <div className="progress-fill" style={{ width: `${progress}%` }} />
+          </div>
 
+          {/* Meta chips */}
+          <div className="meta-row">
+            <span className="meta-chip">Week {weekNumber()}</span>
+            <span className="meta-chip">Day {dayOfYear()}</span>
+          </div>
+
+          {/* Timezone */}
+          <div className="timezone">IST — GMT+5:30</div>
+
+        </div>
       </div>
     </div>
   );

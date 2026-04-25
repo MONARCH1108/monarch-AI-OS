@@ -1,171 +1,350 @@
+/* ─────────────────────────────────────────
+   CLOCK CARD — Refined Dark Luxury Theme
+   (mirrors MomentumCount token system)
+   ───────────────────────────────────────── */
+
+:root {
+  --gold:         #d4af37;
+  --gold-dim:     #a8892a;
+  --gold-faint:   rgba(212, 175, 55, 0.08);
+  --gold-glow:    rgba(212, 175, 55, 0.18);
+  --gold-line:    rgba(212, 175, 55, 0.25);
+
+  --surface:      #000000;
+  --surface-2:    #0d0d0d;
+  --surface-3:    #141414;
+
+  --text-primary:   #f0e8d0;
+  --text-secondary: #7a7264;
+  --text-muted:     #3d3830;
+
+  --positive:     #3b82f6;
+
+  --radius-card:  18px;
+  --radius-inner: 10px;
+
+  --font-sans: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+}
+
+/* ── CARD ── */
 .clock-card {
-  background: #000;
-  border: 1.5px solid #d4af37;
-  border-radius: 16px;
-  padding: 20px;
+  background:    var(--surface);
+  border:        1px solid var(--gold-line);
+  border-radius: var(--radius-card);
+  padding:       24px;
 
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
+  width:  100%;
   height: 100%;
 
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
-}
-
-/* MAIN */
-.clock-body {
-  display: flex;
-  align-items: center; /* 🔥 vertical align */
-  justify-content: flex-start; /* 🔥 start from left */
-  gap: 70px; /* 🔥 more breathing space */
-  width: 100%;
-  height: 100%;
-}
-
-/* LEFT */
-.clock-analog {
-  flex: 0 0 auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-/* RIGHT */
-.clock-digital {
-  flex: 1;
-
-  display: flex;
+  display:        flex;
   flex-direction: column;
-  justify-content: center; /* 🔥 fills vertical space nicely */
 
-  align-items: flex-start;
-}
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.6),
+    0 0 32px var(--gold-glow),
+    inset 0 1px 0 rgba(212, 175, 55, 0.12),
+    inset 0 0 60px rgba(0, 0, 0, 0.4);
 
-/* ANALOG */
-.clock-face {
+  font-family: var(--font-sans);
   position: relative;
-  width: 200px;   /* 🔥 increased */
-  height: 200px;  /* 🔥 increased */
-  border-radius: 50%;
-  border: 2px solid #d4af37;
-
-  box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.25);
+  overflow: hidden;
 }
 
-.clock-center {
+.clock-card * {
+  font-size: calc(var(--force-size, 0px) + 1em) !important;
+}
+
+.clock-card {
+  --force-size: 1px;
+}
+
+
+/* Subtle top-edge shine */
+.clock-card::before {
+  content: '';
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #d4af37;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  border-radius: var(--radius-card);
+  background: linear-gradient(
+    160deg,
+    rgba(212, 175, 55, 0.04) 0%,
+    transparent 45%
+  );
+  pointer-events: none;
 }
 
-.hand {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform-origin: bottom;
-  transform: translateX(-50%);
-}
+/* ── TITLE ── */
+.clock-title {
+  color:          var(--gold);
+  font-size:      10px;
+  font-weight:    700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family:    var(--font-mono);
 
-.hand.hour {
-  width: 5px;
-  height: 45px;
-  background: #d4af37;
-}
-
-.hand.minute {
-  width: 3px;
-  height: 65px;
-  background: #ffffff;
-}
-
-.hand.second {
-  width: 2px;
-  height: 80px;
-  background: #3b82f6;
-}
-
-/* TIME ROW */
-.time-row {
-  display: flex;
+  display:     flex;
   align-items: center;
-  gap: 10px;
+  gap:         8px;
+}
+
+.clock-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-line), transparent);
+}
+
+/* ── BODY ── */
+.clock-body {
+  margin-top: 20px;
+  display:    flex;
+  flex:       1;
+  gap:        12px;
+  min-height: 0;       /* lets flex children shrink below their content size */
+  overflow:   hidden;  /* clips anything that still escapes */
+}
+
+/* ── SECTION (shared inner box style — mirrors .momentum-section) ── */
+.clock-section {
+  background:    var(--surface-3);
+  border:        1px solid rgba(212, 175, 55, 0.1);
+  border-radius: var(--radius-inner);
+  padding:       14px 16px;
+
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     center;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Right panel — digital details */
+.clock-section.digital {
+  flex:            1;
+  min-height:      0;      /* critical — allows the section to shrink */
+  min-width:       0;      /* prevents horizontal blowout */
+  align-items:     flex-start;
+  justify-content: flex-start;
+  gap:             8px;
+  overflow:        hidden; /* clips content instead of pushing past the card */
+}
+
+/* ── LABEL ── */
+.label {
+  font-size:      10px;
+  font-weight:    600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color:          var(--text-secondary);
+  font-family:    var(--font-mono);
+}
+
+/* ── DIGITAL TIME ── */
+.time-row {
+  display:     flex;
+  align-items: baseline;
+  gap:         8px;
 }
 
 .digital-time {
-  font-size: 28px;
-  font-weight: 600;
-  color: #3b82f6;
+  font-size:      32px !important;
+  font-weight:    300;
+  letter-spacing: -0.5px;
+  color:          var(--positive);
+  font-family:    var(--font-sans);
+  line-height:    1;
 }
 
 .ampm {
-  font-size: 12px;
-  color: #9ca3af;
-}
-
-/* DATE */
-.digital-date {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #d4af37;
+  font-size:      10px;
+  font-weight:    700;
+  letter-spacing: 1.5px;
+  color:          var(--text-secondary);
+  font-family:    var(--font-mono);
   text-transform: uppercase;
 }
 
+/* ── DATE ── */
+.digital-date {
+  font-size:      12px;
+  font-weight:    700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color:          var(--gold);
+  font-family:    var(--font-mono);
+}
+
 .digital-subdate {
-  margin-top: 4px;
-  font-size: 12px;
-  color: #888;
+  font-size:   12px;
+  color:       var(--text-secondary);
+  font-family: var(--font-mono);
 }
 
-/* EXTRA INFO */
-.extra-info {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+/* ── DIVIDER ── */
+.clock-divider {
+  width:      100%;
+  height:     1px;
+  background: linear-gradient(90deg, var(--gold-line), transparent);
+  margin:     2px 0;
 }
 
+/* ── EXTRA META ── */
 .greeting {
-  font-size: 13px;
-  color: #3b82f6;
+  font-size:   13px;
   font-weight: 500;
+  color:       var(--text-primary);
+  font-family: var(--font-sans);
 }
 
-.day-progress {
-  font-size: 12px;
-  color: #9ca3af;
+.day-progress-row {
+  display:     flex;
+  align-items: center;
+  gap:         8px;
+  width:       100%;
 }
 
+.day-progress-label {
+  font-size:      10px;
+  font-weight:    600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color:          var(--text-secondary);
+  font-family:    var(--font-mono);
+  white-space:    nowrap;
+}
+
+.day-progress-pct {
+  font-size:   10px;
+  color:       var(--gold);
+  font-family: var(--font-mono);
+  margin-left: auto;
+}
+
+/* Progress bar — mirrors momentum-bar */
+.progress-bar {
+  width:         100%;
+  height:        5px;
+  border-radius: 99px;
+  background:    var(--surface-2);
+  overflow:      hidden;
+  border:        1px solid rgba(255, 255, 255, 0.04);
+}
+
+.progress-fill {
+  height:        100%;
+  border-radius: 99px;
+  background:    linear-gradient(90deg, var(--gold-dim), var(--gold));
+  box-shadow:    0 0 8px var(--gold-glow);
+}
+
+/* ── META CHIPS ── */
 .meta-row {
   display: flex;
-  gap: 12px;
-  font-size: 12px;
-  color: #888;
+  gap:     8px;
 }
 
+.meta-chip {
+  font-size:      10px;
+  font-weight:    700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color:          var(--gold);
+  font-family:    var(--font-mono);
+  background:     var(--gold-faint);
+  border:         1px solid var(--gold-line);
+  border-radius:  6px;
+  padding:        4px 8px;
+}
+
+/* ── TIMEZONE ── */
 .timezone {
-  font-size: 11px;
-  color: #d4af37;
-  opacity: 0.7;
+  font-size:      10px;
+  font-weight:    600;
+  letter-spacing: 1.5px;
+  color:          var(--text-secondary);
+  font-family:    var(--font-mono);
+  text-transform: uppercase;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .clock-body {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
+/* ── RESPONSIVE ── */
+
+/* ── Large (≥ 1024px) — give the face more room ── */
+@media (min-width: 1024px) {
+  .clock-card {
+    padding: 28px;
   }
 
-  .clock-digital {
-    align-items: center;
+  .digital-time {
+    font-size: 32px;
+  }
+}
+
+/* ── Medium (640px – 1023px) ── */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .digital-time {
+    font-size: 22px;
+  }
+
+  .clock-body {
+    gap: 10px;
+  }
+}
+
+/* ── Small (480px – 639px) — tighten up ── */
+@media (min-width: 480px) and (max-width: 639px) {
+  .clock-card {
+    padding: 18px;
+  }
+
+  .digital-time {
+    font-size: 20px;
+  }
+
+  .clock-body {
+    gap: 8px;
+  }
+
+  .meta-chip {
+    padding:        3px 6px;
+    font-size:      9px;
+    letter-spacing: 1px;
+  }
+}
+
+/* ── Extra small (< 480px) ── */
+@media (max-width: 479px) {
+  .clock-card {
+    padding: 16px;
+  }
+
+  .clock-body {
+    gap: 10px;
+  }
+
+  .clock-section.digital {
+    width: 100%;
+  }
+
+  .digital-time {
+    font-size: 22px;
+  }
+
+  .greeting {
+    font-size: 12px;
+  }
+
+  .meta-chip {
+    padding:        3px 6px;
+    font-size:      9px;
+    letter-spacing: 1px;
+  }
+
+  .clock-title {
+    font-size:      9px;
+    letter-spacing: 2px;
   }
 }
