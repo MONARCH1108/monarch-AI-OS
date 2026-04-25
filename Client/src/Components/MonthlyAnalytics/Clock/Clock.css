@@ -77,7 +77,7 @@
 /* ── TITLE ── */
 .clock-title {
   color:          var(--gold);
-  font-size:      10px;
+  font-size:      10px !important;
   font-weight:    700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
