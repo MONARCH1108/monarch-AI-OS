@@ -1,6 +1,7 @@
 .monthly-streak-card,
 .daily-avg-card,
-.weekly-avg-card {
+.weekly-avg-card,
+.clock-card {
   height: 100%;
   width: 100%;
 }

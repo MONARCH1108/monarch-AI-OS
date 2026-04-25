@@ -25,13 +25,14 @@ function MonthlyAnalytics() {
           <WeeklyAvgHours />
         </Col>
 
-        {/* BOTTOM ROW */}
-        <Col xs={24} md={12} style={{ display: "flex" }}>
+        {/* SECOND ROW (FIXED) */}
+        <Col xs={24} md={8} style={{ display: "flex" }}>
           <Clock />
         </Col>
 
-        {/* EMPTY SPACE (for next card) */}
-        <Col xs={24} md={12}></Col>
+        {/* PLACEHOLDER FOR NEXT CARDS */}
+        <Col xs={24} md={8}></Col>
+        <Col xs={24} md={8}></Col>
 
       </Row>
 
