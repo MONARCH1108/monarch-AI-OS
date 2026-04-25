@@ -6,6 +6,7 @@ import DailyAvgHrs from "./DailyAvgHours/DailyAvgHrs";
 import WeeklyAvgHours from "./WeeklyAvgHours/WeeklyAvgHours";
 import Clock from "./Clock/Clock";
 import DailyHours from "./DailyHours/DailyHours";
+import MomentumCount from "./MomentumCount/MomentumCount";
 
 function MonthlyAnalytics() {
   return (
@@ -36,7 +37,9 @@ function MonthlyAnalytics() {
         </Col>
 
         {/* EMPTY SLOT */}
-        <Col xs={24} md={8}></Col>
+        <Col xs={24} md={8} style={{ display: "flex" }}>
+          <MomentumCount />
+        </Col>
 
       </Row>
 
