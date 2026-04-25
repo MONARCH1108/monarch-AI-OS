@@ -180,8 +180,8 @@ return (
         startAngle={90}
         endAngle={-270}
         data={[
-          { name: "bg",       value: 100,       fill: "#1a1610" },
-          { name: "progress", value: percentage, fill: "#d4af37" }
+          { name: "bg",       value: 100,       fill: "#0d0d0d" },
+          { name: "progress", value: percentage, fill: "#3b82f6" }
         ]}
       >
         <RadialBar dataKey="value" cornerRadius={8} clockWise />

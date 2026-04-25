@@ -1,5 +1,5 @@
 import { Row, Col } from "antd";
-import './MonthlyAnalytics.css';
+import "./MonthlyAnalytics.css";
 
 import MonthlyStreak from "./MonthlyStreak/MonthlyStreak";
 import DailyAvgHrs from "./DailyAvgHours/DailyAvgHrs";
@@ -10,37 +10,15 @@ import MomentumCount from "./MomentumCount/MomentumCount";
 
 function MonthlyAnalytics() {
   return (
-    <div style={{ width: "100%" }}>
+    <div className="analytics-container">
+      <Row gutter={[12, 12]} className="analytics-grid">
+        <Col span={8}><Clock /></Col>
+        <Col span={8}><DailyHours /></Col>
+        <Col span={8}><MomentumCount /></Col>
 
-      <Row gutter={[16, 16]} align="stretch">
-
-        {/* TOP ROW */}
-        <Col xs={24} md={8} style={{ display: "flex" }}>
-          <MonthlyStreak />
-        </Col>
-
-        <Col xs={24} md={8} style={{ display: "flex" }}>
-          <DailyAvgHrs />
-        </Col>
-
-        <Col xs={24} md={8} style={{ display: "flex" }}>
-          <WeeklyAvgHours />
-        </Col>
-
-        {/* SECOND ROW */}
-        <Col xs={24} md={8} style={{ display: "flex" }}>
-          <Clock />
-        </Col>
-
-        <Col xs={24} md={8} style={{ display: "flex" }}>
-          <DailyHours />
-        </Col>
-
-        {/* EMPTY SLOT */}
-        <Col xs={24} md={8} style={{ display: "flex" }}>
-          <MomentumCount />
-        </Col>
-
+        <Col span={8}><DailyAvgHrs /></Col>
+        <Col span={8}><WeeklyAvgHours /></Col>
+        <Col span={8}><MonthlyStreak /></Col>    
       </Row>
 
     </div>

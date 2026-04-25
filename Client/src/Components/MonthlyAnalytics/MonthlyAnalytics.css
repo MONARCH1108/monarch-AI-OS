@@ -2,7 +2,10 @@
 .daily-avg-card,
 .weekly-avg-card,
 .clock-card,
-.daily-hours-card {
+.daily-hours-card,
+.momentum-card {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
