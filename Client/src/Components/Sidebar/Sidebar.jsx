@@ -69,26 +69,13 @@ function Sidebar() {
     };
 
   // ── server ──────────────────────────────────────────────────────────────────
-  const startServer = async () => {
-    try {
-      setLoading(true);
-      show("loading", "🚀", "Starting server...");
-
-      const res  = await fetch("https://productivity-api-b5hg.onrender.com/health");
-      const data = await res.json();
-
-      if (data.status === "ok") {
-        autoHide("success", "✅", "Server is ready");
-      } else {
-        autoHide("error", "❌", "Server not healthy");
-      }
-    } catch {
-      autoHide("error", "❌", "Failed to start server");
-    } finally {
-      setLoading(false);
-    }
+  const startServer = () => {
+    window.open(
+      "https://productivity-api-b5hg.onrender.com/health",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
-
   return (
     <Sider width={220} className="SideBar" style={{ background: "white" }}>
 
@@ -136,7 +123,7 @@ function Sidebar() {
           </div>
         )}
 
-        <button className="start-server-btn"  onClick={startServer}  disabled={loading}>
+        <button className="start-server-btn"  onClick={startServer}>
           <RocketOutlined style={{ marginRight: '6px' }} />
           Start Server
         </button>
