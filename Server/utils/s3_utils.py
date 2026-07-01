@@ -5,32 +5,35 @@ from dotenv import load_dotenv
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", "config", ".env"))
 
+
 def get_s3_client():
     return boto3.client(
         "s3",
+        endpoint_url=os.getenv("S3_ENDPOINT_URL"),
         aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
         aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
         region_name=os.getenv("AWS_REGION")
     )
+
 
 def get_bucket():
     return os.getenv("S3_BUCKET_NAME")
 
 
 def upload_json(data, key):
-    s3 = get_s3_client()  # ✅ lazy init
+    s3 = get_s3_client()
     bucket = get_bucket()
 
     s3.put_object(
         Bucket=bucket,
         Key=key,
-        Body=json.dumps(data, indent=4),
+        Body=json.dumps(data, indent=4).encode("utf-8"),
         ContentType="application/json"
     )
 
 
 def read_json(key):
-    s3 = get_s3_client()  # ✅ lazy init
+    s3 = get_s3_client()
     bucket = get_bucket()
 
     response = s3.get_object(
@@ -38,4 +41,6 @@ def read_json(key):
         Key=key
     )
 
-    return json.loads(response["Body"].read().decode("utf-8"))
+    return json.loads(
+        response["Body"].read().decode("utf-8")
+    )
