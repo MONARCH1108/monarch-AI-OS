@@ -104,25 +104,36 @@ async def get_daily_hours(year: Optional[int] = None, month: Optional[int] = Non
     - Always use this tool for granular analysis
     - Useful for detecting patterns, streaks, and daily trends
     """
-    data = fetch_daily()
+    try:
+        data = fetch_daily()
 
-    # ✅ validation
-    if not validate_date_range(year, month, data):
+        if not data:
+            return json.dumps({
+                "status": "error",
+                "message": "No data found in source"
+            })
+
+        if not validate_date_range(year, month, data):
+            return json.dumps({
+                "status": "error",
+                "message": "Data not available for the requested time range"
+            })
+
+        filtered = filter_daily(data, year, month)
+
+        if not filtered:
+            return json.dumps({
+                "status": "empty",
+                "message": "No data available for given filters"
+            })
+
+        return json.dumps(filtered, indent=2)
+
+    except Exception as e:
         return json.dumps({
             "status": "error",
-            "message": "Data not available for the requested time range"
+            "message": str(e)
         })
-
-    filtered = filter_daily(data, year, month)
-
-    # ✅ empty handling
-    if not filtered:
-        return json.dumps({
-            "status": "empty",
-            "message": "No data available for given filters"
-        })
-
-    return json.dumps(filtered, indent=2)
 
 
 @mcp.tool()
