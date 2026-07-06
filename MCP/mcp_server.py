@@ -7,6 +7,9 @@ from utils.get_daily_hours import get_daily_hours as fetch_daily
 from utils.get_weekly_hours import get_weekly_hours as fetch_weekly
 from utils.get_monthly_hours import get_monthly_hours as fetch_monthly
 
+from utils.get_tasks import get_tasks as fetch_tasks
+from utils.get_time_tracker import get_time_tracker as fetch_time_tracker
+
 mcp = FastMCP("analytics")
 
 # ================================
@@ -70,6 +73,43 @@ def validate_date_range(year, month, data):
 
     return True
 
+def filter_tasks(data, year=None, month=None):
+    if not year and not month:
+        return data
+
+    filtered = []
+
+    for item in data:
+        date_obj = datetime.strptime(item["date"], "%Y-%m-%d")
+
+        if year and date_obj.year != year:
+            continue
+
+        if month and date_obj.month != month:
+            continue
+
+        filtered.append(item)
+
+    return filtered
+
+def filter_time_tracker(data, year=None, month=None):
+    if not year and not month:
+        return data
+
+    filtered = []
+
+    for item in data:
+        date_obj = datetime.strptime(item["date"], "%Y-%m-%d")
+
+        if year and date_obj.year != year:
+            continue
+
+        if month and date_obj.month != month:
+            continue
+
+        filtered.append(item)
+
+    return filtered
 
 
 # ================================
@@ -239,6 +279,131 @@ async def get_monthly_hours(year: Optional[int] = None) -> str:
 
     return json.dumps(filtered, indent=2)
 
+@mcp.tool()
+async def get_tasks(
+    year: Optional[int] = None,
+    month: Optional[int] = None
+) -> str:
+    """
+    Fetch task planning data.
+
+    Use this when:
+    - User asks what tasks were planned
+    - User asks about projects worked on
+    - User asks about objectives
+    - Understanding workload
+    - Understanding productivity context
+
+    Parameters:
+    - year (optional)
+    - month (optional)
+
+    Data contains:
+    - date
+    - objective
+    - task_id
+    - subtasks
+
+    Important:
+    - Useful for understanding WHAT the user worked on.
+    """
+
+    try:
+        data = fetch_tasks()
+
+        if not data:
+            return json.dumps({
+                "status": "error",
+                "message": "No task data found"
+            })
+
+        if not validate_date_range(year, month, data):
+            return json.dumps({
+                "status": "error",
+                "message": "Data not available for the requested time range"
+            })
+
+        filtered = filter_tasks(data, year, month)
+
+        if not filtered:
+            return json.dumps({
+                "status": "empty",
+                "message": "No task data available for given filters"
+            })
+
+        return json.dumps(filtered, indent=2)
+
+    except Exception as e:
+        return json.dumps({
+            "status": "error",
+            "message": str(e)
+        })
+    
+@mcp.tool()
+async def get_time_tracker(
+    year: Optional[int] = None,
+    month: Optional[int] = None
+) -> str:
+    """
+    Fetch detailed work session history.
+
+    Use this when:
+    - User asks about work sessions
+    - User asks about focus habits
+    - User asks about categories worked on
+    - User asks about work timing
+    - User asks how time was spent
+
+    Parameters:
+    - year (optional)
+    - month (optional)
+
+    Data contains:
+    - session_id
+    - date
+    - task
+    - task_id
+    - category
+    - status
+    - clock_in
+    - clock_out
+    - minutes
+    - hours
+
+    Important:
+    - Useful for understanding HOW the user worked.
+    """
+
+    try:
+        data = fetch_time_tracker()
+
+        if not data:
+            return json.dumps({
+                "status": "error",
+                "message": "No time tracker data found"
+            })
+
+        if not validate_date_range(year, month, data):
+            return json.dumps({
+                "status": "error",
+                "message": "Data not available for the requested time range"
+            })
+
+        filtered = filter_time_tracker(data, year, month)
+
+        if not filtered:
+            return json.dumps({
+                "status": "empty",
+                "message": "No time tracker data available for given filters"
+            })
+
+        return json.dumps(filtered, indent=2)
+
+    except Exception as e:
+        return json.dumps({
+            "status": "error",
+            "message": str(e)
+        })
 
 # ================================
 # 🔹 EXTRA TOOL (VERY USEFUL)
